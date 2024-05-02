@@ -1,0 +1,24 @@
+{
+  "name": "@pplancq/svg-core",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "Inject svg in dom",
+  "author": "pplancq <paul.plancq@outlook.fr>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pplancq/svg-tools",
+    "directory": "packages/svg-core"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/pplancq/svg-tools/issues"
+  },
+  "keywords": [
+    "svg"
+  ],
+  "volta": {
+    "extends": "../../package.json"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@pplancq/svg-react",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "React svg component to inject svg in dom",
+  "author": "pplancq <paul.plancq@outlook.fr>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pplancq/svg-tools",
+    "directory": "packages/svg-react"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/pplancq/svg-tools/issues"
+  },
+  "keywords": [
+    "svg",
+    "react"
+  ],
+  "volta": {
+    "extends": "../../package.json"
+  }
+}

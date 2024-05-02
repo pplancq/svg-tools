@@ -1,0 +1,24 @@
+{
+  "name": "@pplancq/svg-tools",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "Tools for svg",
+  "author": "pplancq <paul.plancq@outlook.fr>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pplancq/svg-tools"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/pplancq/svg-tools/issues"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "volta": {
+    "node": "20.12.2",
+    "npm": "10.7.0"
+  }
+}
