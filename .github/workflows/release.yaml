@@ -1,0 +1,50 @@
+name: Release
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  HUSKY: 0
+
+jobs:
+  release:
+    if: github.event_name == 'workflow_dispatch' && github.actor == 'pplancq'
+    name: Release
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      id-token: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: ./.github/actions/setup-node
+
+      - name: Install package
+        run: npm ci
+
+      - name: Run build
+        run: npm run build
+
+      - name: Config npm
+        run: npm config set access=public
+
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GIT_AUTHOR_EMAIL: release[bot]@users.noreply.github.com
+          GIT_AUTHOR_NAME: release[bot]
+          GIT_COMMITTER_EMAIL: release[bot]@users.noreply.github.com
+          GIT_COMMITTER_NAME: release[bot]
+          GITHUB_DISABLED_SUCCESS_COMMENT: 'true'
+          GITHUB_DISABLED_RELEASED_LABELS: 'true'
+        run: npm run release
