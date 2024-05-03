@@ -1,3 +1,4 @@
+import { resolve } from 'path'
 import { loadEnv } from 'vite'
 import svgr from 'vite-plugin-svgr'
 import viteTsconfigPaths from 'vite-tsconfig-paths'
@@ -9,15 +10,15 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [viteTsconfigPaths(), svgr()],
     test: {
-      setupFiles: 'vitest.setup.ts',
+      setupFiles: resolve(__dirname, './vitest.setup.ts'),
       clearMocks: true,
       css: false,
+      include: [resolve(__dirname, './src/**/*.(spec|test).[jt]s?(x)')],
       reporters: ['basic', 'junit', 'vitest-sonar-reporter'],
       outputFile: {
         'vitest-sonar-reporter': 'sonar-report.xml',
         'junit': 'junit-report.xml',
       },
-      include: ['src/**/*.(spec|test).[jt]s?(x)'],
       poolOptions: {
         threads: {
           minThreads: env.CI ? 1 : undefined,
@@ -31,11 +32,11 @@ export default defineConfig(({ mode }) => {
         functions: 75,
         branches: 80,
         statements: 80,
-        include: ['src/**/*.[jt]s?(x)'],
+        include: ['packages/*/src/**/*.[jt]s?(x)'],
         exclude: [
-          'src/**/*.d.[jt]s?(x)',
-          'src/**/*.types.[jt]s?(x)',
-          'src/**/index.[jt]s?(x)',
+          'packages/*/src/**/*.d.[jt]s?(x)',
+          'packages/*/src/**/*.types.[jt]s?(x)',
+          'packages/*/src/**/index.[jt]s?(x)',
         ],
       },
     },

@@ -1,21 +1,11 @@
-import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
 import { loadEnv } from 'vite'
-import svgr from 'vite-plugin-svgr'
-import viteTsconfigPaths from 'vite-tsconfig-paths'
 import { defineConfig } from 'vitest/config'
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
 
   return {
-    plugins: [react(), viteTsconfigPaths(), svgr()],
     test: {
-      environment: 'jsdom',
-      setupFiles: resolve(__dirname, './vitest.setup.ts'),
-      clearMocks: true,
-      css: false,
-      include: [resolve(__dirname, './src/**/*.(spec|test).[jt]s?(x)')],
       reporters: ['basic', 'junit', 'vitest-sonar-reporter'],
       outputFile: {
         'vitest-sonar-reporter': 'sonar-report.xml',

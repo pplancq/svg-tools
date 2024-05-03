@@ -75,11 +75,50 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: ./.github/actions/setup-node
+      - name: Testing with Node.js v${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Cache node modules
+        uses: actions/cache@v4
+        with:
+          path: '**/node_modules'
+          key: npm-${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
 
       - name: Run test
         run: npm run test:ci
+
+      - name: Upload sonar reports
+        if: matrix.node-version == '20.x'
+        uses: actions/upload-artifact@v4
+        with:
+          name: sonar-reports
+          path: |
+            coverage/lcov.info
+            sonar-report.xml
+
+  sonarcloud:
+    name: SonarCloud Scan
+    needs:
+      - test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download test reports
+        uses: actions/download-artifact@v4
+        with:
+          name: sonar-reports
+
+      - name: SonarCloud Scan
+        uses: sonarsource/sonarcloud-github-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
   build:
     name: Build
