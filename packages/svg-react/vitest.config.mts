@@ -15,7 +15,7 @@ export default defineConfig(({ mode }) => {
       setupFiles: resolve(__dirname, './vitest.setup.ts'),
       clearMocks: true,
       css: false,
-      include: [resolve(__dirname, './src/**/*.(spec|test).[jt]s?(x)')],
+      include: [resolve(__dirname, './tests/**/*.(spec|test).[jt]s?(x)')],
       reporters: ['basic', 'junit', 'vitest-sonar-reporter'],
       outputFile: {
         'vitest-sonar-reporter': 'sonar-report.xml',

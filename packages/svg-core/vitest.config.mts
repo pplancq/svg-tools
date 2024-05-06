@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => {
       setupFiles: resolve(__dirname, './vitest.setup.ts'),
       clearMocks: true,
       css: false,
-      include: [resolve(__dirname, './src/**/*.(spec|test).[jt]s?(x)')],
+      include: [resolve(__dirname, './tests/**/*.(spec|test).[jt]s?(x)')],
       reporters: ['basic', 'junit', 'vitest-sonar-reporter'],
       outputFile: {
         'vitest-sonar-reporter': 'sonar-report.xml',
@@ -32,7 +32,7 @@ export default defineConfig(({ mode }) => {
         functions: 75,
         branches: 80,
         statements: 80,
-        include: ['packages/*/src/**/*.[jt]s?(x)'],
+        include: ['packages/*/ests/**/*.[jt]s?(x)'],
         exclude: [
           'packages/*/src/**/*.d.[jt]s?(x)',
           'packages/*/src/**/*.types.[jt]s?(x)',
