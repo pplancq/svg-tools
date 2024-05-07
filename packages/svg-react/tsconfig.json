@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "ES2022",
     "lib": [
       "dom",
       "dom.iterable",
@@ -17,14 +17,15 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
+    "module": "Node16",
+    "moduleResolution": "Node16",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "removeComments": true,
     "jsx": "react-jsx",
     "baseUrl": ".",
-    "outDir": "./build"
+    "outDir": "./build",
+    "declaration": true,
   },
   "include": [
     "src"

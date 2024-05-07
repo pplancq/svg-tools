@@ -1,1 +1,1 @@
-export { Svg } from './Svg';
+export { Svg } from './Svg.js';

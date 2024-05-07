@@ -5,12 +5,13 @@
   "description": "Inject svg in dom",
   "author": "pplancq <paul.plancq@outlook.fr>",
   "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pplancq/svg-tools",
+    "url": "git+https://github.com/pplancq/svg-tools.git",
     "directory": "packages/svg-core"
   },
-  "type": "module",
   "scripts": {
     "prebuild": "rimraf build",
     "build": "tsc",

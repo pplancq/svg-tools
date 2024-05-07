@@ -1,4 +1,4 @@
-import { CONTENT_TYPE, MINE_TYPE_SVG } from './constants';
+import { CONTENT_TYPE, MINE_TYPE_SVG } from './constants.js';
 
 const parseSvg = (svgData: string): SVGSVGElement | null => {
   const parser = new DOMParser();

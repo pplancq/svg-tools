@@ -1,1 +1,1 @@
-export { getSvg } from './getSvg';
+export { getSvg } from './getSvg.js';

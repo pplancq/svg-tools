@@ -5,9 +5,11 @@
   "description": "React svg component to inject svg in dom",
   "author": "pplancq <paul.plancq@outlook.fr>",
   "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pplancq/svg-tools",
+    "url": "git+https://github.com/pplancq/svg-tools.git",
     "directory": "packages/svg-react"
   },
   "scripts": {
