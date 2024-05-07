@@ -1,1 +1,1 @@
-export { hello } from './hello/hello';
+export { getSvg } from './getSvg';

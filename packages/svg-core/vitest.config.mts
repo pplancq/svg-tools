@@ -10,6 +10,7 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [viteTsconfigPaths(), svgr()],
     test: {
+      environment: 'jsdom',
       setupFiles: resolve(__dirname, './vitest.setup.ts'),
       clearMocks: true,
       css: false,
@@ -32,11 +33,11 @@ export default defineConfig(({ mode }) => {
         functions: 75,
         branches: 80,
         statements: 80,
-        include: ['packages/*/ests/**/*.[jt]s?(x)'],
+        include: ['src/**/*.[jt]s?(x)'],
         exclude: [
-          'packages/*/src/**/*.d.[jt]s?(x)',
-          'packages/*/src/**/*.types.[jt]s?(x)',
-          'packages/*/src/**/index.[jt]s?(x)',
+          'src/**/*.d.[jt]s?(x)',
+          'src/**/*.types.[jt]s?(x)',
+          'src/**/index.[jt]s?(x)',
         ],
       },
     },
