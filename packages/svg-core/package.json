@@ -36,7 +36,7 @@
     "@pplancq/prettier-config": "^1.0.2",
     "@testing-library/jest-dom": "^6.4.5",
     "@types/dompurify": "^3.0.5",
-    "@types/node": "^20.12.8",
+    "@types/node": "^20.12.10",
     "@vitest/coverage-v8": "^1.5.3",
     "concurrently": "^8.2.2",
     "eslint": "^8.57.0",
