@@ -2,7 +2,7 @@
   "name": "@pplancq/svg-core",
   "version": "0.0.0",
   "license": "MIT",
-  "description": "Inject svg in dom",
+  "description": "A functions for asynchronously loading SVG files into the DOM",
   "author": "pplancq <paul.plancq@outlook.fr>",
   "main": "build/index.js",
   "types": "build/index.d.ts",

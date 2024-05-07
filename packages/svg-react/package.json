@@ -2,7 +2,7 @@
   "name": "@pplancq/svg-react",
   "version": "0.0.0",
   "license": "MIT",
-  "description": "React svg component to inject svg in dom",
+  "description": "A React component designed to load SVG files efficiently",
   "author": "pplancq <paul.plancq@outlook.fr>",
   "main": "build/index.js",
   "types": "build/index.d.ts",

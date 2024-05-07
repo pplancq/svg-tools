@@ -1,7 +1,7 @@
 {
   "name": "@pplancq/svg-tools",
   "license": "MIT",
-  "description": "Tools for svg",
+  "description": "An innovative tooling for asynchronous and ecological loading of SVG files",
   "author": "pplancq <paul.plancq@outlook.fr>",
   "repository": {
     "type": "git",
