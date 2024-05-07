@@ -16,6 +16,7 @@
     "prelint": "npm run build --workspace=@pplancq/svg-core",
     "lint": "npm run lint --workspace=packages",
     "package:check": "npm exec --yes package-lock-utd@1.1.3",
+    "release": "multi-semantic-release",
     "prepare": "husky"
   },
   "bugs": {

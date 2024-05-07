@@ -33,7 +33,7 @@
     "react"
   ],
   "dependencies": {
-    "@pplancq/svg-core": "^0.0.0"
+    "@pplancq/svg-core": "*"
   },
   "peerDependencies": {
     "react": "^18.3.1",
