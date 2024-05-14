@@ -13,6 +13,7 @@
     "directory": "packages/svg-core"
   },
   "scripts": {
+    "version": "git add ../../package-lock.json",
     "prebuild": "rimraf build",
     "build": "tsc",
     "test": "vitest",

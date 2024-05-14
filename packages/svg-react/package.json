@@ -13,6 +13,7 @@
     "directory": "packages/svg-react"
   },
   "scripts": {
+    "version": "git add ../../package-lock.json",
     "prebuild": "rimraf build",
     "build": "tsc",
     "test": "vitest",
