@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest';
-import { CONTENT_TYPE, MINE_TYPE_SVG } from '../src/constants';
-import { fetchSvg } from '../src/fetchSvg';
+import { CONTENT_TYPE, MINE_TYPE_SVG } from '../src/constants.js';
+import { fetchSvg } from '../src/fetchSvg.js';
 
 const svg =
   '<svg width="100" height="100" fill="red" stroke="green" stroke-width="4"><circle cx="50" cy="50" r="40"/></svg>';
@@ -17,7 +17,7 @@ describe('fetchSvg', () => {
 
     const result = await fetchSvg('/foo.svg');
 
-    expect(result.innerHTML).toStrictEqual('<circle cx="50" cy="50" r="40"/>');
+    expect(result).toStrictEqual(svg);
   });
 
   it('should throw an error if the file is not a valid SVG', async () => {
