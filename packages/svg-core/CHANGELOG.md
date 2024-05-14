@@ -1,3 +1,10 @@
+## @pplancq/svg-core [1.0.2](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.0.1...@pplancq/svg-core@1.0.2) (2024-05-14)
+
+
+### Bug Fixes
+
+* sanitize svg before merge in svgEl ([4db7e89](https://github.com/pplancq/svg-tools/commit/4db7e897844a0377259650d80db62e0d2961fcec))
+
 ## @pplancq/svg-core [1.0.1](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.0.0...@pplancq/svg-core@1.0.1) (2024-05-07)
 
 
