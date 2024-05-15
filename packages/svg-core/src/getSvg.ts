@@ -1,4 +1,4 @@
-import { sanitize } from 'dompurify';
+import DOMPurify from 'dompurify';
 import { fetchSvg } from './fetchSvg.js';
 import { mergeAttributes } from './mergeAttributes.js';
 
@@ -9,7 +9,7 @@ export const getSvg = async (path: string | URL, svgElement?: SVGSVGElement): Pr
     const svgData = await fetchSvg(path);
 
     const parent = document.createElement('div');
-    parent.innerHTML = sanitize(svgData, {
+    parent.innerHTML = DOMPurify.sanitize(svgData, {
       USE_PROFILES: { svg: true, svgFilters: true },
       IN_PLACE: true,
     });
