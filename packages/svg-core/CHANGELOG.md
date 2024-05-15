@@ -1,3 +1,10 @@
+## @pplancq/svg-core [1.0.3](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.0.2...@pplancq/svg-core@1.0.3) (2024-05-15)
+
+
+### Bug Fixes
+
+* fixed import and use of DOMPurify ([a12123f](https://github.com/pplancq/svg-tools/commit/a12123f184d0fd3fbe36e213c307e87610697204))
+
 ## @pplancq/svg-core [1.0.2](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.0.1...@pplancq/svg-core@1.0.2) (2024-05-14)
 
 
