@@ -15,7 +15,7 @@ import { Svg } from '@pplancq/svg-react';
 import mySvg from './my-svg.svg';
 
 export const App = () => {
-  return <Svg src={mySvg} atl="mySvg" fill="red" />;
+  return <Svg src={mySvg} alt="mySvg" fill="red" />;
 }
 ```
 
