@@ -1,6 +1,13 @@
 # @pplancq/svg-tools
 
-This repository contains a set of packages designed to asynchronously load SVG files directly into the DOM, similar to the <img> tag.\
+[![Build](https://github.com/pplancq/svg-tools/actions/workflows/build.yaml/badge.svg?branch=main)](https://github.com/pplancq/svg-tools/actions/workflows/build.yaml)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=pplancq_svg-tools&metric=coverage)](https://sonarcloud.io/summary/new_code?id=pplancq_svg-tools)
+[![GitHub License](https://img.shields.io/github/license/pplancq/svg-tools)](https://github.com/pplancq/svg-tools?tab=MIT-1-ov-file#readme)
+
+[![NPM Unpacked Size](https://img.shields.io/npm/unpacked-size/%40pplancq%2Fsvg-core?label=%40pplancq%2Fsvg-core)](https://www.npmjs.com/package/@pplancq/svg-core)
+[![NPM Unpacked Size](https://img.shields.io/npm/unpacked-size/%40pplancq%2Fsvg-react?label=%40pplancq%2Fsvg-react)](https://www.npmjs.com/package/@pplancq/svg-react)
+
+This repository contains a set of packages designed to asynchronously load SVG files directly into the DOM, similar to the `<img>` tag.\
 It offers an efficient, high-performance solution for integrating SVG graphics into your web applications.
 
 ## Motivation
