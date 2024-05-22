@@ -1,3 +1,11 @@
+## @pplancq/svg-react [1.0.2](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@1.0.1...@pplancq/svg-react@1.0.2) (2024-05-22)
+
+
+### Bug Fixes
+
+* removal props in the alternative span ([9528abb](https://github.com/pplancq/svg-tools/commit/9528abb7a8e0ad390046dfa9a80c1a8d2bf8fd14))
+* use the safe state to avoid setstate when the component is no longer mounted ([513e97b](https://github.com/pplancq/svg-tools/commit/513e97bdf09335dbb008b1d1b138cc0b14a626dc))
+
 ## @pplancq/svg-react [1.0.1](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@1.0.0...@pplancq/svg-react@1.0.1) (2024-05-07)
 
 
