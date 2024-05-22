@@ -1,5 +1,5 @@
 import { getSvg } from '@pplancq/svg-core';
-import { type ComponentProps, type SVGProps, useLayoutEffect, useRef, useState } from 'react';
+import { type SVGProps, useLayoutEffect, useRef, useState } from 'react';
 
 type SvgProps = SVGProps<SVGSVGElement> & {
   src: string;
@@ -31,7 +31,7 @@ export const Svg = ({ src, alt, ...props }: SvgProps) => {
   }, [hasError, src]);
 
   if (hasError) {
-    return alt ? <span {...(props as ComponentProps<'span'>)}>{alt}</span> : null;
+    return alt ? <span>{alt}</span> : null;
   }
 
   return <svg {...props} ref={svgRef} />;
