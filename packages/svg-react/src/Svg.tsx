@@ -1,5 +1,6 @@
 import { getSvg } from '@pplancq/svg-core';
-import { type SVGProps, useLayoutEffect, useRef, useState } from 'react';
+import { type SVGProps, useLayoutEffect, useRef } from 'react';
+import { useSafeState } from './useSafeState.js';
 
 type SvgProps = SVGProps<SVGSVGElement> & {
   src: string;
@@ -8,7 +9,7 @@ type SvgProps = SVGProps<SVGSVGElement> & {
 
 export const Svg = ({ src, alt, ...props }: SvgProps) => {
   const svgRef = useRef<SVGSVGElement | null>(null);
-  const [hasError, setHasError] = useState(false);
+  const [hasError, setHasError] = useSafeState(false);
 
   useLayoutEffect(() => {
     if (hasError) {
@@ -28,6 +29,7 @@ export const Svg = ({ src, alt, ...props }: SvgProps) => {
         setHasError(true);
       }
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hasError, src]);
 
   if (hasError) {
