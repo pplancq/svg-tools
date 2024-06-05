@@ -1,3 +1,10 @@
+## @pplancq/svg-react [1.1.0](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@1.0.2...@pplancq/svg-react@1.1.0) (2024-06-05)
+
+
+### Features
+
+* added alt text on aria-label of svg for a11y ([6c128ff](https://github.com/pplancq/svg-tools/commit/6c128ff54d5131aea1e1c270a0532571c9ba44fa))
+
 ## @pplancq/svg-react [1.0.2](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@1.0.1...@pplancq/svg-react@1.0.2) (2024-05-22)
 
 

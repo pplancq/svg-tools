@@ -1,6 +1,6 @@
 {
   "name": "@pplancq/svg-react",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "license": "MIT",
   "description": "A React component designed to load SVG files efficiently",
   "author": "pplancq <paul.plancq@outlook.fr>",
