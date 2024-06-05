@@ -36,5 +36,5 @@ export const Svg = ({ src, alt, ...props }: SvgProps) => {
     return alt ? <span>{alt}</span> : null;
   }
 
-  return <svg {...props} ref={svgRef} />;
+  return <svg {...props} ref={svgRef} aria-label={alt || props['aria-label']} />;
 };
