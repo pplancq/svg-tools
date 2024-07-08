@@ -58,7 +58,7 @@
     "prettier": "^3.3.2",
     "react": "*",
     "react-dom": "*",
-    "rimraf": "^5.0.7",
+    "rimraf": "^5.0.8",
     "typescript": "^5.5.3",
     "vite-plugin-svgr": "^4.2.0",
     "vite-tsconfig-paths": "^4.3.2",
