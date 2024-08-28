@@ -27,6 +27,25 @@ describe('<Svg />', () => {
     });
   });
 
+  it('should have change on attribute aria-busy', async () => {
+    fetchMock.mockResolvedValueOnce({
+      headers: new Headers([[CONTENT_TYPE, MINE_TYPE_SVG]]),
+      text: () => Promise.resolve(svgData),
+    });
+
+    render(<Svg src="/foo.svg" aria-hidden aria-label="foo" />);
+    const svg = screen.getByLabelText('foo');
+
+    expect(svg).toHaveAttribute('aria-busy', 'true');
+
+    await waitFor(() => {
+      const element = screen.getByLabelText('circle');
+      expect(element).toBeInTheDocument();
+    });
+
+    expect(svg).toHaveAttribute('aria-busy', 'false');
+  });
+
   it('renders fallback when src not found', async () => {
     fetchMock.mockRejectedValue({
       headers: new Headers(),
