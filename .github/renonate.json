@@ -1,0 +1,3 @@
+{
+  "extends": ["github:pplancq/renovate-config"]
+}
