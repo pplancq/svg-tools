@@ -1,3 +1,10 @@
+## @pplancq/svg-react [1.2.0](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@1.1.0...@pplancq/svg-react@1.2.0) (2024-08-28)
+
+### Features
+
+* enhance accessibility by adding aria-busy attribute to SVG component ([2f4520b](https://github.com/pplancq/svg-tools/commit/2f4520b7f6f760ef0feef530a8fc1df3f0f93d3c))
+* implement forwardRef and useImperativeHandle in SVG component ([345d004](https://github.com/pplancq/svg-tools/commit/345d004a3ad9690d91b935dfc27397525897e03b))
+
 ## @pplancq/svg-react [1.1.0](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@1.0.2...@pplancq/svg-react@1.1.0) (2024-06-05)
 
 
