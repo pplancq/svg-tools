@@ -1,5 +1,5 @@
 import { getSvg } from '@pplancq/svg-core';
-import { type SVGProps, useLayoutEffect, useRef } from 'react';
+import { forwardRef, type SVGProps, useImperativeHandle, useLayoutEffect, useRef } from 'react';
 import { useSafeState } from './useSafeState.js';
 
 type SvgProps = SVGProps<SVGSVGElement> & {
@@ -7,8 +7,9 @@ type SvgProps = SVGProps<SVGSVGElement> & {
   alt?: string;
 };
 
-export const Svg = ({ src, alt, ...props }: SvgProps) => {
+export const Svg = forwardRef<SVGSVGElement, SvgProps>(({ src, alt, ...props }, ref) => {
   const svgRef = useRef<SVGSVGElement | null>(null);
+  useImperativeHandle(ref, () => svgRef.current as SVGSVGElement);
   const [hasError, setHasError] = useSafeState(false);
 
   useLayoutEffect(() => {
@@ -37,4 +38,6 @@ export const Svg = ({ src, alt, ...props }: SvgProps) => {
   }
 
   return <svg {...props} ref={svgRef} aria-label={alt || props['aria-label']} />;
-};
+});
+
+Svg.displayName = 'Svg';
