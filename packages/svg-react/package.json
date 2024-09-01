@@ -41,7 +41,7 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@pplancq/eslint-config": "^2.2.0",
+    "@pplancq/eslint-config": "^2.3.0",
     "@pplancq/prettier-config": "^1.2.0",
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.0",
