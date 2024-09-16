@@ -31,7 +31,7 @@
     "@pplancq/commitlint-config": "^2.2.0",
     "@pplancq/semantic-release-config": "^1.5.0",
     "husky": "^9.1.6",
-    "lint-staged": "^15.2.9",
+    "lint-staged": "^15.2.10",
     "semantic-release": "^23.1.1",
     "tsc-files": "^1.1.4"
   },
