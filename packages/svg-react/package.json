@@ -19,8 +19,8 @@
     "test": "vitest",
     "test:ci": "vitest run --coverage",
     "lint": "concurrently --prefix-colors auto \"npm:eslint\" \"npm:tsc\"",
-    "eslint": "eslint src --ext js,jsx,ts,tsx",
-    "eslint:fix": "eslint src --ext js,jsx,ts,tsx --fix",
+    "eslint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
+    "eslint:fix": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
     "tsc": "tsc --noEmit"
   },
   "engines": {
@@ -41,7 +41,7 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@pplancq/eslint-config": "^3.0.1",
+    "@pplancq/eslint-config": "^4.0.0",
     "@pplancq/prettier-config": "^1.2.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.0.1",
@@ -52,7 +52,7 @@
     "@vitejs/plugin-react": "^4.3.3",
     "@vitest/coverage-v8": "^2.1.4",
     "concurrently": "^9.1.0",
-    "eslint": "^8.57.1",
+    "eslint": "^9.14.0",
     "eslint-plugin-prettier": "^5.2.1",
     "jsdom": "^25.0.1",
     "prettier": "^3.3.3",
@@ -66,13 +66,6 @@
     "vitest-sonar-reporter": "^2.0.0"
   },
   "prettier": "@pplancq/prettier-config",
-  "eslintConfig": {
-    "extends": [
-      "@pplancq/eslint-config/react",
-      "@pplancq/eslint-config/vitest",
-      "@pplancq/eslint-config/prettier"
-    ]
-  },
   "lint-staged": {
     "*.(js|jsx|ts|tsx)": "eslint --fix",
     "*.{ts,tsx}": "tsc-files --noEmit"
