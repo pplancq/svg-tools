@@ -20,7 +20,7 @@ export const getSvg = async (path: string | URL, svgElement?: SVGSVGElement): Pr
     svgEl.innerHTML = svg.innerHTML;
 
     return svgEl;
-  } catch (e) {
+  } catch {
     return null;
   }
 };
