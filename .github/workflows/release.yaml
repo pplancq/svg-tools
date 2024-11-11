@@ -47,4 +47,4 @@ jobs:
           GIT_COMMITTER_NAME: release[bot]
           GITHUB_DISABLED_SUCCESS_COMMENT: 'true'
           GITHUB_DISABLED_RELEASED_LABELS: 'true'
-        run: npm run release
+        run: npm run release -- --debug
