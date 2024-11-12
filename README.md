@@ -26,10 +26,10 @@ I hope that this solution will help other developers to create more powerful and
 
 ## Package Details
 
-| Package Name                                           | Version                                                                                                      | Description                                                   |
-|--------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
-| [`@pplancq/svg-core`](./packages/svg-core/README.md)   | [![](https://img.shields.io/npm/v/%40pplancq%2Fsvg-core)](https://www.npmjs.com/package/@pplancq/svg-core)   | A functions for asynchronously loading SVG files into the DOM |
-| [`@pplancq/svg-react`](./packages/svg-react/README.md) | [![](https://img.shields.io/npm/v/%40pplancq%2Fsvg-react)](https://www.npmjs.com/package/@pplancq/svg-react) | A React component designed to load SVG files efficiently      |
+| Package Name                                           | Version                                                                                                      | Package Name                                   | Description                                                   |
+|--------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|------------------------------------------------|---------------------------------------------------------------|
+| [`@pplancq/svg-core`](./packages/svg-core/README.md)   | [![](https://img.shields.io/npm/v/%40pplancq%2Fsvg-core)](https://www.npmjs.com/package/@pplancq/svg-core)   | [Changelog](./packages/svg-core/CHANGELOG.md)  | A functions for asynchronously loading SVG files into the DOM |
+| [`@pplancq/svg-react`](./packages/svg-react/README.md) | [![](https://img.shields.io/npm/v/%40pplancq%2Fsvg-react)](https://www.npmjs.com/package/@pplancq/svg-react) | [Changelog](./packages/svg-react/CHANGELOG.md) | A React component designed to load SVG files efficiently      |
 
 ## Getting Started
 
