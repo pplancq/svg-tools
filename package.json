@@ -35,11 +35,6 @@
     "semantic-release": "^24.2.0",
     "tsc-files": "^1.1.4"
   },
-  "commitlint": {
-    "extends": [
-      "@pplancq/commitlint-config"
-    ]
-  },
   "lint-staged": {
     "(package|package-lock).json": "npm run package:check"
   },
