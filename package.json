@@ -30,7 +30,7 @@
     "@commitlint/cli": "^19.6.0",
     "@pplancq/commitlint-config": "^2.2.0",
     "@pplancq/semantic-release-config": "^1.6.0",
-    "husky": "^9.1.6",
+    "husky": "^9.1.7",
     "lint-staged": "^15.2.10",
     "semantic-release": "^24.2.0",
     "tsc-files": "^1.1.4"
