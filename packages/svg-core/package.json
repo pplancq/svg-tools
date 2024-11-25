@@ -39,7 +39,7 @@
     "@types/dompurify": "^3.0.5",
     "@vitest/coverage-v8": "^2.1.5",
     "concurrently": "^9.1.0",
-    "eslint": "^9.14.0",
+    "eslint": "^9.15.0",
     "eslint-plugin-prettier": "^5.2.1",
     "jsdom": "^25.0.1",
     "prettier": "^3.3.3",
