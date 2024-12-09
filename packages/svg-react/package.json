@@ -54,7 +54,7 @@
     "eslint": "^9.16.0",
     "eslint-plugin-prettier": "^5.2.1",
     "jsdom": "^25.0.1",
-    "prettier": "^3.4.1",
+    "prettier": "^3.4.2",
     "react": "*",
     "react-dom": "*",
     "rimraf": "^6.0.1",
