@@ -2,7 +2,7 @@ import { type Dispatch, type SetStateAction, useCallback, useLayoutEffect, useRe
 
 export const useSafeState = <S>(initialState?: S): [S | undefined, Dispatch<SetStateAction<S | undefined>>] => {
   const [state, setState] = useState<S | undefined>(initialState);
-  const isMounted = useRef<boolean>();
+  const isMounted = useRef<boolean>(false);
 
   useLayoutEffect(() => {
     isMounted.current = true;

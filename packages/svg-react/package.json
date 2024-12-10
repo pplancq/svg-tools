@@ -37,8 +37,7 @@
     "@pplancq/svg-core": "*"
   },
   "peerDependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react": "^18.3.1 || ^19.0.0"
   },
   "devDependencies": {
     "@pplancq/eslint-config": "^4.0.3",
@@ -46,8 +45,7 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",
     "@testing-library/user-event": "^14.5.2",
-    "@types/react": "^18.3.14",
-    "@types/react-dom": "^18.3.2",
+    "@types/react": "^19.0.1",
     "@vitejs/plugin-react": "^4.3.4",
     "@vitest/coverage-v8": "^2.1.8",
     "concurrently": "^9.1.0",
@@ -55,8 +53,7 @@
     "eslint-plugin-prettier": "^5.2.1",
     "jsdom": "^25.0.1",
     "prettier": "^3.4.2",
-    "react": "*",
-    "react-dom": "*",
+    "react": "^19.0.0",
     "rimraf": "^6.0.1",
     "typescript": "^5.7.2",
     "vite-plugin-svgr": "^4.3.0",
