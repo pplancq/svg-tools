@@ -1,3 +1,14 @@
+## @pplancq/svg-react [1.3.0](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@1.2.0...@pplancq/svg-react@1.3.0) (2024-12-10)
+
+### Features
+
+* **svg-react:** add compatibility with React 19 ([66e8e04](https://github.com/pplancq/svg-tools/commit/66e8e04072b9fcac7b61d0c5fe11e727117d1f61))
+
+
+### Dependencies
+
+* **@pplancq/svg-core:** upgraded to 1.0.7
+
 ## @pplancq/svg-react [1.2.0](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@1.1.0...@pplancq/svg-react@1.2.0) (2024-08-28)
 
 ### Features
