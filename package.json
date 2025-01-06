@@ -34,7 +34,7 @@
     "lint-staged": "^15.3.0",
     "react": "^18.3.1 || ^19.0.0",
     "react-dom": "^18.3.1 || ^19.0.0",
-    "semantic-release": "^24.2.0",
+    "semantic-release": "^24.2.1",
     "tsc-files": "^1.1.4"
   },
   "overrides": {
