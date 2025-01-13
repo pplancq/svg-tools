@@ -29,7 +29,7 @@
     "@anolilab/multi-semantic-release": "^1.1.6",
     "@commitlint/cli": "^19.6.1",
     "@pplancq/commitlint-config": "^2.2.0",
-    "@pplancq/semantic-release-config": "^1.6.1",
+    "@pplancq/semantic-release-config": "^1.6.2",
     "husky": "^9.1.7",
     "lint-staged": "^15.3.0",
     "react": "^18.3.1 || ^19.0.0",
