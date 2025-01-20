@@ -1,12 +1,12 @@
-import { loadEnv } from 'vite'
-import { defineConfig } from 'vitest/config'
+import { loadEnv } from 'vite';
+import { defineConfig } from 'vitest/config';
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
 
   return {
     test: {
-      reporters: ['basic', 'junit', 'vitest-sonar-reporter'],
+      reporters: ['default', 'junit', 'vitest-sonar-reporter'],
       outputFile: {
         'vitest-sonar-reporter': 'sonar-report.xml',
         'junit': 'junit-report.xml',
