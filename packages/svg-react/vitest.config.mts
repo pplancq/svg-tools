@@ -23,9 +23,9 @@ export default defineConfig(({ mode }) => {
         junit: 'junit-report.xml',
       },
       poolOptions: {
-        threads: {
-          minThreads: env.CI ? 1 : undefined,
-          maxThreads: env.CI ? 2 : undefined,
+        forks: {
+          minForks: env.CI ? 1 : undefined,
+          maxForks: env.CI ? 2 : undefined,
         },
       },
       coverage: {
