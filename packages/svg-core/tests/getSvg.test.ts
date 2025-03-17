@@ -5,6 +5,8 @@ import { CONTENT_TYPE, MINE_TYPE_SVG } from '../src/constants';
 const svg =
   '<svg width="100" height="100" fill="red" stroke="green" stroke-width="4"><circle cx="50" cy="50" r="40"/></svg>';
 
+const svgInline = `data:image/svg+xml,${encodeURIComponent(svg)}`;
+
 describe('getSvg', () => {
   const fetchMock = vi.fn();
   window.fetch = fetchMock;
@@ -47,5 +49,14 @@ describe('getSvg', () => {
 
     expect(result).toHaveAttribute('fill', '#fff');
     expect(result).toHaveAttribute('height', '60');
+  });
+
+  it('should have an svg inline', async () => {
+    const result = await getSvg(svgInline);
+
+    expect(fetchMock).not.toBeCalled();
+
+    expect(result).not.toBeNull();
+    expect(result?.innerHTML).toStrictEqual('<circle r="40" cy="50" cx="50"></circle>');
   });
 });

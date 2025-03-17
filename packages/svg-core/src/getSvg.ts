@@ -6,7 +6,12 @@ export const getSvg = async (path: string | URL, svgElement?: SVGSVGElement): Pr
   const svgEl = svgElement || document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 
   try {
-    const svgData = await fetchSvg(path);
+    let svgData = '';
+    if (typeof path === 'string' && path.startsWith('data:image/svg+xml')) {
+      svgData = decodeURIComponent(path.split(',')[1]);
+    } else {
+      svgData = await fetchSvg(path);
+    }
 
     const parent = document.createElement('div');
     parent.innerHTML = DOMPurify.sanitize(svgData, {
