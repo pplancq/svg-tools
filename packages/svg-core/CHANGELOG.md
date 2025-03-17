@@ -1,3 +1,9 @@
+## @pplancq/svg-core [1.1.0](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.0.9...@pplancq/svg-core@1.1.0) (2025-03-17)
+
+### Features
+
+* **svg-core:** add support for inline SVG data URIs in getSvg function ([ad3e7b5](https://github.com/pplancq/svg-tools/commit/ad3e7b577fd83b940d2a0b2db305af820bdda6d6))
+
 ## @pplancq/svg-core [1.0.9](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.0.8...@pplancq/svg-core@1.0.9) (2025-02-04)
 
 ### Bug Fixes
