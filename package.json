@@ -53,8 +53,7 @@
   },
   "multi-release": {
     "deps": {
-      "bump": "satisfy",
-      "prefix": "^"
+      "bump": "satisfy"
     }
   },
   "volta": {
