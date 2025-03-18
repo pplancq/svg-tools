@@ -5,7 +5,7 @@ import { CONTENT_TYPE, MINE_TYPE_SVG } from '../src/constants';
 const svg =
   '<svg width="100" height="100" fill="red" stroke="green" stroke-width="4"><circle cx="50" cy="50" r="40"/></svg>';
 
-const svgInline = `data:image/svg+xml,${encodeURIComponent(svg)}`;
+const svgInline = `data:${MINE_TYPE_SVG},${encodeURIComponent(svg)}`;
 
 describe('getSvg', () => {
   const fetchMock = vi.fn();
