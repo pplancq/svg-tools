@@ -1,3 +1,10 @@
+## @pplancq/svg-core [1.1.1](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.1.0...@pplancq/svg-core@1.1.1) (2025-03-18)
+
+### Bug Fixes
+
+* **svg-core:** fix inline SVG data base64 encoded in getSvg function ([091ef9f](https://github.com/pplancq/svg-tools/commit/091ef9f25920efb13177f880a409aa10f26d1643))
+* **svg-core:** use constant for SVG MIME type in getSvg function ([710cdb2](https://github.com/pplancq/svg-tools/commit/710cdb2187a018f3802cc174ab3fab5394665c84))
+
 ## @pplancq/svg-core [1.1.0](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.0.9...@pplancq/svg-core@1.1.0) (2025-03-17)
 
 ### Features
