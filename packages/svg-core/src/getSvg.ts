@@ -7,9 +7,10 @@ export const getSvg = async (path: string | URL, svgElement?: SVGSVGElement): Pr
   const svgEl = svgElement || document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 
   try {
-    let svgData = '';
-    if (typeof path === 'string' && path.startsWith(`data:${MINE_TYPE_SVG},`)) {
-      svgData = decodeURIComponent(path.split(',')[1]);
+    let svgData: string;
+    if (typeof path === 'string' && path.startsWith(`data:${MINE_TYPE_SVG}`)) {
+      const [prefix, svgEncoded] = path.split(',');
+      svgData = prefix.includes('base64') ? atob(svgEncoded) : decodeURIComponent(svgEncoded);
     } else {
       svgData = await fetchSvg(path);
     }

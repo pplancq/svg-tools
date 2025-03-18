@@ -5,7 +5,8 @@ import { CONTENT_TYPE, MINE_TYPE_SVG } from '../src/constants';
 const svg =
   '<svg width="100" height="100" fill="red" stroke="green" stroke-width="4"><circle cx="50" cy="50" r="40"/></svg>';
 
-const svgInline = `data:${MINE_TYPE_SVG},${encodeURIComponent(svg)}`;
+const svgInlineURI = `data:${MINE_TYPE_SVG},${encodeURIComponent(svg)}`;
+const svgInlineBase64 = `data:${MINE_TYPE_SVG};base64,${btoa(svg)}`;
 
 describe('getSvg', () => {
   const fetchMock = vi.fn();
@@ -51,8 +52,17 @@ describe('getSvg', () => {
     expect(result).toHaveAttribute('height', '60');
   });
 
-  it('should have an svg inline', async () => {
-    const result = await getSvg(svgInline);
+  it('should have an svg inline URIComponent', async () => {
+    const result = await getSvg(svgInlineURI);
+
+    expect(fetchMock).not.toBeCalled();
+
+    expect(result).not.toBeNull();
+    expect(result?.innerHTML).toStrictEqual('<circle r="40" cy="50" cx="50"></circle>');
+  });
+
+  it('should have an svg inline base64', async () => {
+    const result = await getSvg(svgInlineBase64);
 
     expect(fetchMock).not.toBeCalled();
 
