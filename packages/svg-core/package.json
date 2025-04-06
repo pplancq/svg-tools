@@ -58,6 +58,6 @@
     "extends": "../../package.json"
   },
   "dependencies": {
-    "dompurify": "^3.2.4"
+    "dompurify": "^3.2.5"
   }
 }
