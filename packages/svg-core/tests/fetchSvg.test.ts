@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest';
-import { CONTENT_TYPE, MINE_TYPE_SVG } from '../src/constants.js';
-import { fetchSvg } from '../src/fetchSvg.js';
+import { CONTENT_TYPE, MINE_TYPE_SVG } from '../src/constants';
+import { fetchSvg } from '../src/fetchSvg';
 
 const svg =
   '<svg width="100" height="100" fill="red" stroke="green" stroke-width="4"><circle cx="50" cy="50" r="40"/></svg>';

@@ -1,6 +1,6 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
-import { Svg } from '../src/Svg.js';
+import { Svg } from '../src';
 
 const CONTENT_TYPE = 'content-type';
 

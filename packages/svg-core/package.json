@@ -15,7 +15,7 @@
   "scripts": {
     "version": "git add ../../package-lock.json",
     "prebuild": "rimraf build",
-    "build": "tsc",
+    "build": "tsc --project tsconfig.build.json",
     "test": "vitest",
     "test:ci": "vitest run --coverage",
     "lint": "concurrently --prefix-colors auto \"npm:eslint\" \"npm:tsc\"",

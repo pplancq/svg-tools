@@ -17,8 +17,8 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "Node16",
-    "moduleResolution": "Node16",
+    "module": "ESNext",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "removeComments": true,
     "isolatedModules": true,
@@ -27,13 +27,10 @@
     "declaration": true,
   },
   "include": [
-    "src"
+    "src",
+    "tests",
   ],
   "exclude": [
     "node_modules",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx",
   ]
 }
