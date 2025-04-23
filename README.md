@@ -1,8 +1,21 @@
 # @pplancq/svg-tools
 
+## Build Status
+
 [![Build](https://github.com/pplancq/svg-tools/actions/workflows/build.yaml/badge.svg?branch=main)](https://github.com/pplancq/svg-tools/actions/workflows/build.yaml)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=pplancq_svg-tools&metric=coverage)](https://sonarcloud.io/summary/new_code?id=pplancq_svg-tools)
 [![GitHub License](https://img.shields.io/github/license/pplancq/svg-tools)](https://github.com/pplancq/svg-tools?tab=MIT-1-ov-file#readme)
+
+## Sonarcloud Quality Metrics
+
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=pplancq_svg-tools&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=pplancq_svg-tools)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=pplancq_svg-tools&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=pplancq_svg-tools)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=pplancq_svg-tools&metric=bugs)](https://sonarcloud.io/summary/new_code?id=pplancq_svg-tools)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=pplancq_svg-tools&metric=coverage)](https://sonarcloud.io/summary/new_code?id=pplancq_svg-tools)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=pplancq_svg-tools&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=pplancq_svg-tools)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=pplancq_svg-tools&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=pplancq_svg-tools)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=pplancq_svg-tools&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=pplancq_svg-tools)
+
+## NPM Package Sizes
 
 [![NPM Unpacked Size](https://img.shields.io/npm/unpacked-size/%40pplancq%2Fsvg-core?label=%40pplancq%2Fsvg-core)](https://www.npmjs.com/package/@pplancq/svg-core)
 [![NPM Unpacked Size](https://img.shields.io/npm/unpacked-size/%40pplancq%2Fsvg-react?label=%40pplancq%2Fsvg-react)](https://www.npmjs.com/package/@pplancq/svg-react)
