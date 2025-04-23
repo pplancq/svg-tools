@@ -60,6 +60,20 @@ describe('<Svg />', () => {
     });
   });
 
+  it('renders nothing when alt is not define and src fails to load', async () => {
+    fetchMock.mockRejectedValueOnce({
+      headers: new Headers(),
+      text: () => Promise.resolve('foo'),
+    });
+
+    render(<Svg src="/foo.svg" aria-label="test" />);
+
+    await waitFor(() => {
+      const fallback = screen.queryByText('foo');
+      expect(fallback).not.toBeInTheDocument();
+    });
+  });
+
   it('should reset hasError when src changes', async () => {
     fetchMock.mockRejectedValueOnce({
       headers: new Headers(),
