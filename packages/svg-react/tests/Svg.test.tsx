@@ -1,6 +1,6 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
-import { Svg } from '../src/Svg';
+import { Svg } from '../src/Svg.js';
 
 const CONTENT_TYPE = 'content-type';
 
@@ -56,6 +56,32 @@ describe('<Svg />', () => {
 
     await waitFor(() => {
       const element = screen.getByText('foo');
+      expect(element).toBeInTheDocument();
+    });
+  });
+
+  it('should reset hasError when src changes', async () => {
+    fetchMock.mockRejectedValueOnce({
+      headers: new Headers(),
+      text: () => Promise.resolve('foo'),
+    });
+
+    const { rerender } = render(<Svg src="/foo.svg" alt="foo" />);
+
+    await waitFor(() => {
+      const fallback = screen.getByText('foo');
+      expect(fallback).toBeInTheDocument();
+    });
+
+    fetchMock.mockResolvedValueOnce({
+      headers: new Headers([[CONTENT_TYPE, MINE_TYPE_SVG]]),
+      text: () => Promise.resolve(svgData),
+    });
+
+    rerender(<Svg src="/bar.svg" alt="bar" />);
+
+    await waitFor(() => {
+      const element = screen.getByLabelText('circle');
       expect(element).toBeInTheDocument();
     });
   });
