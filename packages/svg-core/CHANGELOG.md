@@ -1,3 +1,9 @@
+## @pplancq/svg-core [1.1.3](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.1.2...@pplancq/svg-core@1.1.3) (2025-05-06)
+
+### Bug Fixes
+
+* **svg-react:** fixed handling of inline SVGs encoded with encodeURI ([81b7b85](https://github.com/pplancq/svg-tools/commit/81b7b855d20b52928b9af04f102432039730b89d))
+
 ## @pplancq/svg-core [1.1.2](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.1.1...@pplancq/svg-core@1.1.2) (2025-04-07)
 
 ### Bug Fixes
