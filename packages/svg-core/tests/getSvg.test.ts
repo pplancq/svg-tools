@@ -69,4 +69,17 @@ describe('getSvg', () => {
     expect(result).not.toBeNull();
     expect(result?.innerHTML).toStrictEqual('<circle r="40" cy="50" cx="50"></circle>');
   });
+
+  it('should have an svg inline encoded with encodeURI', async () => {
+    const testSvg =
+      "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M15.54,11.29,9.88,5.64a1,1,0,0,0-1.42,0,1,1,0,0,0,0,1.41l4.95,5L8.46,17a1,1,0,0,0,0,1.41,1,1,0,0,0,.71.3,1,1,0,0,0,.71-.3l5.66-5.65A1,1,0,0,0,15.54,11.29Z'/></svg>";
+    const testSvgInlineURI = `data:${MINE_TYPE_SVG},${encodeURI(testSvg)}`;
+
+    const result = await getSvg(testSvgInlineURI);
+
+    expect(fetchMock).not.toBeCalled();
+    expect(result?.innerHTML).toStrictEqual(
+      '<path d="M15.54,11.29,9.88,5.64a1,1,0,0,0-1.42,0,1,1,0,0,0,0,1.41l4.95,5L8.46,17a1,1,0,0,0,0,1.41,1,1,0,0,0,.71.3,1,1,0,0,0,.71-.3l5.66-5.65A1,1,0,0,0,15.54,11.29Z"></path>',
+    );
+  });
 });

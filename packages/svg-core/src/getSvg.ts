@@ -1,7 +1,7 @@
 import DOMPurify from 'dompurify';
+import { MINE_TYPE_SVG } from './constants.js';
 import { fetchSvg } from './fetchSvg.js';
 import { mergeAttributes } from './mergeAttributes.js';
-import { MINE_TYPE_SVG } from './constants.js';
 
 export const getSvg = async (path: string | URL, svgElement?: SVGSVGElement): Promise<SVGSVGElement | null> => {
   const svgEl = svgElement || document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -9,8 +9,8 @@ export const getSvg = async (path: string | URL, svgElement?: SVGSVGElement): Pr
   try {
     let svgData: string;
     if (typeof path === 'string' && path.startsWith(`data:${MINE_TYPE_SVG}`)) {
-      const [prefix, svgEncoded] = path.split(',');
-      svgData = prefix.includes('base64') ? atob(svgEncoded) : decodeURIComponent(svgEncoded);
+      const svgEncoded = path.substring(path.indexOf(',') + 1);
+      svgData = path.includes('base64') ? atob(svgEncoded) : decodeURIComponent(svgEncoded);
     } else {
       svgData = await fetchSvg(path);
     }
