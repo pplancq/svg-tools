@@ -1,3 +1,9 @@
+## @pplancq/svg-core [1.2.0](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.1.3...@pplancq/svg-core@1.2.0) (2025-05-13)
+
+### Features
+
+* **svg-core:** update main and types fields to point to getSvg.js ([b96e46a](https://github.com/pplancq/svg-tools/commit/b96e46a890bd89c94634d5085a60a7086e4b6e99))
+
 ## @pplancq/svg-core [1.1.3](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.1.2...@pplancq/svg-core@1.1.3) (2025-05-06)
 
 ### Bug Fixes
