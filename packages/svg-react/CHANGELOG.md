@@ -1,3 +1,14 @@
+## @pplancq/svg-react [1.4.0](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@1.3.5...@pplancq/svg-react@1.4.0) (2025-05-13)
+
+### Features
+
+* **svg-react:** update main and types fields to point to getSvg.js ([08d8f8c](https://github.com/pplancq/svg-tools/commit/08d8f8cfdce2fe81d1a6e621d24fe03f8a2d9b17))
+
+
+### Dependencies
+
+* **@pplancq/svg-core:** upgraded to 1.2.0
+
 ## @pplancq/svg-react [1.3.5](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@1.3.4...@pplancq/svg-react@1.3.5) (2025-05-06)
 
 
