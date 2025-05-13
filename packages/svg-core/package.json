@@ -4,8 +4,14 @@
   "license": "MIT",
   "description": "A functions for asynchronously loading SVG files into the DOM",
   "author": "pplancq <paul.plancq@outlook.fr>",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
+  "main": "./build/getSvg.js",
+  "types": "./build/getSvg.d.ts",
+  "exports": {
+    ".": {
+      "import": "./build/getSvg.js",
+      "type": "./build/getSvg.d.ts"
+    }
+  },
   "type": "module",
   "repository": {
     "type": "git",
