@@ -4,8 +4,14 @@
   "license": "MIT",
   "description": "A React component designed to load SVG files efficiently",
   "author": "pplancq <paul.plancq@outlook.fr>",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
+  "main": "./build/Svg.js",
+  "types": "./build/Svg.d.ts",
+  "exports": {
+    ".": {
+      "import": "./build/Svg.js",
+      "types": "./build/Svg.d.ts"
+    }
+  },
   "type": "module",
   "repository": {
     "type": "git",
