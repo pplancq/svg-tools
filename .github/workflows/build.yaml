@@ -85,7 +85,7 @@ jobs:
         run: npm install --save-dev react@${{ matrix.react-version }} react-dom@${{ matrix.react-version }}
 
       - name: Run test with Node.Js v${{ matrix.node-version }}
-        run: npm run test:ci
+        run: npm run test
 
       - name: Upload sonar reports
         if: matrix.node-version == '22.x' && matrix.react-version == '19'

@@ -10,9 +10,9 @@
   "scripts": {
     "build": "npm run build --workspace=packages",
     "pretest": "npm run build --workspace=@pplancq/svg-core",
-    "test": "vitest",
-    "pretest:ci": "npm run build --workspace=@pplancq/svg-core",
-    "test:ci": "vitest run --coverage",
+    "test": "vitest run",
+    "pretest:watch": "npm run build --workspace=@pplancq/svg-core",
+    "test:watch": "vitest",
     "prelint": "npm run build --workspace=@pplancq/svg-core",
     "lint": "npm run lint --workspace=packages",
     "package:check": "npm exec --yes package-lock-utd@1.1.3",

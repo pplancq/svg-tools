@@ -20,8 +20,8 @@
   },
   "scripts": {
     "build": "rslib build",
-    "test": "vitest",
-    "test:ci": "vitest run --coverage",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "lint": "concurrently --prefix-colors auto \"npm:eslint\" \"npm:tsc\"",
     "eslint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
     "eslint:fix": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
