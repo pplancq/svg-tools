@@ -1,4 +1,4 @@
-import { CONTENT_TYPE, MINE_TYPE_SVG } from './constants.js';
+import { CONTENT_TYPE, MINE_TYPE_SVG } from './constants';
 
 const isValidSvg = (svgData: string): boolean => {
   const parser = new DOMParser();

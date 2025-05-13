@@ -1,6 +1,6 @@
 import { getSvg } from '@pplancq/svg-core';
 import { forwardRef, type SVGProps, useImperativeHandle, useLayoutEffect, useRef } from 'react';
-import { useSafeState } from './useSafeState.js';
+import { useSafeState } from './useSafeState';
 
 type SvgProps = Omit<SVGProps<SVGSVGElement>, 'aria-busy'> & {
   src: string;

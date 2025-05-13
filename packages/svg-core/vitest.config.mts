@@ -1,15 +1,10 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { loadEnv } from 'vite';
-import svgr from 'vite-plugin-svgr';
-import viteTsconfigPaths from 'vite-tsconfig-paths';
 import { defineConfig } from 'vitest/config';
 
-// eslint-disable-next-line import/no-default-export
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
 
   return {
-    plugins: [viteTsconfigPaths(), svgr()],
     test: {
       environment: 'jsdom',
       setupFiles: 'vitest.setup.ts',

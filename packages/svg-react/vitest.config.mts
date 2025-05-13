@@ -1,15 +1,12 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import react from '@vitejs/plugin-react';
 import { loadEnv } from 'vite';
-import viteTsconfigPaths from 'vite-tsconfig-paths';
 import { defineConfig } from 'vitest/config';
 
-// eslint-disable-next-line import/no-default-export
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
 
   return {
-    plugins: [react(), viteTsconfigPaths()],
+    plugins: [react()],
     test: {
       environment: 'jsdom',
       setupFiles: 'vitest.setup.ts',
