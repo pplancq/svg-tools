@@ -18,7 +18,9 @@
     "url": "git+https://github.com/pplancq/svg-tools.git",
     "directory": "packages/svg-react"
   },
+  "homepage": "https://pplancq.github.io/svg-tools/",
   "scripts": {
+    "dev": "rslib build --watch",
     "build": "rslib build",
     "test": "vitest run",
     "test:watch": "vitest",

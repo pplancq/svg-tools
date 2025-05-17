@@ -9,6 +9,7 @@ export default {
         'svg-tools',
         'svg-core',
         'svg-react',
+        'storybook',
         'deps',
         'release',
       ],
