@@ -17,6 +17,9 @@
     "lint:tsc": "tsc --noEmit"
   },
   "dependencies": {
+    "@pplancq/shelter-ui-css": "^1.0.0-alpha.1",
+    "@pplancq/shelter-ui-icon": "^1.0.0-alpha.1",
+    "@pplancq/shelter-ui-react": "^1.0.0-alpha.1",
     "@pplancq/svg-core": "*",
     "@pplancq/svg-react": "*",
     "react": "^19.1.0",
@@ -26,7 +29,9 @@
     "@pplancq/eslint-config": "^4.0.21",
     "@pplancq/prettier-config": "^1.2.4",
     "@pplancq/stylelint-config": "^3.1.1",
+    "@storybook/addon-a11y": "^9.0.0-rc.2",
     "@storybook/addon-docs": "^9.0.0-rc.2",
+    "@storybook/addon-links": "^9.0.0-rc.2",
     "@storybook/addon-onboarding": "^9.0.0-rc.2",
     "@storybook/react-vite": "^9.0.0-rc.2",
     "@types/react": "^19.1.2",
@@ -37,6 +42,8 @@
     "eslint-plugin-prettier": "^5.4.0",
     "eslint-plugin-storybook": "^9.0.0-rc.2",
     "prettier": "^3.5.3",
+    "react-docgen-typescript": "^2.2.2",
+    "remark-gfm": "^4.0.1",
     "storybook": "^9.0.0-rc.2",
     "stylelint": "^16.19.1",
     "stylelint-prettier": "^5.0.3",

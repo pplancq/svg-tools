@@ -1,0 +1,136 @@
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<style>
+  #storybook-root {
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
+
+  html,
+  *:not(code) {
+    font-family: var(--font-family-content);
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-regular);
+    letter-spacing: var(--letter-spacing-default);
+    line-height: var(--line-height-24);
+  }
+
+  .sbdocs.sbdocs-toc--custom * {
+    font-family: var(--font-family-content);
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-default);
+    line-height: var(--line-height-20);
+  }
+
+  .sbdocs.sbdocs-content {
+    max-width: 840px;
+  }
+
+  .docs-story {
+    background: var(--color-background-body);
+  }
+
+  /**
+   * The selectors were copied from Storybook to avoid style leakage
+   */
+
+  /* Display 3 */
+  .sbdocs :is(h1:not(.sb-anchor, .sbdocs-toc--custom *, .sb-unstyled, .sb-unstyled h1)) {
+    font-family: var(--font-family-display);
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-default);
+    line-height: var(--line-height-32);
+    margin-bottom: var(--margin-6);
+  }
+
+  @media (width >= 41.75rem) {
+    .sbdocs :is(h1:not(.sb-anchor, .sbdocs-toc--custom *, .sb-unstyled, .sb-unstyled h1)) {
+      font-size: var(--font-size-48);
+      line-height: var(--line-height-48);
+    }
+  }
+  /* Heading 2 */
+  .sbdocs :is(h2:not(.sb-anchor, .sbdocs-toc--custom *, .sb-unstyled, .sb-unstyled h2)) {
+    font-family: var(--font-family-display);
+    font-size: var(--font-size-20);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-default);
+    line-height: var(--line-height-28);
+  }
+
+  @media (width >= 41.75rem) {
+    .sbdocs :is(h2:not(.sb-anchor, .sbdocs-toc--custom *, .sb-unstyled, .sb-unstyled h2)) {
+      font-size: var(--font-size-24);
+      line-height: var(--line-height-32);
+    }
+  }
+  /* Heading 3 */
+  .sbdocs :is(h3:not(.sb-anchor, .sbdocs-toc--custom *, .sb-unstyled, .sb-unstyled h3)) {
+    font-family: var(--font-family-display);
+    font-size: var(--font-size-18);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-default);
+    line-height: var(--line-height-28);
+  }
+
+  @media (width >= 41.75rem) {
+    .sbdocs :is(h3:not(.sb-anchor, .sbdocs-toc--custom *, .sb-unstyled, .sb-unstyled h3)) {
+      font-size: var(--font-size-20);
+      line-height: var(--line-height-28);
+    }
+  }
+  /* Heading 4 */
+  .sbdocs :is(h4:not(.sb-anchor, .sbdocs-toc--custom *, .sb-unstyled, .sb-unstyled h4)) {
+    font-family: var(--font-family-display);
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-semi-bold);
+    letter-spacing: var(--letter-spacing-default);
+    line-height: var(--line-height-24);
+  }
+
+  @media (width >= 41.75rem) {
+    .sbdocs :is(h4:not(.sb-anchor, .sbdocs-toc--custom *, .sb-unstyled, .sb-unstyled h4)) {
+      font-size: var(--font-size-18);
+      line-height: var(--line-height-28);
+    }
+  }
+  /* test medium */
+  .sbdocs :is(p:not(.sb-anchor, .sbdocs-toc--custom *, .sb-unstyled, .sb-unstyled p)),
+  .sbdocs :is(table:not(.sb-anchor, .sbdocs-toc--custom *, .sb-unstyled, .sb-unstyled table)),
+  .sbdocs :is(li:not(.sb-anchor, .sbdocs-toc--custom *, .sb-unstyled, .sb-unstyled li)) {
+    font-family: var(--font-family-content);
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-regular);
+    letter-spacing: var(--letter-spacing-default);
+    line-height: var(--line-height-24);
+  }
+  .sbdocs :is(a:not(.sb-anchor, .sbdocs-toc--custom *, .sb-unstyled, .sb-unstyled a)) {
+    text-decoration: underline;
+    text-underline-position: under;
+  }
+  .sbdocs :is(em:not(.sb-anchor, .sbdocs-toc--custom *, .sb-unstyled, .sb-unstyled em)) {
+    font-style: italic;
+  }
+  .sbdocs :is(strong:not(.sb-anchor, .sbdocs-toc--custom *, .sb-unstyled, .sb-unstyled strong)) {
+    font-weight: var(--font-weight-bold);
+  }
+
+  /*  code medium */
+  .sbdocs code {
+    font-family: var(--font-family-code);
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: var(--letter-spacing-default);
+    line-height: var(--line-height-24);
+  }
+
+  /*  code small */
+  pre *,
+  .sbdocs .token {
+    font-family: var(--font-family-code) !important;
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: var(--letter-spacing-default);
+    line-height: var(--line-height-20);
+  }
+</style>
