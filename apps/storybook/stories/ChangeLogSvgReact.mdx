@@ -1,0 +1,6 @@
+import { Markdown, Meta } from '@storybook/addon-docs/blocks';
+import changeLog from '../../../packages/svg-react/CHANGELOG.md?raw';
+
+<Meta title="svg-react/ChangeLog" />
+
+<Markdown>{changeLog.replaceAll('## @pplancq/svg-react [', '## [v')}</Markdown>
