@@ -1,9 +1,14 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks';
+import * as SvgStories from './Svg.stories';
+
+<Meta name="Svg" of={SvgStories} />
+
 # @pplancq/svg-react
 
 A React component designed to efficiently load SVG files into your web applications,
 while following best practices for performance, accessibility, and eco-design.
 
-## General Overview
+## 🚀 General Overview
 
 `@pplancq/svg-react` allows you to integrate SVG images asynchronously and efficiently, directly into the DOM,
 without converting your SVGs into React components. This approach reduces your bundle size, improves loading times,
@@ -11,7 +16,7 @@ and helps lower your application's carbon footprint.
 
 This component is intended to be used in the same way as the HTML `<img>` tag, providing a simple and familiar API for developers used to working with standard images.
 
-### Philosophy and Advantages
+### 💡 Philosophy and Advantages
 
 - **Performance**: SVGs are loaded on demand, preventing your JavaScript bundle from becoming bloated.
 - **Eco-design**: Less transformation, less generated code, fewer resources consumed.
@@ -21,13 +26,13 @@ This component is intended to be used in the same way as the HTML `<img>` tag, p
 - **Modern bundler compatibility**: Also works with the inline mode of modern bundlers like Vite and Rspack,
   allowing you to import SVGs as optimized string assets.
 
-## Installation
+## 📦 Installation
 
 ```shell
 npm install @pplancq/svg-react
 ```
 
-## Usage in your React application
+## ⚡ Usage in your React application
 
 ```javascript
 import { Svg } from '@pplancq/svg-react';
@@ -38,11 +43,11 @@ export const App = () => {
 };
 ```
 
-## Usage Guide
+## 📖 Usage Guide
 
 This SVG component is designed to be as flexible and customizable as a native SVG element. It inherits all the props of a standard SVG component, so you can use it just like a regular SVG element.
 
-### Props
+### 🏷️ Props
 
 <table>
   <thead>
@@ -59,7 +64,7 @@ This SVG component is designed to be as flexible and customizable as a native SV
       <td>The source of the SVG icon. It can be a URL or an inline SVG string.</td>
       <td>yes</td>
       <td>
-        <code>https://my-domain/my-svg.svg</code>
+        <code>{'https://my-domain/my-svg.svg'}</code>
       </td>
     </tr>
     <tr>
@@ -67,21 +72,27 @@ This SVG component is designed to be as flexible and customizable as a native SV
       <td>Alternative text if the SVG image cannot be loaded (accessibility).</td>
       <td>no</td>
       <td>
-        <code>my-svg</code>
+        <code>user icon</code>
       </td>
     </tr>
   </tbody>
 </table>
 
-### Best Practices
+### ✅ Best Practices
 
 - Use the `alt` prop to improve accessibility.
 - Prefer asynchronous loading for large or non-critical SVGs.
 - Customize your SVGs via props (`fill`, `width`, `height`, etc.) for optimal integration.
 - You can also style your SVGs by applying CSS classes (`className`) to manage styles centrally.
 
-### Use Cases
+### 🛠️ Use Cases
 
 - Dynamic or themed icons.
 - Remote or local SVG illustrations.
 - Eco-friendly replacement for SVG imports transformed into React components.
+
+## 🧪 Demo
+
+<Canvas of={SvgStories.Playground} sourceState="shown" layout="centered" />
+
+<Controls of={SvgStories.Playground} />

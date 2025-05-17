@@ -1,5 +1,47 @@
+import arrowCircleRightIcon from '@pplancq/shelter-ui-icon/icon/arrow-circle-right.svg';
+
+import { Button, Icon } from '@pplancq/shelter-ui-react';
 import { Meta } from '@storybook/addon-docs/blocks';
+import defaultClasses from './Welcome.module.scss';
 
 <Meta title="Welcome" />
 
-# Welcome to Storybook
+# Welcome to @pplancq/svg-tools
+
+Looking for a new, modern, simple, and eco-friendly way to handle your SVGs?\
+You're in the right place!
+
+[![GitHub](https://img.shields.io/badge/GitHub-pplancq/svg--tools-blue?logo=github)](https://github.com/pplancq/svg-tools)
+[![NPM @pplancq/svg-react](https://img.shields.io/npm/v/@pplancq/svg-react?label=@pplancq/svg-react)](https://www.npmjs.com/package/@pplancq/svg-react)
+[![NPM @pplancq/svg-core](https://img.shields.io/npm/v/@pplancq/svg-core?label=@pplancq/svg-core)](https://www.npmjs.com/package/@pplancq/svg-core)
+
+## 🌱 Motivation
+
+> This project aims to provide a lightweight and eco-friendly alternative to systematically converting SVGs into React components.
+
+## 📦 Main packages
+
+- **@pplancq/svg-core**: Utility functions to load SVGs into the DOM.
+- **@pplancq/svg-react**: React component to easily integrate SVGs.
+
+## 🚀 Quick example
+
+```jsx
+import { Svg } from '@pplancq/svg-react';
+import mySvg from './my-svg.svg';
+
+export const App = () => <Svg src={mySvg} alt="My SVG" fill="red" />;
+```
+
+<div className={defaultClasses['getting-started-container']}>
+  <Button
+    component="a"
+    href={`${window.location.origin}${window.location.pathname.replace('/iframe.html', '')}/?path=/docs/package-svg-react--svg`}
+    variant="reverse"
+    size="large"
+    endIcon={<Icon icon={arrowCircleRightIcon} />}
+    className={[defaultClasses.button, 'sb-unstyled'].join(' ')}
+  >
+    {'Get started with the main Svg component'}
+  </Button>
+</div>
