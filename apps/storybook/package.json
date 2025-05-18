@@ -26,7 +26,7 @@
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@pplancq/eslint-config": "^4.0.21",
+    "@pplancq/eslint-config": "^4.0.22",
     "@pplancq/prettier-config": "^1.2.4",
     "@pplancq/stylelint-config": "^3.1.1",
     "@storybook/addon-a11y": "^9.0.0-rc.2",
