@@ -37,7 +37,7 @@
     "@pplancq/commitlint-config": "^2.2.2",
     "@pplancq/semantic-release-config": "^1.6.3",
     "husky": "^9.1.7",
-    "lint-staged": "^15.5.2",
+    "lint-staged": "^16.0.0",
     "react": "^18.3.1 || ^19.0.0",
     "react-dom": "^18.3.1 || ^19.0.0",
     "semantic-release": "^24.2.3",
