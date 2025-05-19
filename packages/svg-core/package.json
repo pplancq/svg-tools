@@ -40,7 +40,7 @@
   ],
   "devDependencies": {
     "@pplancq/eslint-config": "^4.0.22",
-    "@pplancq/prettier-config": "^1.2.4",
+    "@pplancq/prettier-config": "^1.2.5",
     "@rslib/core": "^0.7.1",
     "@testing-library/jest-dom": "^6.6.3",
     "@vitest/coverage-v8": "^3.1.3",
