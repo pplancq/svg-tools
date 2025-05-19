@@ -1,5 +1,5 @@
 import { getSvg } from '@pplancq/svg-core';
-import { forwardRef, type SVGProps, useImperativeHandle, useLayoutEffect, useRef } from 'react';
+import { type SVGProps, useImperativeHandle, useLayoutEffect, useRef } from 'react';
 import { useSafeState } from './useSafeState';
 
 type SvgProps = Omit<SVGProps<SVGSVGElement>, 'aria-busy'> & {
@@ -7,7 +7,7 @@ type SvgProps = Omit<SVGProps<SVGSVGElement>, 'aria-busy'> & {
   alt?: string;
 };
 
-export const Svg = forwardRef<SVGSVGElement, SvgProps>(({ src, alt, ...props }, ref) => {
+export const Svg = ({ src, alt, ref, ...props }: SvgProps) => {
   const svgRef = useRef<SVGSVGElement | null>(null);
   useImperativeHandle(ref, () => svgRef.current as SVGSVGElement);
   const [hasError, setHasError] = useSafeState(false);
@@ -42,6 +42,6 @@ export const Svg = forwardRef<SVGSVGElement, SvgProps>(({ src, alt, ...props }, 
   }
 
   return <svg {...props} ref={svgRef} aria-label={props['aria-label'] || alt} aria-busy />;
-});
+};
 
 Svg.displayName = 'Svg';
