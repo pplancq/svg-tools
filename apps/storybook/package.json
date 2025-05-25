@@ -17,7 +17,7 @@
     "lint:tsc": "tsc --noEmit"
   },
   "dependencies": {
-    "@pplancq/shelter-ui-css": "^1.0.0-alpha.1",
+    "@pplancq/shelter-ui-css": "^1.0.0-alpha.2",
     "@pplancq/shelter-ui-icon": "^1.0.0-alpha.1",
     "@pplancq/shelter-ui-react": "^1.0.0-alpha.2",
     "@pplancq/svg-core": "*",
