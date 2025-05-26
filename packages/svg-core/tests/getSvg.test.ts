@@ -21,7 +21,7 @@ describe('getSvg', () => {
     const result = await getSvg('/foo.svg');
 
     expect(result).not.toBeNull();
-    expect(result?.innerHTML).toStrictEqual('<circle r="40" cy="50" cx="50"></circle>');
+    expect(result?.innerHTML).toStrictEqual('<circle cx="50" cy="50" r="40"></circle>');
   });
 
   it('should not have an svg', async () => {
@@ -58,7 +58,7 @@ describe('getSvg', () => {
     expect(fetchMock).not.toBeCalled();
 
     expect(result).not.toBeNull();
-    expect(result?.innerHTML).toStrictEqual('<circle r="40" cy="50" cx="50"></circle>');
+    expect(result?.innerHTML).toStrictEqual('<circle cx="50" cy="50" r="40"></circle>');
   });
 
   it('should have an svg inline base64', async () => {
@@ -67,7 +67,7 @@ describe('getSvg', () => {
     expect(fetchMock).not.toBeCalled();
 
     expect(result).not.toBeNull();
-    expect(result?.innerHTML).toStrictEqual('<circle r="40" cy="50" cx="50"></circle>');
+    expect(result?.innerHTML).toStrictEqual('<circle cx="50" cy="50" r="40"></circle>');
   });
 
   it('should have an svg inline encoded with encodeURI', async () => {
