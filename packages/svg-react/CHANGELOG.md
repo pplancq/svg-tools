@@ -1,3 +1,28 @@
+## <small>1.4.1 (2025-05-26)</small>
+
+* chore(svg-tools): fix coverage reporting in CI environment ([a071a39](https://github.com/pplancq/svg-tools/commit/a071a39))
+* chore(storybook): initialize Storybook configuration and add Welcome page ([fa9d1ee](https://github.com/pplancq/svg-tools/commit/fa9d1ee))
+* chore(deps): update dependency @pplancq/eslint-config to ^4.0.22 ([b10c885](https://github.com/pplancq/svg-tools/commit/b10c885))
+* chore(deps): update dependency @pplancq/eslint-config to ^4.0.23 ([3f4c312](https://github.com/pplancq/svg-tools/commit/3f4c312))
+* chore(deps): update dependency @pplancq/prettier-config to ^1.2.5 ([2d381a7](https://github.com/pplancq/svg-tools/commit/2d381a7))
+* chore(deps): update dependency @pplancq/prettier-config to ^1.2.6 ([bbcfaa0](https://github.com/pplancq/svg-tools/commit/bbcfaa0))
+* chore(deps): update dependency @rslib/core to ^0.7.1 ([762e3b0](https://github.com/pplancq/svg-tools/commit/762e3b0))
+* chore(deps): update dependency @rslib/core to ^0.8.0 ([35683a5](https://github.com/pplancq/svg-tools/commit/35683a5))
+* chore(deps): update dependency @types/react to ^19.1.5 ([bb64f8c](https://github.com/pplancq/svg-tools/commit/bb64f8c))
+* chore(deps): update dependency @vitejs/plugin-react to ^4.5.0 ([96606ef](https://github.com/pplancq/svg-tools/commit/96606ef))
+* chore(deps): update dependency eslint to ^9.27.0 ([7c9a1cf](https://github.com/pplancq/svg-tools/commit/7c9a1cf))
+* chore(deps): update react monorepo ([17466b8](https://github.com/pplancq/svg-tools/commit/17466b8))
+* chore(deps): update vitest monorepo to ^3.1.4 ([47c1f93](https://github.com/pplancq/svg-tools/commit/47c1f93))
+* docs(storybook): add documentation and stories for Svg component ([f98548d](https://github.com/pplancq/svg-tools/commit/f98548d))
+
+
+
+
+
+### Dependencies
+
+* **@pplancq/svg-core:** upgraded to 1.2.1
+
 ## @pplancq/svg-react [1.4.0](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@1.3.5...@pplancq/svg-react@1.4.0) (2025-05-13)
 
 ### Features
