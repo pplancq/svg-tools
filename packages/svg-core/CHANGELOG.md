@@ -1,3 +1,18 @@
+## <small>1.2.1 (2025-05-26)</small>
+
+* test(svg-core): correct circle attribute order in SVG output assertions ([13239af](https://github.com/pplancq/svg-tools/commit/13239af))
+* fix(deps): update dependency dompurify to ^3.2.6 ([094ece2](https://github.com/pplancq/svg-tools/commit/094ece2))
+* chore(svg-tools): fix coverage reporting in CI environment ([a071a39](https://github.com/pplancq/svg-tools/commit/a071a39))
+* chore(storybook): initialize Storybook configuration and add Welcome page ([fa9d1ee](https://github.com/pplancq/svg-tools/commit/fa9d1ee))
+* chore(deps): update dependency @pplancq/eslint-config to ^4.0.22 ([b10c885](https://github.com/pplancq/svg-tools/commit/b10c885))
+* chore(deps): update dependency @pplancq/eslint-config to ^4.0.23 ([3f4c312](https://github.com/pplancq/svg-tools/commit/3f4c312))
+* chore(deps): update dependency @pplancq/prettier-config to ^1.2.5 ([2d381a7](https://github.com/pplancq/svg-tools/commit/2d381a7))
+* chore(deps): update dependency @pplancq/prettier-config to ^1.2.6 ([bbcfaa0](https://github.com/pplancq/svg-tools/commit/bbcfaa0))
+* chore(deps): update dependency @rslib/core to ^0.7.1 ([762e3b0](https://github.com/pplancq/svg-tools/commit/762e3b0))
+* chore(deps): update dependency @rslib/core to ^0.8.0 ([35683a5](https://github.com/pplancq/svg-tools/commit/35683a5))
+* chore(deps): update dependency eslint to ^9.27.0 ([7c9a1cf](https://github.com/pplancq/svg-tools/commit/7c9a1cf))
+* chore(deps): update vitest monorepo to ^3.1.4 ([47c1f93](https://github.com/pplancq/svg-tools/commit/47c1f93))
+
 ## @pplancq/svg-core [1.2.0](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.1.3...@pplancq/svg-core@1.2.0) (2025-05-13)
 
 ### Features
