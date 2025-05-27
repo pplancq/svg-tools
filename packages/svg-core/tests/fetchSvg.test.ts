@@ -1,5 +1,7 @@
 import { describe, expect, it, vi } from 'vitest';
 import { CONTENT_TYPE, MINE_TYPE_SVG } from '../src/constants';
+import { ContentSvgError } from '../src/Error/ContentSvgError';
+import { InvalidSvgError } from '../src/Error/InvalidSvgError';
 import { fetchSvg } from '../src/fetchSvg';
 
 const svg =
@@ -26,7 +28,7 @@ describe('fetchSvg', () => {
       text: () => Promise.resolve('foo'),
     });
 
-    await expect(fetchSvg('/foo.svg')).rejects.toThrow('The file is not a valid SVG');
+    await expect(fetchSvg('/foo.svg')).rejects.toThrow(InvalidSvgError);
   });
 
   it('should throw an error if the content of the file is not a valid SVG', async () => {
@@ -35,6 +37,6 @@ describe('fetchSvg', () => {
       text: () => Promise.resolve('foo'),
     });
 
-    await expect(fetchSvg('/foo.svg')).rejects.toThrow('The content of the file is not a valid SVG');
+    await expect(fetchSvg('/foo.svg')).rejects.toThrow(ContentSvgError);
   });
 });
