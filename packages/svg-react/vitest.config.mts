@@ -1,5 +1,6 @@
 import react from '@vitejs/plugin-react';
 import { loadEnv } from 'vite';
+// eslint-disable-next-line import/no-unresolved
 import { defineConfig } from 'vitest/config';
 
 export default defineConfig(({ mode }) => {
@@ -25,7 +26,7 @@ export default defineConfig(({ mode }) => {
         },
       },
       coverage: {
-        enabled: env.CI,
+        enabled: env.CI === 'true',
         reporter: ['lcov', 'json', 'html', 'text', 'cobertura'],
         provider: 'v8',
         lines: 80,
