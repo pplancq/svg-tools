@@ -1,5 +1,6 @@
 import { describe, expect, it, vi } from 'vitest';
 import { CONTENT_TYPE, MINE_TYPE_SVG } from '../src/constants';
+import { InvalidSvgError } from '../src/Error/InvalidSvgError';
 import { getSvg } from '../src/getSvg';
 
 const svg =
@@ -30,9 +31,7 @@ describe('getSvg', () => {
       text: () => Promise.resolve('foo'),
     });
 
-    const result = await getSvg('/foo.svg');
-
-    expect(result).toBeNull();
+    await expect(getSvg('/foo.svg')).rejects.toThrow(InvalidSvgError);
   });
 
   it('should merge in my svg', async () => {
