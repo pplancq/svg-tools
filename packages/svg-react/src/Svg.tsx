@@ -25,15 +25,13 @@ export const Svg = ({ src, alt, ref, ...props }: SvgProps) => {
       return;
     }
 
-    getSvg(src, svg).then(result => {
-      if (!result) {
+    getSvg(src, svg)
+      .then(result => {
+        result.setAttribute('aria-busy', 'false');
+      })
+      .catch(() => {
         setHasError(true);
-
-        return;
-      }
-
-      result.setAttribute('aria-busy', 'false');
-    });
+      });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hasError, src]);
 
