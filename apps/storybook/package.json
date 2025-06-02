@@ -34,7 +34,7 @@
     "@storybook/addon-links": "^9.0.1",
     "@storybook/addon-onboarding": "^9.0.1",
     "@storybook/react-vite": "^9.0.1",
-    "@types/react": "^19.1.5",
+    "@types/react": "^19.1.6",
     "@types/react-dom": "^19.1.5",
     "@vitejs/plugin-react": "^4.5.0",
     "concurrently": "^9.1.2",
