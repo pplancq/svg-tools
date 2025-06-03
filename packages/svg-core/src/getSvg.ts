@@ -1,7 +1,7 @@
 import DOMPurify from 'dompurify';
 import { MINE_TYPE_SVG } from './constants';
 import { fetchSvg } from './fetchSvg';
-import { mergeAttributes } from './mergeAttributes';
+import { mergeSvgContent } from './mergeSvgContent';
 
 /**
  * Retrieves an SVG element from a given path or URL, sanitizes it, and merges its attributes with an optional SVG element.
@@ -33,8 +33,5 @@ export const getSvg = async (path: string | URL, svgElement?: SVGSVGElement): Pr
 
   const svg = parent.firstChild as SVGSVGElement;
 
-  mergeAttributes(svg, svgEl);
-  svgEl.innerHTML = svg.innerHTML;
-
-  return svgEl;
+  return mergeSvgContent(svg, svgEl);
 };
