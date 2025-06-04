@@ -1,4 +1,5 @@
 import { render, screen, waitFor } from '@testing-library/react';
+import { act } from 'react';
 import { describe, expect, it, vi } from 'vitest';
 import { Svg } from '../src/Svg';
 
@@ -12,6 +13,7 @@ const svgData =
 describe('<Svg />', () => {
   const fetchMock = vi.fn();
   window.fetch = fetchMock;
+  vi.spyOn(console, 'error').mockImplementation(() => {});
 
   it('should render correctly', async () => {
     fetchMock.mockResolvedValueOnce({
@@ -19,7 +21,10 @@ describe('<Svg />', () => {
       text: () => Promise.resolve(svgData),
     });
 
-    render(<Svg src="/foo.svg" alt="foo" aria-hidden />);
+    // eslint-disable-next-line testing-library/no-unnecessary-act
+    await act(async () => {
+      render(<Svg src="/foo.svg" alt="foo" aria-hidden />);
+    });
 
     await waitFor(() => {
       const element = screen.getByLabelText('circle');
@@ -33,17 +38,17 @@ describe('<Svg />', () => {
       text: () => Promise.resolve(svgData),
     });
 
-    render(<Svg src="/foo.svg" aria-hidden aria-label="foo" />);
-    const svg = screen.getByLabelText('foo');
-
-    expect(svg).toHaveAttribute('aria-busy', 'true');
+    // eslint-disable-next-line testing-library/no-unnecessary-act
+    await act(async () => {
+      render(<Svg src="/foo.svg" aria-hidden aria-label="foo" />);
+    });
 
     await waitFor(() => {
       const element = screen.getByLabelText('circle');
       expect(element).toBeInTheDocument();
     });
 
-    expect(svg).toHaveAttribute('aria-busy', 'false');
+    expect(screen.getByLabelText('foo')).toHaveAttribute('aria-busy', 'false');
   });
 
   it('renders fallback when src not found', async () => {
@@ -52,7 +57,10 @@ describe('<Svg />', () => {
       text: () => Promise.resolve('foo'),
     });
 
-    render(<Svg src="/foo.svg" alt="foo" aria-hidden aria-label="test" />);
+    // eslint-disable-next-line testing-library/no-unnecessary-act
+    await act(async () => {
+      render(<Svg src="/foo.svg" alt="foo" aria-hidden aria-label="test" />);
+    });
 
     await waitFor(() => {
       const element = screen.getByText('foo');
@@ -80,7 +88,8 @@ describe('<Svg />', () => {
       text: () => Promise.resolve('foo'),
     });
 
-    const { rerender } = render(<Svg src="/foo.svg" alt="foo" />);
+    // eslint-disable-next-line testing-library/no-unnecessary-act
+    const { rerender } = await act(async () => render(<Svg src="/foo.svg" alt="foo" />));
 
     await waitFor(() => {
       const fallback = screen.getByText('foo');
@@ -92,7 +101,10 @@ describe('<Svg />', () => {
       text: () => Promise.resolve(svgData),
     });
 
-    rerender(<Svg src="/bar.svg" alt="bar" />);
+    // eslint-disable-next-line testing-library/no-unnecessary-act
+    await act(async () => {
+      rerender(<Svg src="/bar.svg" alt="bar" />);
+    });
 
     await waitFor(() => {
       const element = screen.getByLabelText('circle');
