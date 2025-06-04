@@ -1,3 +1,17 @@
+## @pplancq/svg-core 2.0.0-alpha.1 (2025-06-04)
+
+* feat(svg-core): implement mergeSvgContent function and update exports ([36d6711](https://github.com/pplancq/svg-tools/commit/36d6711))
+* feat(svg-core)!: introduce custom error classes for SVG validation ([08cf325](https://github.com/pplancq/svg-tools/commit/08cf325))
+* chore(svg-tools): update coverage configuration to check for true string in CI environment ([e5ad7e2](https://github.com/pplancq/svg-tools/commit/e5ad7e2))
+* chore(deps): update dependency @pplancq/eslint-config to ^4.0.24 ([4d6bc3a](https://github.com/pplancq/svg-tools/commit/4d6bc3a))
+* chore(deps): update dependency @rslib/core to ^0.9.1 ([0fea1be](https://github.com/pplancq/svg-tools/commit/0fea1be))
+* chore(deps): update dependency eslint-plugin-prettier to ^5.4.1 ([a97bd30](https://github.com/pplancq/svg-tools/commit/a97bd30))
+
+
+### BREAKING CHANGE
+
+* the getSvg function now throws custom exceptions (InvalidSvgError, ContentSvgError) in case of errors when retrieving or validating an SVG.
+
 ## <small>1.2.1 (2025-05-26)</small>
 
 * test(svg-core): correct circle attribute order in SVG output assertions ([13239af](https://github.com/pplancq/svg-tools/commit/13239af))
