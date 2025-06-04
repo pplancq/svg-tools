@@ -1,3 +1,28 @@
+## @pplancq/svg-react 2.0.0-alpha.1 (2025-06-04)
+
+* feat(svg-react): migrate Svg component to React 19 use() API ([2181444](https://github.com/pplancq/svg-tools/commit/2181444))
+* fix(svg-react): handle SVG loading errors by setting hasError state ([c9066ff](https://github.com/pplancq/svg-tools/commit/c9066ff))
+* refactor(svg-react): refactor Svg component to remove forwardRef and adjust props handling ([c911ed5](https://github.com/pplancq/svg-tools/commit/c911ed5))
+* feat(svg-tools)!: update peer dependencies to require React 19 ([1b7319e](https://github.com/pplancq/svg-tools/commit/1b7319e))
+* chore(svg-tools): replace @vitejs/plugin-react with @vitejs/plugin-react-swc ([c89d4ea](https://github.com/pplancq/svg-tools/commit/c89d4ea))
+* chore(svg-tools): update coverage configuration to check for true string in CI environment ([e5ad7e2](https://github.com/pplancq/svg-tools/commit/e5ad7e2))
+* chore(deps): update dependency @pplancq/eslint-config to ^4.0.24 ([4d6bc3a](https://github.com/pplancq/svg-tools/commit/4d6bc3a))
+* chore(deps): update dependency @rslib/core to ^0.9.1 ([0fea1be](https://github.com/pplancq/svg-tools/commit/0fea1be))
+* chore(deps): update dependency @types/react to ^19.1.6 ([9810518](https://github.com/pplancq/svg-tools/commit/9810518))
+* chore(deps): update dependency eslint-plugin-prettier to ^5.4.1 ([a97bd30](https://github.com/pplancq/svg-tools/commit/a97bd30))
+
+
+### BREAKING CHANGE
+
+* React 18 is no longer supported. The minimum required version is now React 19.
+
+
+
+
+### Dependencies
+
+* **@pplancq/svg-core:** upgraded to 2.0.0-alpha.1
+
 ## <small>1.4.1 (2025-05-26)</small>
 
 * chore(svg-tools): fix coverage reporting in CI environment ([a071a39](https://github.com/pplancq/svg-tools/commit/a071a39))
