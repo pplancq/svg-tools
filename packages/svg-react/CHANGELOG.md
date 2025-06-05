@@ -1,3 +1,9 @@
+## @pplancq/svg-react [2.0.0-alpha.2](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@2.0.0-alpha.1...@pplancq/svg-react@2.0.0-alpha.2) (2025-06-05)
+
+### Features
+
+* **svg-react:** add renderSuspense helper for testing components with Suspense ([e4abfc4](https://github.com/pplancq/svg-tools/commit/e4abfc47c93683466b979fffe5427f55bb278ef7))
+
 ## @pplancq/svg-react 2.0.0-alpha.1 (2025-06-04)
 
 * feat(svg-react): migrate Svg component to React 19 use() API ([2181444](https://github.com/pplancq/svg-tools/commit/2181444))
