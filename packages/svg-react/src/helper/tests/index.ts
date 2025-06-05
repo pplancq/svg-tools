@@ -1,0 +1,1 @@
+export { renderSuspense } from './renderSuspense';

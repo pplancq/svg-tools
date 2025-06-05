@@ -1,6 +1,6 @@
-import { render, screen, waitFor } from '@testing-library/react';
-import { act } from 'react';
+import { screen, waitFor } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
+import { renderSuspense } from '../src/helper/tests';
 import { Svg } from '../src/Svg';
 
 const CONTENT_TYPE = 'content-type';
@@ -21,10 +21,7 @@ describe('<Svg />', () => {
       text: () => Promise.resolve(svgData),
     });
 
-    // eslint-disable-next-line testing-library/no-unnecessary-act
-    await act(async () => {
-      render(<Svg src="/foo.svg" alt="foo" aria-hidden />);
-    });
+    await renderSuspense(<Svg src="/foo.svg" alt="foo" aria-hidden />);
 
     await waitFor(() => {
       const element = screen.getByLabelText('circle');
@@ -38,10 +35,7 @@ describe('<Svg />', () => {
       text: () => Promise.resolve(svgData),
     });
 
-    // eslint-disable-next-line testing-library/no-unnecessary-act
-    await act(async () => {
-      render(<Svg src="/foo.svg" aria-hidden aria-label="foo" />);
-    });
+    await renderSuspense(<Svg src="/foo.svg" aria-hidden aria-label="foo" />);
 
     await waitFor(() => {
       const element = screen.getByLabelText('circle');
@@ -57,10 +51,7 @@ describe('<Svg />', () => {
       text: () => Promise.resolve('foo'),
     });
 
-    // eslint-disable-next-line testing-library/no-unnecessary-act
-    await act(async () => {
-      render(<Svg src="/foo.svg" alt="foo" aria-hidden aria-label="test" />);
-    });
+    await renderSuspense(<Svg src="/foo.svg" alt="foo" aria-hidden aria-label="test" />);
 
     await waitFor(() => {
       const element = screen.getByText('foo');
@@ -74,7 +65,7 @@ describe('<Svg />', () => {
       text: () => Promise.resolve('foo'),
     });
 
-    render(<Svg src="/foo.svg" aria-label="test" />);
+    await renderSuspense(<Svg src="/foo.svg" aria-label="test" />);
 
     await waitFor(() => {
       const fallback = screen.queryByText('foo');
@@ -88,8 +79,7 @@ describe('<Svg />', () => {
       text: () => Promise.resolve('foo'),
     });
 
-    // eslint-disable-next-line testing-library/no-unnecessary-act
-    const { rerender } = await act(async () => render(<Svg src="/foo.svg" alt="foo" />));
+    const { rerender } = await renderSuspense(<Svg src="/foo.svg" alt="foo" />);
 
     await waitFor(() => {
       const fallback = screen.getByText('foo');
@@ -101,10 +91,7 @@ describe('<Svg />', () => {
       text: () => Promise.resolve(svgData),
     });
 
-    // eslint-disable-next-line testing-library/no-unnecessary-act
-    await act(async () => {
-      rerender(<Svg src="/bar.svg" alt="bar" />);
-    });
+    await rerender(<Svg src="/bar.svg" alt="bar" />);
 
     await waitFor(() => {
       const element = screen.getByLabelText('circle');
