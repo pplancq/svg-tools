@@ -10,6 +10,10 @@
     ".": {
       "import": "./build/Svg.js",
       "types": "./build/Svg.d.ts"
+    },
+    "./tests": {
+      "import": "./build/helper/tests/index.js",
+      "types": "./build/helper/tests/index.d.ts"
     }
   },
   "type": "module",

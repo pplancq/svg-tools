@@ -1,4 +1,4 @@
-import appleIcon from '@pplancq/shelter-ui-icon/logo/apple-original.svg?url';
+import appleIcon from '@pplancq/shelter-ui-icon/logo/apple-original.svg?no-inline';
 import reactIcon from '@pplancq/shelter-ui-icon/logo/react-original.svg?inline';
 import { Svg } from '@pplancq/svg-react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
