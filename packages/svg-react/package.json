@@ -47,7 +47,13 @@
     "@pplancq/svg-core": "2.0.0-alpha.1"
   },
   "peerDependencies": {
+    "@testing-library/react": "^16.3.0",
     "react": "^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@testing-library/react": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@pplancq/eslint-config": "^4.0.24",
