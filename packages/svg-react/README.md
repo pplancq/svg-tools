@@ -3,6 +3,12 @@
 A React component designed to efficiently load SVG files into your web applications,
 while following best practices for performance, accessibility, and eco-design.
 
+## What’s new & Migrating from v1 to v2
+
+- **React 19 only**: Version 2 ne supporte plus React 18. Assurez-vous d'utiliser React 19 avant de mettre à jour.
+- **Nouvelle API use()**: Le composant `Svg` utilise désormais la nouvelle API `use()` de React 19, simplifiant la logique asynchrone et le chargement des SVG. Votre code existant peut nécessiter de légers ajustements pour s'aligner sur cette approche.
+- **Pas de changement majeur d'interface**: L'API du composant reste similaire, mais l'implémentation interne bénéficie des dernières fonctionnalités de React.
+
 ## General Overview
 
 `@pplancq/svg-react` allows you to integrate SVG images asynchronously and efficiently, directly into the DOM,
