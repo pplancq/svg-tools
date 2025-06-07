@@ -1,6 +1,6 @@
 {
   "name": "@pplancq/svg-react",
-  "version": "1.4.1",
+  "version": "2.0.0-alpha.2",
   "license": "MIT",
   "description": "A React component designed to load SVG files efficiently",
   "author": "pplancq <paul.plancq@outlook.fr>",
@@ -10,6 +10,10 @@
     ".": {
       "import": "./build/Svg.js",
       "types": "./build/Svg.d.ts"
+    },
+    "./tests": {
+      "import": "./build/helper/tests/index.js",
+      "types": "./build/helper/tests/index.d.ts"
     }
   },
   "type": "module",
@@ -40,10 +44,16 @@
     "react"
   ],
   "dependencies": {
-    "@pplancq/svg-core": "1.2.1"
+    "@pplancq/svg-core": "2.0.0-alpha.1"
   },
   "peerDependencies": {
-    "react": "^18.3.1 || ^19.0.0"
+    "@testing-library/react": "^16.3.0",
+    "react": "^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@testing-library/react": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@pplancq/eslint-config": "^4.0.24",
@@ -61,8 +71,8 @@
     "eslint-plugin-prettier": "^5.4.1",
     "jsdom": "^26.1.0",
     "prettier": "^3.5.3",
-    "react": "^18.3.1 || ^19.0.0",
-    "react-dom": "^18.3.1 || ^19.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "rimraf": "^6.0.1",
     "typescript": "^5.8.3",
     "vitest": "^3.1.4",

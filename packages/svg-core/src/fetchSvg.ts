@@ -1,4 +1,6 @@
 import { CONTENT_TYPE, MINE_TYPE_SVG } from './constants';
+import { ContentSvgError } from './Error/ContentSvgError';
+import { InvalidSvgError } from './Error/InvalidSvgError';
 
 const isValidSvg = (svgData: string): boolean => {
   const parser = new DOMParser();
@@ -11,7 +13,7 @@ export const fetchSvg = async (path: string | URL): Promise<string> => {
   const response = await fetch(path);
 
   if (response.headers.get(CONTENT_TYPE) !== MINE_TYPE_SVG) {
-    throw new Error('The file is not a valid SVG');
+    throw new InvalidSvgError();
   }
 
   const svgData = await response.text();
@@ -20,5 +22,5 @@ export const fetchSvg = async (path: string | URL): Promise<string> => {
     return svgData;
   }
 
-  throw new Error('The content of the file is not a valid SVG');
+  throw new ContentSvgError();
 };

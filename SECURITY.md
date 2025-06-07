@@ -4,8 +4,8 @@
 
 | Package Name                       | Version | Supported          |
 |------------------------------------|---------| ------------------ |
-| `@pplancq/svg-core`                | 1.0.x   | :white_check_mark: |
-| `@pplancq/svg-react`               | 1.0.x   | :white_check_mark: |
+| `@pplancq/svg-core`                | 2.0.x   | :white_check_mark: |
+| `@pplancq/svg-react`               | 2.0.x   | :white_check_mark: |
 
 ## Reporting a Vulnerability
 
