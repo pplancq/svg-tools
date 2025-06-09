@@ -1,3 +1,14 @@
+## @pplancq/svg-core [2.0.0](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.2.1...@pplancq/svg-core@2.0.0) (2025-06-09)
+
+### ⚠ BREAKING CHANGES
+
+* **svg-core:** the getSvg function now throws custom exceptions (InvalidSvgError, ContentSvgError) in case of errors when retrieving or validating an SVG.
+
+### Features
+
+* **svg-core:** implement mergeSvgContent function and update exports ([5f997f3](https://github.com/pplancq/svg-tools/commit/5f997f3785bf30ab2406ba63e26d915f0cbbd1af))
+* **svg-core:** introduce custom error classes for SVG validation ([ad16579](https://github.com/pplancq/svg-tools/commit/ad16579025e923d17d2e8d6b85ada35f27ddc8f2))
+
 ## @pplancq/svg-core 2.0.0-alpha.1 (2025-06-04)
 
 * feat(svg-core): implement mergeSvgContent function and update exports ([36d6711](https://github.com/pplancq/svg-tools/commit/36d6711))
