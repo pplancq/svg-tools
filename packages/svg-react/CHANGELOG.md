@@ -1,3 +1,24 @@
+## @pplancq/svg-react [2.0.0](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@1.4.1...@pplancq/svg-react@2.0.0) (2025-06-09)
+
+### ⚠ BREAKING CHANGES
+
+* **svg-tools:** React 18 is no longer supported. The minimum required version is now React 19.
+
+### Features
+
+* **svg-react:** add renderSuspense helper for testing components with Suspense ([d7525da](https://github.com/pplancq/svg-tools/commit/d7525da9088d92bfc7f0bcd0cb28b3511f9a0f1a))
+* **svg-react:** migrate Svg component to React 19 use() API ([439e468](https://github.com/pplancq/svg-tools/commit/439e4687ce57e97c5e118b308ba5e201decea9ce))
+* **svg-tools:** update peer dependencies to require React 19 ([c968c86](https://github.com/pplancq/svg-tools/commit/c968c8688fbbc9fc96ec8fcf8394c262a2948c6b))
+
+### Bug Fixes
+
+* **svg-react:** handle SVG loading errors by setting hasError state ([11ae675](https://github.com/pplancq/svg-tools/commit/11ae675f1ead1fa38f0cd8f77f19f88a7f9506f8))
+
+
+### Dependencies
+
+* **@pplancq/svg-core:** upgraded to 2.0.0
+
 ## @pplancq/svg-react [2.0.0-alpha.2](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@2.0.0-alpha.1...@pplancq/svg-react@2.0.0-alpha.2) (2025-06-05)
 
 ### Features
