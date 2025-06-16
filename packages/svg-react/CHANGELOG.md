@@ -1,3 +1,9 @@
+## @pplancq/svg-react [2.0.2](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@2.0.1...@pplancq/svg-react@2.0.2) (2025-06-16)
+
+### Bug Fixes
+
+* **svg-react:** import act form @testing-library/react ([01f713b](https://github.com/pplancq/svg-tools/commit/01f713b80eaf79df08829902f022f35a42e78595))
+
 ## @pplancq/svg-react [2.0.1](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@2.0.0...@pplancq/svg-react@2.0.1) (2025-06-16)
 
 ### Bug Fixes
