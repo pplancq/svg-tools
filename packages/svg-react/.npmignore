@@ -1,7 +1,7 @@
 coverage/
 node_modules/
 src/
-tests/
+/tests/
 junit-report.xml
 sonar-report.xml
 tsconfig.json
