@@ -1,3 +1,9 @@
+## @pplancq/svg-react [2.0.1](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@2.0.0...@pplancq/svg-react@2.0.1) (2025-06-16)
+
+### Bug Fixes
+
+* **svg-react:** include test helpers in npm package ([6be587a](https://github.com/pplancq/svg-tools/commit/6be587a270dda335b23549e0c100ec32bdf954cb))
+
 ## @pplancq/svg-react [2.0.0](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@1.4.1...@pplancq/svg-react@2.0.0) (2025-06-09)
 
 ### ⚠ BREAKING CHANGES
