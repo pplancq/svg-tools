@@ -8,11 +8,38 @@ type SvgProps = Omit<SVGProps<SVGSVGElement>, 'aria-busy'> & {
   alt?: string;
 };
 
-export const Svg = ({ src, alt, ...props }: PropsWithChildren<SvgProps>) => {
+const setAriaAttributes = ({
+  role,
+  alt,
+  ariaLabel,
+  ariaBusy,
+}: {
+  role?: string;
+  alt?: string;
+  ariaLabel?: string;
+  ariaBusy?: boolean;
+}) => ({
+  ...(!['presentation', 'none'].includes(role ?? '') ? { 'aria-label': ariaLabel || alt, 'aria-busy': ariaBusy } : {}),
+});
+
+export const Svg = ({ src, alt, role, ...props }: PropsWithChildren<SvgProps>) => {
   return (
     <ErrorBoundary fallback={alt ? <span>{alt}</span> : null} key={src}>
-      <Suspense fallback={<svg {...props} aria-label={props['aria-label'] || alt} aria-busy />}>
-        <SvgPromise svgPromise={getSvg(src)} {...props} aria-label={props['aria-label'] || alt} aria-busy={false} />
+      <Suspense
+        fallback={
+          <svg
+            {...props}
+            role={role}
+            {...setAriaAttributes({ role, alt, ariaLabel: props['aria-label'], ariaBusy: true })}
+          />
+        }
+      >
+        <SvgPromise
+          svgPromise={getSvg(src)}
+          {...props}
+          role={role}
+          {...setAriaAttributes({ role, alt, ariaLabel: props['aria-label'], ariaBusy: false })}
+        />
       </Suspense>
     </ErrorBoundary>
   );
