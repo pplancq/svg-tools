@@ -98,4 +98,17 @@ describe('<Svg />', () => {
       expect(element).toBeInTheDocument();
     });
   });
+
+  it('should not have any aria attributes if role is presentation', async () => {
+    fetchMock.mockResolvedValueOnce({
+      headers: new Headers([[CONTENT_TYPE, MINE_TYPE_SVG]]),
+      text: () => Promise.resolve(svgData),
+    });
+
+    await renderSuspense(<Svg src="/foo.svg" role="presentation" alt="foo" />);
+
+    const svg = screen.getByRole('presentation');
+    expect(svg).not.toHaveAttribute('aria-busy');
+    expect(svg).not.toHaveAttribute('aria-label');
+  });
 });
