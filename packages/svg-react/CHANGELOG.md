@@ -1,3 +1,9 @@
+## @pplancq/svg-react [2.1.0](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@2.0.2...@pplancq/svg-react@2.1.0) (2025-07-14)
+
+### Features
+
+* **svg-react:** enhance accessibility with ARIA attributes ([62913ee](https://github.com/pplancq/svg-tools/commit/62913eecfd00be6fa5a54390eeebf9820edcf52d))
+
 ## @pplancq/svg-react [2.0.2](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@2.0.1...@pplancq/svg-react@2.0.2) (2025-06-16)
 
 ### Bug Fixes
