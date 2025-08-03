@@ -48,7 +48,7 @@
     "storybook": "^9.0.18",
     "stylelint": "^16.22.0",
     "stylelint-prettier": "^5.0.3",
-    "typescript": "~5.8.3",
+    "typescript": "~5.9.2",
     "vite": "^7.0.6"
   },
   "prettier": "@pplancq/prettier-config",
