@@ -83,7 +83,7 @@ jobs:
         continue-on-error: true
 
   deploy:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && (github.event.inputs.dryRun != 'true')
     needs:
       - release
     environment:
