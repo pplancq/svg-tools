@@ -36,7 +36,7 @@
     "@storybook/react-vite": "^9.1.1",
     "@types/react": "^19.1.9",
     "@types/react-dom": "^19.1.7",
-    "@vitejs/plugin-react": "^4.7.0",
+    "@vitejs/plugin-react": "^5.0.0",
     "concurrently": "^9.2.0",
     "eslint": "^9.32.0",
     "eslint-plugin-prettier": "^5.5.3",
