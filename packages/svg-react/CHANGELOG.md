@@ -1,3 +1,9 @@
+## @pplancq/svg-react [2.1.2](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@2.1.1...@pplancq/svg-react@2.1.2) (2025-08-22)
+
+### Bug Fixes
+
+* **svg-tools:** update README for React 19 support and new API usage ([d071ed2](https://github.com/pplancq/svg-tools/commit/d071ed2e10e430cde32cfc5709178ba568a1d662))
+
 ## @pplancq/svg-react [2.1.1](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@2.1.0...@pplancq/svg-react@2.1.1) (2025-08-04)
 
 ### Bug Fixes
