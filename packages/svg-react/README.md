@@ -5,9 +5,9 @@ while following best practices for performance, accessibility, and eco-design.
 
 ## What’s new & Migrating from v1 to v2
 
-- **React 19 only**: Version 2 ne supporte plus React 18. Assurez-vous d'utiliser React 19 avant de mettre à jour.
-- **Nouvelle API use()**: Le composant `Svg` utilise désormais la nouvelle API `use()` de React 19, simplifiant la logique asynchrone et le chargement des SVG. Votre code existant peut nécessiter de légers ajustements pour s'aligner sur cette approche.
-- **Pas de changement majeur d'interface**: L'API du composant reste similaire, mais l'implémentation interne bénéficie des dernières fonctionnalités de React.
+- **React 19 only**: Version 2 no longer supports React 18. Please ensure you are using React 19 before upgrading.
+- **New use() API**: The `Svg` component now leverages React 19's new `use()` API, simplifying asynchronous logic and SVG loading. Your existing code may require minor adjustments to align with this approach.
+- **No major interface changes**: The component API remains similar, but the internal implementation benefits from the latest React features.
 
 ## General Overview
 
