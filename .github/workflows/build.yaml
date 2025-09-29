@@ -83,6 +83,7 @@ jobs:
         uses: pplancq/actions/setup-node@main
         with:
           node-version: ${{ matrix.node-version }}
+          npm-version: 10
 
       - name: Install react@${{ matrix.react-version }}
         run: npm install --save-dev react@${{ matrix.react-version }} react-dom@${{ matrix.react-version }}
