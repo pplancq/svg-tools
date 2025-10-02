@@ -20,7 +20,7 @@
     "test:watch": "vitest",
     "prelint": "npm run build --workspace=packages",
     "lint": "npm run lint --workspace=packages --workspace=apps",
-    "package:check": "npm exec --yes package-lock-utd@1.1.3",
+    "package:check": "node ./script/package-check.mjs",
     "release": "multi-semantic-release",
     "prepare": "husky"
   },
