@@ -33,7 +33,7 @@
   ],
   "devDependencies": {
     "@anolilab/multi-semantic-release": "^2.0.4",
-    "@commitlint/cli": "^20.0.0",
+    "@commitlint/cli": "^20.1.0",
     "@pplancq/commitlint-config": "^2.3.0",
     "@pplancq/semantic-release-config": "^1.6.8",
     "husky": "^9.1.7",
