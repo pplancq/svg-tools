@@ -22,8 +22,8 @@
     "@pplancq/shelter-ui-react": "^1.0.0-alpha.2",
     "@pplancq/svg-core": "*",
     "@pplancq/svg-react": "*",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
     "@pplancq/eslint-config": "^5.0.6",
@@ -34,8 +34,8 @@
     "@storybook/addon-links": "^9.1.8",
     "@storybook/addon-onboarding": "^9.1.8",
     "@storybook/react-vite": "^9.1.8",
-    "@types/react": "^19.1.13",
-    "@types/react-dom": "^19.1.9",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^5.0.3",
     "concurrently": "^9.2.1",
     "eslint": "^9.36.0",
