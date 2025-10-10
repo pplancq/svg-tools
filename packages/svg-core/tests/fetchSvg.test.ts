@@ -39,4 +39,40 @@ describe('fetchSvg', () => {
 
     await expect(fetchSvg('/foo.svg')).rejects.toThrow(ContentSvgError);
   });
+
+  it('should deduplicate simultaneous fetches but not cache the result', async () => {
+    fetchMock.mockResolvedValue({
+      headers: new Headers([[CONTENT_TYPE, MINE_TYPE_SVG]]),
+      text: () => Promise.resolve(svg),
+    });
+    await Promise.all([fetchSvg('/foo.svg'), fetchSvg('/foo.svg')]);
+
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+
+    await fetchSvg('/foo.svg');
+
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+  });
+
+  it('should issue separate network requests for different paths', async () => {
+    fetchMock.mockResolvedValue({
+      headers: new Headers([[CONTENT_TYPE, MINE_TYPE_SVG]]),
+      text: () => Promise.resolve(svg),
+    });
+    await Promise.all([fetchSvg('/foo.svg'), fetchSvg('/bar.svg')]);
+
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+  });
+
+  it('should deduplicate simultaneous requests and trigger a new fetch after resolution', async () => {
+    fetchMock.mockResolvedValue({
+      headers: new Headers([[CONTENT_TYPE, MINE_TYPE_SVG]]),
+      text: () => Promise.resolve(svg),
+    });
+    await Promise.all([fetchSvg('/foo.svg'), fetchSvg('/foo.svg')]);
+
+    await fetchSvg('/foo.svg');
+
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+  });
 });
