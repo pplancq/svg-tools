@@ -1,0 +1,6 @@
+import { Markdown, Meta } from '@storybook/addon-docs/blocks';
+import changeLog from '../../../packages/svg-core/README.md?raw';
+
+<Meta title="svg-core/Getting Started" />
+
+<Markdown>{changeLog.replaceAll('## @pplancq/svg-core [', '## [v')}</Markdown>
