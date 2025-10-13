@@ -3,13 +3,13 @@
 A React component designed to efficiently load SVG files into your web applications,
 while following best practices for performance, accessibility, and eco-design.
 
-## What’s new & Migrating from v1 to v2
+## ✨ What’s new & Migrating from v1 to v2
 
 - **React 19 only**: Version 2 no longer supports React 18. Please ensure you are using React 19 before upgrading.
 - **New use() API**: The `Svg` component now leverages React 19's new `use()` API, simplifying asynchronous logic and SVG loading. Your existing code may require minor adjustments to align with this approach.
 - **No major interface changes**: The component API remains similar, but the internal implementation benefits from the latest React features.
 
-## General Overview
+## 🚀 General Overview
 
 `@pplancq/svg-react` allows you to integrate SVG images asynchronously and efficiently, directly into the DOM,
 without converting your SVGs into React components. This approach reduces your bundle size, improves loading times,
@@ -17,7 +17,7 @@ and helps lower your application's carbon footprint.
 
 This component is intended to be used in the same way as the HTML `<img>` tag, providing a simple and familiar API for developers used to working with standard images.
 
-### Philosophy and Advantages
+### 💡 Philosophy and Advantages
 
 - **Performance**: SVGs are loaded on demand, preventing your JavaScript bundle from becoming bloated.
 - **Eco-design**: Less transformation, less generated code, fewer resources consumed.
@@ -27,7 +27,7 @@ This component is intended to be used in the same way as the HTML `<img>` tag, p
 - **Modern bundler compatibility**: Also works with the inline mode of modern bundlers like Vite and Rspack,
   allowing you to import SVGs as optimized string assets.
 
-## Installation
+## 📦 Installation
 
 ```shell
 npm install @pplancq/svg-react
@@ -44,11 +44,11 @@ export const App = () => {
 };
 ```
 
-## Usage Guide
+## 📖 Usage Guide
 
 This SVG component is designed to be as flexible and customizable as a native SVG element. It inherits all the props of a standard SVG component, so you can use it just like a regular SVG element.
 
-### Props
+### 🏷️ Props
 
 <table>
   <thead>
@@ -79,34 +79,34 @@ This SVG component is designed to be as flexible and customizable as a native SV
   </tbody>
 </table>
 
-### Best Practices
+### ✅ Best Practices
 
 - Use the `alt` prop to improve accessibility.
 - Prefer asynchronous loading for large or non-critical SVGs.
 - Customize your SVGs via props (`fill`, `width`, `height`, etc.) for optimal integration.
 - You can also style your SVGs by applying CSS classes (`className`) to manage styles centrally.
 
-### Use Cases
+### 🛠️ Use Cases
 
 - Dynamic or themed icons.
 - Remote or local SVG illustrations.
 - Eco-friendly replacement for SVG imports transformed into React components.
 
-## Tests
+## 🧑‍🔬 Tests
 
-### Testing components using Suspense
+### 🌀 Testing components using Suspense
 
 When testing React components, the `render` function from Testing Library natively wraps updates in `act()` to help ensure correct behavior. However, when your components use `Suspense` for asynchronous loading (such as fetching SVGs), this is sometimes not sufficient: certain asynchronous updates triggered by Suspense may still escape this wrapping, leading to unstable tests or React warnings.
 
 To make writing robust tests easier, this package provides a `renderSuspense` helper that automatically wraps rendering in an asynchronous `act()`. This allows you to easily test your components, even when they use `Suspense` or asynchronous hooks.
 
-#### Why use `renderSuspense`?
+#### 💡 Why use `renderSuspense`?
 
 - Ensures all asynchronous effects and rendering are properly synchronized.
 - Avoids React warnings related to Suspense usage in tests.
 - Simplifies your test syntax for asynchronous components.
 
-### Example usage with a custom component
+### 📝 Example usage with a custom component
 
 Suppose you have an `IconButton` component that uses the `<Svg />` component to display an icon:
 
@@ -143,7 +143,7 @@ it('should render the button with its SVG icon', async () => {
 
 > ℹ️ You can use `renderSuspense` just like `render`, but it handles the subtleties related to Suspense and asynchronous effects for you.
 
-### Best practices for testing
+### 🏆 Best practices for testing
 
 - Always use `renderSuspense` to test components that use `<Svg />` or any other Suspense-based component.
 - Combine it with standard Testing Library utilities (`screen`, `waitFor`, etc.) to check the final render.
