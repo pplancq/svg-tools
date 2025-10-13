@@ -1,17 +1,8 @@
-## <small>2.0.2 (2025-10-13)</small>
+## @pplancq/svg-core [2.0.2](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@2.0.1...@pplancq/svg-core@2.0.2) (2025-10-13)
 
-* docs(svg-core): add documentation for mergeSvgContent function ([b75b599](https://github.com/pplancq/svg-tools/commit/b75b599))
-* docs(svg-core): update README with detailed usage and API information ([b128ed7](https://github.com/pplancq/svg-tools/commit/b128ed7))
-* chore(deps): update dependency @pplancq/eslint-config to ^5.0.6 ([d3e183d](https://github.com/pplancq/svg-tools/commit/d3e183d))
-* chore(deps): update dependency @pplancq/eslint-config to ^5.0.7 ([dbd09f5](https://github.com/pplancq/svg-tools/commit/dbd09f5))
-* chore(deps): update dependency @pplancq/eslint-config to ^5.0.8 ([e97421e](https://github.com/pplancq/svg-tools/commit/e97421e))
-* chore(deps): update dependency @rslib/core to ^0.14.0 ([73beb13](https://github.com/pplancq/svg-tools/commit/73beb13))
-* chore(deps): update dependency @rslib/core to ^0.15.0 ([9f27056](https://github.com/pplancq/svg-tools/commit/9f27056))
-* chore(deps): update dependency @testing-library/jest-dom to ^6.9.1 ([e81b7a9](https://github.com/pplancq/svg-tools/commit/e81b7a9))
-* chore(deps): update dependency eslint to ^9.36.0 ([427e9a4](https://github.com/pplancq/svg-tools/commit/427e9a4))
-* chore(deps): update dependency eslint to ^9.37.0 ([58f393f](https://github.com/pplancq/svg-tools/commit/58f393f))
-* chore(deps): update dependency typescript to v5.9.3 ([91cf78b](https://github.com/pplancq/svg-tools/commit/91cf78b))
-* fix(svg-core): deduplicate simultaneous SVG fetch requests ([63c7b17](https://github.com/pplancq/svg-tools/commit/63c7b17))
+### Bug Fixes 
+
+* **svg-core:** deduplicate simultaneous SVG fetch requests ([63c7b17](https://github.com/pplancq/svg-tools/commit/63c7b17))
 
 ## @pplancq/svg-core [2.0.1](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@2.0.0...@pplancq/svg-core@2.0.1) (2025-09-22)
 
