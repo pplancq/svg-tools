@@ -10,7 +10,7 @@ const icons: Record<string, string> = {
 };
 
 const meta: Meta<typeof Svg> = {
-  title: 'svg-react',
+  title: 'svg-react/Getting Started',
   component: Svg,
   parameters: {
     controls: { expanded: true },

@@ -22,7 +22,7 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ['Welcome'],
+        order: ['Welcome', 'svg-react', ['Getting Started', 'ChangeLog'], 'svg-core', ['Getting Started', 'ChangeLog']],
       },
     },
   },
