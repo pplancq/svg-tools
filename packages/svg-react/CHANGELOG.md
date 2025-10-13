@@ -1,3 +1,27 @@
+## <small>2.1.4 (2025-10-13)</small>
+
+* docs(svg-react): update README with new section headers and content formatting ([59a6862](https://github.com/pplancq/svg-tools/commit/59a6862))
+* chore(deps): update dependency @pplancq/eslint-config to ^5.0.6 ([d3e183d](https://github.com/pplancq/svg-tools/commit/d3e183d))
+* chore(deps): update dependency @pplancq/eslint-config to ^5.0.7 ([dbd09f5](https://github.com/pplancq/svg-tools/commit/dbd09f5))
+* chore(deps): update dependency @pplancq/eslint-config to ^5.0.8 ([e97421e](https://github.com/pplancq/svg-tools/commit/e97421e))
+* chore(deps): update dependency @rsbuild/plugin-react to ^1.4.1 ([fd868c9](https://github.com/pplancq/svg-tools/commit/fd868c9))
+* chore(deps): update dependency @rslib/core to ^0.14.0 ([73beb13](https://github.com/pplancq/svg-tools/commit/73beb13))
+* chore(deps): update dependency @rslib/core to ^0.15.0 ([9f27056](https://github.com/pplancq/svg-tools/commit/9f27056))
+* chore(deps): update dependency @testing-library/jest-dom to ^6.9.1 ([e81b7a9](https://github.com/pplancq/svg-tools/commit/e81b7a9))
+* chore(deps): update dependency eslint to ^9.36.0 ([427e9a4](https://github.com/pplancq/svg-tools/commit/427e9a4))
+* chore(deps): update dependency eslint to ^9.37.0 ([58f393f](https://github.com/pplancq/svg-tools/commit/58f393f))
+* chore(deps): update dependency typescript to v5.9.3 ([91cf78b](https://github.com/pplancq/svg-tools/commit/91cf78b))
+* chore(deps): update react monorepo ([d02bda3](https://github.com/pplancq/svg-tools/commit/d02bda3))
+* fix(deps): update react monorepo to ^19.2.0 ([1a57b8e](https://github.com/pplancq/svg-tools/commit/1a57b8e))
+
+
+
+
+
+### Dependencies
+
+* **@pplancq/svg-core:** upgraded to 2.0.2
+
 ## @pplancq/svg-react [2.1.3](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@2.1.2...@pplancq/svg-react@2.1.3) (2025-09-22)
 
 
