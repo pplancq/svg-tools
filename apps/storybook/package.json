@@ -38,7 +38,7 @@
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^5.0.4",
     "concurrently": "^9.2.1",
-    "eslint": "^9.36.0",
+    "eslint": "^9.37.0",
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-storybook": "^9.1.10",
     "prettier": "^3.6.2",
