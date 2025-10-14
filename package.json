@@ -14,6 +14,7 @@
     "dev:react": "npm run dev --workspace=packages/svg-react",
     "dev:storybook": "npm run dev --workspace=apps/storybook",
     "build": "npm run build --workspace=packages --workspace=apps",
+    "build:packages": "npm run build --workspace=packages",
     "pretest": "npm run build --workspace=@pplancq/svg-core",
     "test": "vitest run",
     "pretest:watch": "npm run build --workspace=@pplancq/svg-core",
