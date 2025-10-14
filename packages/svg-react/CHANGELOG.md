@@ -72,51 +72,27 @@
 
 * **svg-react:** add renderSuspense helper for testing components with Suspense ([e4abfc4](https://github.com/pplancq/svg-tools/commit/e4abfc47c93683466b979fffe5427f55bb278ef7))
 
-## @pplancq/svg-react 2.0.0-alpha.1 (2025-06-04)
+## @pplancq/svg-react [2.0.0-alpha.1](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@1.4.1...@pplancq/svg-react@2.0.0-alpha.1) (2025-06-05)
+ (2025-06-04)
 
-* feat(svg-react): migrate Svg component to React 19 use() API ([2181444](https://github.com/pplancq/svg-tools/commit/2181444))
-* fix(svg-react): handle SVG loading errors by setting hasError state ([c9066ff](https://github.com/pplancq/svg-tools/commit/c9066ff))
-* refactor(svg-react): refactor Svg component to remove forwardRef and adjust props handling ([c911ed5](https://github.com/pplancq/svg-tools/commit/c911ed5))
-* feat(svg-tools)!: update peer dependencies to require React 19 ([1b7319e](https://github.com/pplancq/svg-tools/commit/1b7319e))
-* chore(svg-tools): replace @vitejs/plugin-react with @vitejs/plugin-react-swc ([c89d4ea](https://github.com/pplancq/svg-tools/commit/c89d4ea))
-* chore(svg-tools): update coverage configuration to check for true string in CI environment ([e5ad7e2](https://github.com/pplancq/svg-tools/commit/e5ad7e2))
-* chore(deps): update dependency @pplancq/eslint-config to ^4.0.24 ([4d6bc3a](https://github.com/pplancq/svg-tools/commit/4d6bc3a))
-* chore(deps): update dependency @rslib/core to ^0.9.1 ([0fea1be](https://github.com/pplancq/svg-tools/commit/0fea1be))
-* chore(deps): update dependency @types/react to ^19.1.6 ([9810518](https://github.com/pplancq/svg-tools/commit/9810518))
-* chore(deps): update dependency eslint-plugin-prettier to ^5.4.1 ([a97bd30](https://github.com/pplancq/svg-tools/commit/a97bd30))
+## ⚠ BREAKING CHANGES
 
+* **svg-tools:** React 18 is no longer supported. The minimum required version is now React 19.
 
-### BREAKING CHANGE
+### Features
 
-* React 18 is no longer supported. The minimum required version is now React 19.
+* **svg-react:** migrate Svg component to React 19 use() API ([439e468](https://github.com/pplancq/svg-tools/commit/439e4687ce57e97c5e118b308ba5e201decea9ce))
+* **svg-tools:** update peer dependencies to require React 19 ([c968c86](https://github.com/pplancq/svg-tools/commit/c968c8688fbbc9fc96ec8fcf8394c262a2948c6b))
 
+### Bug Fixes
 
-
+* **svg-react:** handle SVG loading errors by setting hasError state ([11ae675](https://github.com/pplancq/svg-tools/commit/11ae675f1ead1fa38f0cd8f77f19f88a7f9506f8))
 
 ### Dependencies
 
 * **@pplancq/svg-core:** upgraded to 2.0.0-alpha.1
 
-## <small>1.4.1 (2025-05-26)</small>
-
-* chore(svg-tools): fix coverage reporting in CI environment ([a071a39](https://github.com/pplancq/svg-tools/commit/a071a39))
-* chore(storybook): initialize Storybook configuration and add Welcome page ([fa9d1ee](https://github.com/pplancq/svg-tools/commit/fa9d1ee))
-* chore(deps): update dependency @pplancq/eslint-config to ^4.0.22 ([b10c885](https://github.com/pplancq/svg-tools/commit/b10c885))
-* chore(deps): update dependency @pplancq/eslint-config to ^4.0.23 ([3f4c312](https://github.com/pplancq/svg-tools/commit/3f4c312))
-* chore(deps): update dependency @pplancq/prettier-config to ^1.2.5 ([2d381a7](https://github.com/pplancq/svg-tools/commit/2d381a7))
-* chore(deps): update dependency @pplancq/prettier-config to ^1.2.6 ([bbcfaa0](https://github.com/pplancq/svg-tools/commit/bbcfaa0))
-* chore(deps): update dependency @rslib/core to ^0.7.1 ([762e3b0](https://github.com/pplancq/svg-tools/commit/762e3b0))
-* chore(deps): update dependency @rslib/core to ^0.8.0 ([35683a5](https://github.com/pplancq/svg-tools/commit/35683a5))
-* chore(deps): update dependency @types/react to ^19.1.5 ([bb64f8c](https://github.com/pplancq/svg-tools/commit/bb64f8c))
-* chore(deps): update dependency @vitejs/plugin-react to ^4.5.0 ([96606ef](https://github.com/pplancq/svg-tools/commit/96606ef))
-* chore(deps): update dependency eslint to ^9.27.0 ([7c9a1cf](https://github.com/pplancq/svg-tools/commit/7c9a1cf))
-* chore(deps): update react monorepo ([17466b8](https://github.com/pplancq/svg-tools/commit/17466b8))
-* chore(deps): update vitest monorepo to ^3.1.4 ([47c1f93](https://github.com/pplancq/svg-tools/commit/47c1f93))
-* docs(storybook): add documentation and stories for Svg component ([f98548d](https://github.com/pplancq/svg-tools/commit/f98548d))
-
-
-
-
+## @pplancq/svg-react [1.4.1](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@1.4.0...@pplancq/svg-react@1.4.1) (2025-05-26)
 
 ### Dependencies
 
