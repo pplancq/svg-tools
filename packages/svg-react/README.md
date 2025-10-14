@@ -92,6 +92,8 @@ This SVG component is designed to be as flexible and customizable as a native SV
 - Remote or local SVG illustrations.
 - Eco-friendly replacement for SVG imports transformed into React components.
 
+<!-- DEMO -->
+
 ## 🧑‍🔬 Tests
 
 ### 🌀 Testing components using Suspense

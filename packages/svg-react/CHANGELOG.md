@@ -1,4 +1,4 @@
-## ## @pplancq/svg-react [2.1.4](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@2.1.3...@pplancq/svg-react@2.1.4) (2025-10-13)
+## @pplancq/svg-react [2.1.4](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@2.1.3...@pplancq/svg-react@2.1.4) (2025-10-13)
 
 ### Bug Fixes
 
