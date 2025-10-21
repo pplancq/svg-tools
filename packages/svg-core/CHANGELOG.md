@@ -1,3 +1,9 @@
+## @pplancq/svg-core [2.0.3](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@2.0.2...@pplancq/svg-core@2.0.3) (2025-10-21)
+
+### Bug Fixes
+
+* **deps:** update dependency dompurify to ^3.3.0 ([777b3a5](https://github.com/pplancq/svg-tools/commit/777b3a5aafa8066a3b7a3ee339760e4467432788))
+
 ## @pplancq/svg-core [2.0.2](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@2.0.1...@pplancq/svg-core@2.0.2) (2025-10-13)
 
 ### Bug Fixes 
