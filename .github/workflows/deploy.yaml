@@ -33,6 +33,9 @@ jobs:
       - name: Setup Node
         uses: pplancq/actions/setup-node@main
 
+      - name: Install package
+        run: npm ci
+
       - name: Run build
         run: npm run build
 
