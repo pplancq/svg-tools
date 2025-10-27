@@ -39,7 +39,7 @@
     "@pplancq/semantic-release-config": "^2.0.0",
     "conventional-changelog-conventionalcommits": "^9.1.0",
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.4",
+    "lint-staged": "^16.2.6",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "semantic-release": "^25.0.0",
