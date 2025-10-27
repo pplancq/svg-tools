@@ -1,3 +1,9 @@
+## @pplancq/svg-core [2.1.0](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@2.0.3...@pplancq/svg-core@2.1.0) (2025-10-27)
+
+### Features
+
+* **svg-core:** add custom sanitization configuration for getSvg ([c913044](https://github.com/pplancq/svg-tools/commit/c9130440872fbb3978515370b897903217f46693))
+
 ## @pplancq/svg-core [2.0.3](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@2.0.2...@pplancq/svg-core@2.0.3) (2025-10-21)
 
 ### Bug Fixes
