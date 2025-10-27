@@ -40,16 +40,8 @@
     "conventional-changelog-conventionalcommits": "^9.1.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.6",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
     "semantic-release": "^25.0.1",
     "tsc-files": "^1.1.4"
-  },
-  "overrides": {
-    "@testing-library/react": {
-      "react": "$react",
-      "react-dom": "$react-dom"
-    }
   },
   "lint-staged": {
     "(package|package-lock).json": "npm run package:check"
