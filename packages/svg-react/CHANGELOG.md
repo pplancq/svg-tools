@@ -1,3 +1,14 @@
+## @pplancq/svg-react [2.2.0](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@2.1.5...@pplancq/svg-react@2.2.0) (2025-10-27)
+
+### Features
+
+* **svg-react:** add optional sanitization configuration for Svg component ([166f6e8](https://github.com/pplancq/svg-tools/commit/166f6e8bf0defcb3099ea328636f91fb3d2675f8))
+
+
+### Dependencies
+
+* **@pplancq/svg-core:** upgraded to 2.1.0
+
 ## @pplancq/svg-react [2.1.5](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@2.1.4...@pplancq/svg-react@2.1.5) (2025-10-21)
 
 
