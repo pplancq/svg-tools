@@ -1,6 +1,7 @@
 import DOMPurify from 'dompurify';
 import { MINE_TYPE_SVG } from './constants';
 import { fetchSvg } from './fetchSvg';
+import { mapSanitizeConfig, type SanitizeConfig } from './mapSanitizeConfig';
 import { mergeSvgContent } from './mergeSvgContent';
 
 /**
@@ -8,13 +9,20 @@ import { mergeSvgContent } from './mergeSvgContent';
  *
  * @param {string | URL} path - The path or URL to the SVG file or data URI.
  * @param {SVGSVGElement} [svgElement] - An optional SVG element to merge attributes into.
+ * @param {SanitizeConfig} [sanitizeConfig] - Optional sanitization configuration to customize sanitization behavior.
+ *                                             ⚠️ WARNING: Only use with trusted SVG sources.
+ *                                             Improper configuration can introduce security vulnerabilities.
  *
  * @returns {Promise<SVGSVGElement>} - A promise that resolves to the SVG element.
  *
  * @throws {InvalidSvgError} - If the fetched content is not a valid SVG.
  * @throws {ContentSvgError} - If the content of the SVG file is not valid.
  */
-export const getSvg = async (path: string | URL, svgElement?: SVGSVGElement): Promise<SVGSVGElement> => {
+export const getSvg = async (
+  path: string | URL,
+  svgElement?: SVGSVGElement,
+  sanitizeConfig?: SanitizeConfig,
+): Promise<SVGSVGElement> => {
   const svgEl = svgElement || document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 
   let svgData: string;
@@ -26,10 +34,7 @@ export const getSvg = async (path: string | URL, svgElement?: SVGSVGElement): Pr
   }
 
   const parent = document.createElement('div');
-  parent.innerHTML = DOMPurify.sanitize(svgData, {
-    USE_PROFILES: { svg: true, svgFilters: true },
-    IN_PLACE: true,
-  });
+  parent.innerHTML = DOMPurify.sanitize(svgData, mapSanitizeConfig(sanitizeConfig));
 
   const svg = parent.firstChild as SVGSVGElement;
 

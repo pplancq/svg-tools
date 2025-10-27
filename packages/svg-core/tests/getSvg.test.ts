@@ -81,4 +81,79 @@ describe('getSvg', () => {
       '<path d="M15.54,11.29,9.88,5.64a1,1,0,0,0-1.42,0,1,1,0,0,0,0,1.41l4.95,5L8.46,17a1,1,0,0,0,0,1.41,1,1,0,0,0,.71.3,1,1,0,0,0,.71-.3l5.66-5.65A1,1,0,0,0,15.54,11.29Z"></path>',
     );
   });
+
+  it('should allow custom tags when allowTags is provided', async () => {
+    const svgWithAnimation =
+      '<svg><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="1s" repeatCount="indefinite"/></svg>';
+    fetchMock.mockResolvedValueOnce({
+      headers: new Headers([[CONTENT_TYPE, MINE_TYPE_SVG]]),
+      text: () => Promise.resolve(svgWithAnimation),
+    });
+
+    const result = await getSvg('/foo.svg', undefined, {
+      allowTags: ['animateTransform'],
+      allowAttributes: ['from', 'to', 'dur', 'repeatCount'],
+    });
+
+    expect(result?.innerHTML).toContain('animateTransform');
+    expect(result?.innerHTML).toContain('from="0"');
+    expect(result?.innerHTML).toContain('to="360"');
+  });
+
+  it('should forbid specific tags when forbidTags is provided', async () => {
+    const svgWithCircle = '<svg><circle cx="50" cy="50" r="40"/></svg>';
+    fetchMock.mockResolvedValueOnce({
+      headers: new Headers([[CONTENT_TYPE, MINE_TYPE_SVG]]),
+      text: () => Promise.resolve(svgWithCircle),
+    });
+
+    const result = await getSvg('/foo.svg', undefined, {
+      forbidTags: ['circle'],
+    });
+
+    expect(result?.innerHTML).not.toContain('circle');
+  });
+
+  it('should forbid specific attributes when forbidAttributes is provided', async () => {
+    const svgWithFill = '<svg><rect fill="red" width="100" height="100"/></svg>';
+    fetchMock.mockResolvedValueOnce({
+      headers: new Headers([[CONTENT_TYPE, MINE_TYPE_SVG]]),
+      text: () => Promise.resolve(svgWithFill),
+    });
+
+    const result = await getSvg('/foo.svg', undefined, {
+      forbidAttributes: ['fill'],
+    });
+
+    expect(result?.innerHTML).toContain('rect');
+    expect(result?.innerHTML).not.toContain('fill=');
+  });
+
+  it('should allow data attributes when allowDataAttributes is true', async () => {
+    const svgWithDataAttr = '<svg><rect data-custom="value" width="100" height="100"/></svg>';
+    fetchMock.mockResolvedValueOnce({
+      headers: new Headers([[CONTENT_TYPE, MINE_TYPE_SVG]]),
+      text: () => Promise.resolve(svgWithDataAttr),
+    });
+
+    const result = await getSvg('/foo.svg', undefined, {
+      allowDataAttributes: true,
+    });
+
+    expect(result?.innerHTML).toContain('data-custom="value"');
+  });
+
+  it('should work with inline SVG and custom config', async () => {
+    const svgWithAnimation =
+      '<svg><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="1s" repeatCount="indefinite"/></svg>';
+    const svgInline = `data:${MINE_TYPE_SVG},${encodeURIComponent(svgWithAnimation)}`;
+
+    const result = await getSvg(svgInline, undefined, {
+      allowTags: ['animateTransform'],
+      allowAttributes: ['from', 'to', 'dur', 'repeatCount'],
+    });
+
+    expect(fetchMock).not.toBeCalled();
+    expect(result?.innerHTML).toContain('animateTransform');
+  });
 });
