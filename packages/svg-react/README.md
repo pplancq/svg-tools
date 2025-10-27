@@ -76,8 +76,83 @@ This SVG component is designed to be as flexible and customizable as a native SV
         <code>my-svg</code>
       </td>
     </tr>
+    <tr>
+      <td>sanitizeConfig</td>
+      <td>
+        Optional sanitization configuration to customize sanitization behavior.
+        <br />
+        <strong>⚠️ WARNING:</strong> Only use with trusted SVG sources. Improper configuration can introduce security vulnerabilities.
+      </td>
+      <td>no</td>
+      <td>
+        <code>{ allowTags: ['animateTransform'] }</code>
+      </td>
+    </tr>
   </tbody>
 </table>
+
+### 🔒 Security: Custom Sanitization Configuration
+
+By default, all SVG content is sanitized using [DOMPurify](https://github.com/cure53/DOMPurify) to prevent XSS attacks. However, DOMPurify's default configuration may remove certain SVG elements or attributes that are safe in controlled environments, such as animation elements.
+
+If you **control your SVG sources** and need to allow specific elements or attributes, you can use the `sanitizeConfig` prop:
+
+```typescript
+import { Svg } from '@pplancq/svg-react';
+
+<Svg
+  src="/spinner.svg"
+  alt="Loading animation"
+  sanitizeConfig={{
+    allowTags: ['animateTransform', 'animate'],
+    allowAttributes: ['to', 'from', 'dur', 'repeatCount'],
+  }}
+/>
+```
+
+#### Available Configuration Options
+
+The `sanitizeConfig` prop accepts a `SanitizeConfig` object with the following properties:
+
+- **`allowTags`**: Array of additional tag names to allow (e.g., `['animateTransform', 'animate']`)
+- **`allowAttributes`**: Array of additional attribute names to allow (e.g., `['to', 'from', 'dur', 'repeatCount']`)
+- **`forbidTags`**: Array of tag names to explicitly forbid (e.g., `['script', 'iframe']`)
+- **`forbidAttributes`**: Array of attribute names to explicitly forbid (e.g., `['onerror', 'onclick']`)
+- **`allowDataAttributes`**: Boolean to allow `data-*` attributes (default: `false`)
+
+#### ⚠️ Security Warning
+
+**IMPORTANT**: The `sanitizeConfig` option should **only** be used when:
+- You control and trust the source of your SVG files
+- You understand the security implications of allowing specific elements/attributes
+- You have validated that your configuration doesn't introduce XSS vulnerabilities
+
+**DO NOT** use custom sanitization configurations with user-uploaded SVGs or SVGs from untrusted sources.
+
+#### Common Use Cases
+
+**Allowing SVG animations:**
+```typescript
+<Svg
+  src="/animated-icon.svg"
+  alt="Animated icon"
+  sanitizeConfig={{
+    allowTags: ['animate', 'animateTransform', 'animateMotion'],
+    allowAttributes: ['from', 'to', 'dur', 'repeatCount', 'values', 'keyTimes'],
+  }}
+/>
+```
+
+**Allowing data attributes for JavaScript interactions:**
+```typescript
+<Svg
+  src="/interactive.svg"
+  alt="Interactive graphic"
+  sanitizeConfig={{
+    allowDataAttributes: true,
+  }}
+/>
+```
 
 ### ✅ Best Practices
 
@@ -85,6 +160,7 @@ This SVG component is designed to be as flexible and customizable as a native SV
 - Prefer asynchronous loading for large or non-critical SVGs.
 - Customize your SVGs via props (`fill`, `width`, `height`, etc.) for optimal integration.
 - You can also style your SVGs by applying CSS classes (`className`) to manage styles centrally.
+- **Security**: Keep the default sanitization settings unless you have a specific need and fully control your SVG sources. Only use `sanitizeConfig` with trusted SVGs.
 
 ### 🛠️ Use Cases
 

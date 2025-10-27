@@ -1,4 +1,4 @@
-import { getSvg } from '@pplancq/svg-core';
+import { getSvg, type SanitizeConfig } from '@pplancq/svg-core';
 import { type PropsWithChildren, Suspense, type SVGProps } from 'react';
 import { ErrorBoundary } from './ErrorBoundary';
 import { SvgPromise } from './SvgPromise';
@@ -6,6 +6,25 @@ import { SvgPromise } from './SvgPromise';
 type SvgProps = Omit<SVGProps<SVGSVGElement>, 'aria-busy'> & {
   src: string;
   alt?: string;
+  /**
+   * Optional sanitization configuration to customize sanitization behavior.
+   *
+   * ⚠️ **WARNING**: Only use with trusted SVG sources.
+   * Improper configuration can introduce security vulnerabilities.
+   *
+   * @example
+   * ```tsx
+   * <Svg
+   *   src="/spinner.svg"
+   *   alt="Loading"
+   *   sanitizeConfig={{
+   *     allowTags: ['animateTransform', 'animate'],
+   *     allowAttributes: ['to', 'from', 'dur', 'repeatCount'],
+   *   }}
+   * />
+   * ```
+   */
+  sanitizeConfig?: SanitizeConfig;
 };
 
 const setAriaAttributes = ({
@@ -22,7 +41,7 @@ const setAriaAttributes = ({
   ...(!['presentation', 'none'].includes(role ?? '') ? { 'aria-label': ariaLabel || alt, 'aria-busy': ariaBusy } : {}),
 });
 
-export const Svg = ({ src, alt, role, ...props }: PropsWithChildren<SvgProps>) => {
+export const Svg = ({ src, alt, role, sanitizeConfig, ...props }: PropsWithChildren<SvgProps>) => {
   return (
     <ErrorBoundary fallback={alt ? <span>{alt}</span> : null} key={src}>
       <Suspense
@@ -35,7 +54,7 @@ export const Svg = ({ src, alt, role, ...props }: PropsWithChildren<SvgProps>) =
         }
       >
         <SvgPromise
-          svgPromise={getSvg(src)}
+          svgPromise={getSvg(src, undefined, sanitizeConfig)}
           {...props}
           role={role}
           {...setAriaAttributes({ role, alt, ariaLabel: props['aria-label'], ariaBusy: false })}

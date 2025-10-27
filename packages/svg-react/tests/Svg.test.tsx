@@ -45,7 +45,7 @@ describe('<Svg />', () => {
     expect(screen.getByLabelText('foo')).toHaveAttribute('aria-busy', 'false');
   });
 
-  it('renders fallback when src not found', async () => {
+  it('should render fallback when src not found', async () => {
     fetchMock.mockRejectedValue({
       headers: new Headers(),
       text: () => Promise.resolve('foo'),
@@ -59,7 +59,7 @@ describe('<Svg />', () => {
     });
   });
 
-  it('renders nothing when alt is not define and src fails to load', async () => {
+  it('should render nothing when alt is not defined and src fails to load', async () => {
     fetchMock.mockRejectedValueOnce({
       headers: new Headers(),
       text: () => Promise.resolve('foo'),
@@ -110,5 +110,58 @@ describe('<Svg />', () => {
     const svg = screen.getByRole('presentation');
     expect(svg).not.toHaveAttribute('aria-busy');
     expect(svg).not.toHaveAttribute('aria-label');
+  });
+
+  it('should allow custom tags with sanitizeConfig', async () => {
+    const svgWithAnimation =
+      '<svg><animateTransform data-testid="animateTransform" attributeName="transform" type="rotate" from="0" to="360" dur="1s" repeatCount="indefinite"/></svg>';
+    fetchMock.mockResolvedValueOnce({
+      headers: new Headers([[CONTENT_TYPE, MINE_TYPE_SVG]]),
+      text: () => Promise.resolve(svgWithAnimation),
+    });
+
+    await renderSuspense(
+      <Svg
+        src="/foo.svg"
+        alt="animated"
+        sanitizeConfig={{
+          allowTags: ['animateTransform'],
+          allowAttributes: ['from', 'to', 'dur', 'repeatCount'],
+        }}
+      />,
+    );
+
+    await waitFor(() => {
+      expect(screen.getByLabelText('animated')).toBeInTheDocument();
+    });
+
+    const animateTransform = screen.getByTestId('animateTransform');
+    expect(animateTransform).toBeInTheDocument();
+    expect(animateTransform).toHaveAttribute('to', '360');
+    expect(animateTransform).toHaveAttribute('from', '0');
+  });
+
+  it('should forbid tags with sanitizeConfig', async () => {
+    const svgWithCircle = '<svg><circle cx="50" cy="50" r="40"/></svg>';
+    fetchMock.mockResolvedValueOnce({
+      headers: new Headers([[CONTENT_TYPE, MINE_TYPE_SVG]]),
+      text: () => Promise.resolve(svgWithCircle),
+    });
+
+    await renderSuspense(
+      <Svg
+        src="/foo.svg"
+        alt="no circle"
+        sanitizeConfig={{
+          forbidTags: ['circle'],
+        }}
+      />,
+    );
+
+    await waitFor(() => {
+      const svg = screen.getByLabelText('no circle');
+      expect(svg).toBeInTheDocument();
+      expect(svg.innerHTML).not.toContain('circle');
+    });
   });
 });
