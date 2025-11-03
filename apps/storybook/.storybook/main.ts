@@ -1,7 +1,10 @@
 import type { StorybookConfig } from '@storybook/react-vite';
+import { createRequire } from 'node:module';
 
 import { dirname, join } from 'path';
 import remarkGfm from 'remark-gfm';
+
+const require = createRequire(import.meta.url);
 
 function getAbsolutePath<T extends string>(value: T): T {
   return dirname(require.resolve(join(value, 'package.json'))) as T;

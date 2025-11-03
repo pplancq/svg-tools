@@ -14,5 +14,8 @@ export default defineConfig({
         'import/no-default-export': 'off',
       },
     },
+    {
+      ignores: ['build'],
+    },
   ],
 });
