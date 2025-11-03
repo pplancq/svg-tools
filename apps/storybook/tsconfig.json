@@ -2,14 +2,15 @@
   "compilerOptions": {
     "lib": ["DOM", "ES2021"],
     "types": ["vite/client", "node"],
-    "module": "ESNext",
+    "target": "ES2022",
+    "module": "ES2022",
     "jsx": "react-jsx",
     "strict": true,
     "skipLibCheck": true,
     "isolatedModules": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "useDefineForClassFields": true
   },
   "include": ["stories"]
