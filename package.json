@@ -39,7 +39,7 @@
     "@pplancq/semantic-release-config": "^2.0.2",
     "conventional-changelog-conventionalcommits": "^9.1.0",
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.6",
+    "lint-staged": "^16.2.7",
     "semantic-release": "^25.0.2",
     "tsc-files": "^1.1.4"
   },
