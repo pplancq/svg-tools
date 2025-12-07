@@ -22,8 +22,8 @@
     "@pplancq/shelter-ui-react": "^1.0.0-alpha.2",
     "@pplancq/svg-core": "*",
     "@pplancq/svg-react": "*",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1"
   },
   "devDependencies": {
     "@pplancq/eslint-config": "^5.0.15",
