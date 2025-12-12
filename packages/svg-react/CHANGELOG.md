@@ -1,3 +1,14 @@
+## @pplancq/svg-react [2.2.1](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@2.2.0...@pplancq/svg-react@2.2.1) (2025-12-12)
+
+### Bug Fixes
+
+* **deps:** update react monorepo to ^19.2.1 ([4223f99](https://github.com/pplancq/svg-tools/commit/4223f999f56902f20b6a106ea8af7e75c6e0a7c9))
+
+
+### Dependencies
+
+* **@pplancq/svg-core:** upgraded to 2.1.1
+
 ## @pplancq/svg-react [2.2.0](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@2.1.5...@pplancq/svg-react@2.2.0) (2025-10-27)
 
 ### Features
