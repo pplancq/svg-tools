@@ -57,8 +57,5 @@
     "*.{ts,tsx}": "tsc-files --noEmit",
     "*.(scss|css)": "stylelint --fix",
     "*.!(js|jsx|ts|tsx|scss|css)": "prettier --write --ignore-unknown"
-  },
-  "volta": {
-    "extends": "../../package.json"
   }
 }

@@ -88,8 +88,5 @@
   "lint-staged": {
     "*.(js|jsx|ts|tsx)": "eslint --fix",
     "*.{ts,tsx}": "tsc-files --noEmit"
-  },
-  "volta": {
-    "extends": "../../package.json"
   }
 }

@@ -59,9 +59,6 @@
     "*.(js|jsx|ts|tsx)": "eslint --fix",
     "*.{ts,tsx}": "tsc-files --noEmit"
   },
-  "volta": {
-    "extends": "../../package.json"
-  },
   "dependencies": {
     "dompurify": "^3.3.1"
   }

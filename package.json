@@ -56,9 +56,5 @@
     "deps": {
       "bump": "satisfy"
     }
-  },
-  "volta": {
-    "node": "24.12.0",
-    "npm": "11.7.0"
   }
 }

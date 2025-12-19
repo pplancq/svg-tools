@@ -24,6 +24,8 @@ jobs:
 
       - name: Setup Node
         uses: pplancq/actions/setup-node@main
+        with:
+          use-mise: 'true'
 
       - name: Check package-lock.json
         run: npm run package:check
@@ -46,6 +48,8 @@ jobs:
 
       - name: Setup Node
         uses: pplancq/actions/setup-node@main
+        with:
+          use-mise: 'true'
 
       # https://commitlint.js.org/guides/ci-setup.html#github-actions
       - name: Validate PR commits with commitlint
@@ -62,6 +66,8 @@ jobs:
 
       - name: Setup Node
         uses: pplancq/actions/setup-node@main
+        with:
+          use-mise: 'true'
 
       - name: Run lint
         run: npm run lint -- -- --max-processes 1
@@ -77,6 +83,8 @@ jobs:
 
       - name: Setup Node
         uses: pplancq/actions/setup-node@main
+        with:
+          use-mise: 'true'
 
       - name: Run test
         run: npm run test
@@ -122,6 +130,8 @@ jobs:
 
       - name: Setup Node
         uses: pplancq/actions/setup-node@main
+        with:
+          use-mise: 'true'
 
       - name: Run build
         run: npm run build
