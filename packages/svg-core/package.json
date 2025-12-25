@@ -39,7 +39,7 @@
     "svg"
   ],
   "devDependencies": {
-    "@pplancq/eslint-config": "^5.0.17",
+    "@pplancq/eslint-config": "^5.0.18",
     "@pplancq/prettier-config": "^1.2.8",
     "@rslib/core": "^0.18.5",
     "@testing-library/jest-dom": "^6.9.1",
