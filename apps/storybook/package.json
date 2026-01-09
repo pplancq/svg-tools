@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@pplancq/eslint-config": "^5.0.20",
-    "@pplancq/prettier-config": "^1.2.8",
+    "@pplancq/prettier-config": "^1.2.9",
     "@pplancq/stylelint-config": "^4.0.6",
     "@storybook/addon-a11y": "^10.1.11",
     "@storybook/addon-docs": "^10.1.11",
