@@ -39,7 +39,7 @@
     "@vitejs/plugin-react-swc": "^4.2.2",
     "concurrently": "^9.2.1",
     "eslint": "^9.39.2",
-    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-prettier": "^5.5.5",
     "eslint-plugin-storybook": "^10.1.11",
     "prettier": "^3.7.4",
     "react-docgen-typescript": "^2.4.0",
