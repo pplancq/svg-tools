@@ -7,6 +7,7 @@
     "type": "git",
     "url": "https://github.com/pplancq/svg-tools"
   },
+  "packageManager": "npm@11.9.0",
   "homepage": "https://pplancq.github.io/svg-tools/",
   "scripts": {
     "dev": "concurrently --prefix-colors auto \"npm:dev:*\"",
