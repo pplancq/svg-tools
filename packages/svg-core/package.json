@@ -49,7 +49,6 @@
     "eslint-plugin-prettier": "^5.5.5",
     "jsdom": "^28.1.0",
     "prettier": "^3.8.1",
-    "rimraf": "^6.1.2",
     "typescript": "^5.9.3",
     "vitest": "^4.0.18",
     "vitest-sonar-reporter": "^3.0.0"
