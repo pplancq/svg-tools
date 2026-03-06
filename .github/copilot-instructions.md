@@ -1,50 +1,113 @@
 # Copilot Instructions
 
-## Language Policy
+## Repository Overview
 
-All instructions and prompts in this repository must be written in English. This applies to:
+This is an npm workspaces monorepo for SVG loading utilities:
 
-- All rule and instruction files in `.github/instructions/`
-- All prompt files in `.github/prompts/`
-- All documentation and code comments intended for contributors
+- **`packages/svg-core`** – Framework-agnostic TypeScript library. Fetches SVG files/data URIs, sanitizes them with DOMPurify, and injects them into the DOM.
+- **`packages/svg-react`** – React 19 component built on `svg-core`. Uses `Suspense` + React 19's `use()` hook to consume the async SVG promise, wrapped in a custom `ErrorBoundary`.
+- **`apps/storybook`** – Storybook demo app consuming both packages.
 
-## Repository Configuration
+**Default branch:** `main`
 
-**Default Branch:** `main`
+## Build, Test, and Lint
 
-## Development Code Generation
+> Node 24.14.0 and npm 11.11.0 are required (managed by [mise](https://mise.jdx.dev/)).
 
-When working with TypeScript, React, and other technologies in this project, follow these instructions very carefully.
+### All packages
 
-It is **EXTREMELY important that you follow the instructions in the rule files very carefully.**
+```sh
+npm run build          # Build all packages and apps
+npm run test           # Run all tests (builds svg-core first via pretest)
+npm run lint           # Lint all packages and apps (builds packages first via prelint)
+```
 
-### Workflow Implementation
+### Single package
 
-**IMPORTANT:** Always follow these steps when implementing new features or making changes:
+```sh
+npm run build --workspace=packages/svg-core
+npm run test --workspace=packages/svg-react
+npm run lint --workspace=packages/svg-core
+```
 
-1. **Instruction Selection**: Consult any relevant instruction files listed in `.github/instructions/` and start by listing which rule files have been used to guide the implementation (e.g., `Instructions used: [a11y.instructions.md, vitest.instructions.md]`).
+### Single test file
 
-2. **Prompt Execution**: If the user requests execution of a specific prompt from `.github/prompts/`, read the prompt file and execute EXCLUSIVELY what it contains. Start by indicating which prompt is being used (e.g., `Prompt used: [open_pull_request.prompt.md]`).
+```sh
+# From workspace root
+npx vitest run packages/svg-core/tests/getSvg.test.ts
 
-3. **Error Resolution**: Fix any compiler warnings and errors after each file modification using the `get_errors` tool.
+# Or from within the package directory
+cd packages/svg-core && npx vitest run tests/getSvg.test.ts
+```
 
-4. **Code Quality**: Ensure all changes follow the established coding standards and accessibility guidelines.
+### Watch mode
 
-## Rule Priority
+```sh
+npm run test:watch     # Requires svg-core to be built first
+```
 
-- When executing a prompt from `.github/prompts/`, the prompt instructions take precedence over general instructions
-- For all other development work, strictly follow the instructions in `.github/instructions/`
-- Always indicate which instructions or prompt is being used at the beginning of your response
+### Coverage
 
-## Error Handling and Testing Workflow
+Coverage is only collected when `CI=true`. Thresholds: 80% lines/branches/statements, 75% functions.
 
-After every file modification:
+## Architecture
 
-1. Run `get_errors` to check for compilation issues
-2. Fix any warnings or errors immediately
+### SVG loading pipeline (svg-core)
 
-## Best Practices
+1. `fetchSvg` – Fetches SVG over HTTP. Deduplicates concurrent requests for the same URL using an in-flight `Map<string, Promise<string>>`.
+2. `getSvg` – Orchestrates the pipeline: supports HTTP URLs and `data:image/svg+xml` URIs, sanitizes via DOMPurify (`mapSanitizeConfig` translates `SanitizeConfig` to DOMPurify's `Config`), then calls `mergeSvgContent` to copy attributes and `innerHTML` into the target element.
+3. `mergeSvgContent` / `mergeAttributes` – Mutates and returns the target `SVGSVGElement`.
 
-- Always use English for code, documentation, tests, and comments
-- Follow the established file and directory structure
-- Maintain consistency with existing codebase patterns
+### React Suspense pattern (svg-react)
+
+`Svg` component calls `getSvg(src)` and passes the resulting `Promise` directly to `SvgPromise` as a `Usable<T>`. `SvgPromise` calls React 19's `use()` which suspends until the promise resolves, then applies the SVG via `useLayoutEffect`. `Suspense` renders an empty `<svg>` with `aria-busy="true"` while loading; on error `ErrorBoundary` renders `<span>{alt}</span>`.
+
+### Test helper
+
+`@pplancq/svg-react/tests` exports `renderSuspense` – a wrapper around React Testing Library's `render` that uses `act(async () => …)` to flush Suspense boundaries. Always use this instead of `render` when testing `Svg`.
+
+### Build system
+
+Both packages use **Rslib** (`rslib.config.ts`) with `bundle: false`, ESM output, and DTS generation into `build/`. Tests must `npm run build --workspace=@pplancq/svg-core` before running `svg-react` tests (handled automatically by `pretest`).
+
+## Key Conventions
+
+### Commit messages
+
+Conventional Commits format with a **mandatory scope**:
+
+| Scope | When to use |
+|---|---|
+| `svg-core` | Changes in `packages/svg-core` |
+| `svg-react` | Changes in `packages/svg-react` |
+| `storybook` | Changes in `apps/storybook` |
+| `svg-tools` | Root-level or cross-cutting changes |
+| `deps` | Dependency updates |
+| `release` | Release automation |
+
+First line must not exceed 72 characters. Use imperative mood, no trailing period.
+
+### Branch naming
+
+`feature/<name>` or `bugfix/<name>`
+
+### Tests
+
+- Test files live in `tests/` at the package root (e.g., `packages/svg-core/tests/`), not inside `src/`.
+- File naming: `<SubjectName>.test.ts(x)`.
+- Use `describe` / `it('should …')` structure.
+- Prefer `getByRole` queries; use accessibility assertions (`toHaveAccessibleName`, etc.).
+- Mock `window.fetch` directly in `svg-react` tests (no MSW).
+- Always use `renderSuspense` (not `render`) in `svg-react` tests.
+
+### Code style
+
+- All source files are TypeScript with strict mode.
+- ESLint + Prettier enforced via lint-staged on commit.
+- Components follow the `export const Foo = () => {}` arrow-function pattern.
+- Props type named `<ComponentName>Props`, declared before the component.
+
+## Instructions
+
+- **`.github/instructions/`** – Instruction files for a11y (WCAG 2.2 + RGAA 4), React, Vitest, performance, object calisthenics, and more. These are automatically applied based on file glob patterns.
+- **`.github/git-commit-instructions.md`** – Full commit message guidelines.
