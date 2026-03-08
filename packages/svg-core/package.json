@@ -59,6 +59,6 @@
     "*.{ts,tsx}": "tsc-files --noEmit"
   },
   "dependencies": {
-    "dompurify": "^3.3.1"
+    "dompurify": "^3.3.2"
   }
 }
