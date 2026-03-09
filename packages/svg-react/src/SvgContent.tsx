@@ -18,15 +18,11 @@ const setAriaAttributes = ({
   ariaLabel?: string;
   ariaBusy?: boolean;
 }) => ({
-  ...(!['presentation', 'none'].includes(role ?? '') ? { 'aria-label': ariaLabel || alt, 'aria-busy': ariaBusy } : {}),
+  ...(['presentation', 'none'].includes(role ?? '') ? {} : { 'aria-label': ariaLabel || alt, 'aria-busy': ariaBusy }),
 });
 
 export const SvgContent = ({ src, alt, role, sanitizeConfig, ...props }: PropsWithChildren<SvgContentProps>) => {
-  // sanitizeConfig is intentionally excluded from deps: re-creating the store only on src change
-  // matches the keying strategy (key={src} on ErrorBoundary) and avoids unnecessary reloads
-  // when sanitizeConfig is defined as an inline object literal.
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const store = useMemo(() => new SvgStore(src, undefined, sanitizeConfig), [src]);
+  const store = useMemo(() => new SvgStore(src, undefined, sanitizeConfig), [src, sanitizeConfig]);
 
   const state = useSyncExternalStore(
     useCallback(cb => store.subscribe(cb), [store]),
