@@ -1,3 +1,17 @@
+## @pplancq/svg-core [3.0.0-alpha.1](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@2.1.1...@pplancq/svg-core@3.0.0-alpha.1) (2026-03-09)
+
+### ⚠ BREAKING CHANGES
+
+* **svg-core:** The library API has been completely redesigned. The old function-based API (`getSvg()`, `fetchSvg()`) is replaced with a class-based Observable pattern. See the [Migration Guide in README](packages/svg-core/README.md#-migration-from-v2-to-v3) for detailed upgrade instructions.
+
+### Features
+
+* **svg-core:** migrate to Observable pattern with class-based architecture ([#730](https://github.com/pplancq/svg-tools/issues/730)) ([cef9c3e](https://github.com/pplancq/svg-tools/commit/cef9c3eaa0b665ae1af129fd292a60c4a471dbc4))
+
+### Bug Fixes
+
+* **deps:** update dependency dompurify to ^3.3.2 ([#729](https://github.com/pplancq/svg-tools/issues/729)) ([f808392](https://github.com/pplancq/svg-tools/commit/f8083922ab064863dc54e1b894ddaef37d58e9cb))
+
 ## @pplancq/svg-core [2.1.1](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@2.1.0...@pplancq/svg-core@2.1.1) (2025-12-12)
 
 ### Bug Fixes
