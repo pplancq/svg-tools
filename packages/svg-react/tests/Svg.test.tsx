@@ -1,6 +1,5 @@
-import { screen, waitFor } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
-import { renderSuspense } from '../src/helper/tests';
 import { Svg } from '../src/Svg';
 
 const CONTENT_TYPE = 'content-type';
@@ -21,7 +20,7 @@ describe('<Svg />', () => {
       text: () => Promise.resolve(svgData),
     });
 
-    await renderSuspense(<Svg src="/foo.svg" alt="foo" aria-hidden />);
+    render(<Svg src="/foo.svg" alt="foo" aria-hidden />);
 
     await waitFor(() => {
       const element = screen.getByLabelText('circle');
@@ -35,7 +34,7 @@ describe('<Svg />', () => {
       text: () => Promise.resolve(svgData),
     });
 
-    await renderSuspense(<Svg src="/foo.svg" aria-hidden aria-label="foo" />);
+    render(<Svg src="/foo.svg" aria-hidden aria-label="foo" />);
 
     await waitFor(() => {
       const element = screen.getByLabelText('circle');
@@ -51,7 +50,7 @@ describe('<Svg />', () => {
       text: () => Promise.resolve('foo'),
     });
 
-    await renderSuspense(<Svg src="/foo.svg" alt="foo" aria-hidden aria-label="test" />);
+    render(<Svg src="/foo.svg" alt="foo" aria-hidden aria-label="test" />);
 
     await waitFor(() => {
       const element = screen.getByText('foo');
@@ -65,7 +64,7 @@ describe('<Svg />', () => {
       text: () => Promise.resolve('foo'),
     });
 
-    await renderSuspense(<Svg src="/foo.svg" aria-label="test" />);
+    render(<Svg src="/foo.svg" aria-label="test" />);
 
     await waitFor(() => {
       const fallback = screen.queryByText('foo');
@@ -79,7 +78,7 @@ describe('<Svg />', () => {
       text: () => Promise.resolve('foo'),
     });
 
-    const { rerender } = await renderSuspense(<Svg src="/foo.svg" alt="foo" />);
+    const { rerender } = render(<Svg src="/foo.svg" alt="foo" />);
 
     await waitFor(() => {
       const fallback = screen.getByText('foo');
@@ -91,7 +90,7 @@ describe('<Svg />', () => {
       text: () => Promise.resolve(svgData),
     });
 
-    await rerender(<Svg src="/bar.svg" alt="bar" />);
+    rerender(<Svg src="/bar.svg" alt="bar" />);
 
     await waitFor(() => {
       const element = screen.getByLabelText('circle');
@@ -105,11 +104,13 @@ describe('<Svg />', () => {
       text: () => Promise.resolve(svgData),
     });
 
-    await renderSuspense(<Svg src="/foo.svg" role="presentation" alt="foo" />);
+    render(<Svg src="/foo.svg" role="presentation" alt="foo" />);
 
-    const svg = screen.getByRole('presentation');
-    expect(svg).not.toHaveAttribute('aria-busy');
-    expect(svg).not.toHaveAttribute('aria-label');
+    await waitFor(() => {
+      const svg = screen.getByRole('presentation');
+      expect(svg).not.toHaveAttribute('aria-busy');
+      expect(svg).not.toHaveAttribute('aria-label');
+    });
   });
 
   it('should allow custom tags with sanitizeConfig', async () => {
@@ -120,7 +121,7 @@ describe('<Svg />', () => {
       text: () => Promise.resolve(svgWithAnimation),
     });
 
-    await renderSuspense(
+    render(
       <Svg
         src="/foo.svg"
         alt="animated"
@@ -148,7 +149,7 @@ describe('<Svg />', () => {
       text: () => Promise.resolve(svgWithCircle),
     });
 
-    await renderSuspense(
+    render(
       <Svg
         src="/foo.svg"
         alt="no circle"

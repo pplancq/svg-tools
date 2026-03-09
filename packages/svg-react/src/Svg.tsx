@@ -1,7 +1,7 @@
-import { getSvg, type SanitizeConfig } from '@pplancq/svg-core';
-import { type PropsWithChildren, Suspense, type SVGProps } from 'react';
+import { type SanitizeConfig } from '@pplancq/svg-core';
+import { type PropsWithChildren, type SVGProps } from 'react';
 import { ErrorBoundary } from './ErrorBoundary';
-import { SvgPromise } from './SvgPromise';
+import { SvgContent } from './SvgContent';
 
 type SvgProps = Omit<SVGProps<SVGSVGElement>, 'aria-busy'> & {
   src: string;
@@ -27,41 +27,10 @@ type SvgProps = Omit<SVGProps<SVGSVGElement>, 'aria-busy'> & {
   sanitizeConfig?: SanitizeConfig;
 };
 
-const setAriaAttributes = ({
-  role,
-  alt,
-  ariaLabel,
-  ariaBusy,
-}: {
-  role?: string;
-  alt?: string;
-  ariaLabel?: string;
-  ariaBusy?: boolean;
-}) => ({
-  ...(!['presentation', 'none'].includes(role ?? '') ? { 'aria-label': ariaLabel || alt, 'aria-busy': ariaBusy } : {}),
-});
-
 export const Svg = ({ src, alt, role, sanitizeConfig, ...props }: PropsWithChildren<SvgProps>) => {
   return (
     <ErrorBoundary fallback={alt ? <span>{alt}</span> : null} key={src}>
-      <Suspense
-        fallback={
-          <svg
-            {...props}
-            role={role}
-            {...setAriaAttributes({ role, alt, ariaLabel: props['aria-label'], ariaBusy: true })}
-          />
-        }
-      >
-        <SvgPromise
-          svgPromise={getSvg(src, undefined, sanitizeConfig)}
-          {...props}
-          role={role}
-          {...setAriaAttributes({ role, alt, ariaLabel: props['aria-label'], ariaBusy: false })}
-        />
-      </Suspense>
+      <SvgContent src={src} alt={alt} role={role} sanitizeConfig={sanitizeConfig} {...props} />
     </ErrorBoundary>
   );
 };
-
-Svg.displayName = 'Svg';

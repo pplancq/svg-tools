@@ -3,11 +3,19 @@
 A React component designed to efficiently load SVG files into your web applications,
 while following best practices for performance, accessibility, and eco-design.
 
-## ✨ What’s new & Migrating from v1 to v2
+## ⬆️ Migration Guides
+
+### Migrating from v1 to v2
 
 - **React 19 only**: Version 2 no longer supports React 18. Please ensure you are using React 19 before upgrading.
-- **New use() API**: The `Svg` component now leverages React 19's new `use()` API, simplifying asynchronous logic and SVG loading. Your existing code may require minor adjustments to align with this approach.
+- **New use() API**: The `Svg` component leverages React 19's `use()` API internally. Your existing code may require minor adjustments to align with this approach.
 - **No major interface changes**: The component API remains similar, but the internal implementation benefits from the latest React features.
+
+### Migrating from v2 to v3
+
+- **No interface changes**: The `<Svg />` component API is **completely unchanged** — no modifications required in your application code.
+- **Internal rewrite**: The component now uses `useSyncExternalStore` instead of `Suspense`/`use()`. As a result, wrapping `<Svg />` in a `<Suspense>` boundary is no longer necessary (though harmless if already present).
+- **⚠️ Breaking change — `renderSuspense` removed**: The `@pplancq/svg-react/tests` export and its `renderSuspense` helper have been removed. If you were using `renderSuspense` in your tests, replace it with the standard `render` from `@testing-library/react` — see the [Testing section](#-tests) below.
 
 ## 🚀 General Overview
 
@@ -172,19 +180,13 @@ The `sanitizeConfig` prop accepts a `SanitizeConfig` object with the following p
 
 ## 🧑‍🔬 Tests
 
-### 🌀 Testing components using Suspense
+### 📝 Testing components using `<Svg />`
 
-When testing React components, the `render` function from Testing Library natively wraps updates in `act()` to help ensure correct behavior. However, when your components use `Suspense` for asynchronous loading (such as fetching SVGs), this is sometimes not sufficient: certain asynchronous updates triggered by Suspense may still escape this wrapping, leading to unstable tests or React warnings.
+Since version 3, the `<Svg />` component uses `useSyncExternalStore` internally — no `Suspense` boundary is required. Standard `render` from `@testing-library/react` is all you need.
 
-To make writing robust tests easier, this package provides a `renderSuspense` helper that automatically wraps rendering in an asynchronous `act()`. This allows you to easily test your components, even when they use `Suspense` or asynchronous hooks.
+The `@testing-library/react`’s `waitFor` utility handles asynchronous updates from the store automatically.
 
-#### 💡 Why use `renderSuspense`?
-
-- Ensures all asynchronous effects and rendering are properly synchronized.
-- Avoids React warnings related to Suspense usage in tests.
-- Simplifies your test syntax for asynchronous components.
-
-### 📝 Example usage with a custom component
+### 📋 Example usage with a custom component
 
 Suppose you have an `IconButton` component that uses the `<Svg />` component to display an icon:
 
@@ -201,30 +203,25 @@ export function IconButton() {
 }
 ```
 
-To test this component, use the `renderSuspense` helper:
+To test this component, use `render` and `waitFor` from `@testing-library/react`:
 
 ```tsx
-import { renderSuspense } from '@pplancq/svg-react/tests';
-import { screen, waitFor } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import { IconButton } from './IconButton';
 
 it('should render the button with its SVG icon', async () => {
-  await renderSuspense(<IconButton />);
+  render(<IconButton />);
   await waitFor(() => {
-    expect(screen.getByAltText('button icon')).toBeInTheDocument();
+    expect(screen.getByRole('img', { name: 'button icon' })).toBeInTheDocument();
   });
-  await waitFor(() => {
-    expect(screen.getByRole('button', { name: /action/i })).toBeInTheDocument();
-  });
+  expect(screen.getByRole('button', { name: /action/i })).toBeInTheDocument();
 });
 ```
 
-> ℹ️ You can use `renderSuspense` just like `render`, but it handles the subtleties related to Suspense and asynchronous effects for you.
-
 ### 🏆 Best practices for testing
 
-- Always use `renderSuspense` to test components that use `<Svg />` or any other Suspense-based component.
-- Combine it with standard Testing Library utilities (`screen`, `waitFor`, etc.) to check the final render.
-- To simulate loading or failure of an SVG, you can mock `fetch` in your tests (for example with `vi.fn()` or by using a solution like [`msw`](https://mswjs.io/) for more advanced mocks).
+- Use `render` from `@testing-library/react` directly — no wrapper needed.
+- Use `waitFor` to assert on the state after the SVG has loaded.
+- To simulate loading or failure of an SVG, mock `fetch` in your tests (e.g. with `vi.fn()` or [`msw`](https://mswjs.io/)).
 
-For more examples, see the package's test files.
+For more examples, see the package’s test files.
