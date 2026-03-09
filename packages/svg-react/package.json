@@ -10,10 +10,6 @@
     ".": {
       "import": "./build/Svg.js",
       "types": "./build/Svg.d.ts"
-    },
-    "./tests": {
-      "import": "./build/helper/tests/index.js",
-      "types": "./build/helper/tests/index.d.ts"
     }
   },
   "type": "module",
@@ -47,13 +43,7 @@
     "@pplancq/svg-core": "2.1.1"
   },
   "peerDependencies": {
-    "@testing-library/react": "^16.3.0",
     "react": "^19.0.0"
-  },
-  "peerDependenciesMeta": {
-    "@testing-library/react": {
-      "optional": true
-    }
   },
   "devDependencies": {
     "@pplancq/eslint-config": "^6.0.5",
