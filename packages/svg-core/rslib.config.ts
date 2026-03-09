@@ -20,5 +20,8 @@ export default defineConfig({
     distPath: {
       root: 'build',
     },
+    copy: {
+      patterns: [{ from: '**/*.d.ts', context: 'src' }],
+    },
   },
 });
