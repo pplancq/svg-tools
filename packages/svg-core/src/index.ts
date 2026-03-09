@@ -1,3 +1,3 @@
-export { getSvg } from './getSvg';
-export { mergeSvgContent } from './mergeSvgContent';
-export type { SanitizeConfig } from './mapSanitizeConfig';
+export { SvgStore } from './SvgStore/SvgStore';
+export type { SvgState, SvgStatus, SvgStoreInterface } from './SvgStore/SvgStoreInterface';
+export type { SanitizeConfig } from './SanitizeConfig/SanitizeConfig';
