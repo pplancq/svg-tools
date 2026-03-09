@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
+import { ContentSvgError } from '../../src/Error/ContentSvgError';
 import { SvgSanitizer } from '../../src/SvgSanitizer/SvgSanitizer';
 
 describe('SvgSanitizer', () => {
@@ -8,6 +9,10 @@ describe('SvgSanitizer', () => {
   it('should return an SVGSVGElement', () => {
     const result = sanitizer.sanitize('<svg><circle cx="50" cy="50" r="40"/></svg>');
     expect(result).toBeInstanceOf(SVGSVGElement);
+  });
+
+  it('should throw ContentSvgError when sanitized output contains no <svg> element', () => {
+    expect(() => sanitizer.sanitize('<div>not an svg</div>')).toThrow(ContentSvgError);
   });
 
   it('should strip script tags by default', () => {

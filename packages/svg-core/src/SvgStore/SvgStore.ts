@@ -16,7 +16,7 @@ import type { SvgValidatorInterface } from '../SvgValidator/SvgValidatorInterfac
 import type { SvgState, SvgStoreInterface } from './SvgStoreInterface';
 
 export class SvgStore extends AbstractObserver implements SvgStoreInterface {
-  private state: SvgState = { status: 'idle', svgElement: null, error: null };
+  private state: SvgState = Object.freeze({ status: 'idle', svgElement: null, error: null });
 
   private readonly sourceResolver: SvgSourceResolverInterface;
 
@@ -67,12 +67,16 @@ export class SvgStore extends AbstractObserver implements SvgStoreInterface {
 
       this.setState({ status: 'success', svgElement: this.merger.merge(sanitizedEl, targetEl), error: null });
     } catch (error) {
-      this.setState({ status: 'error', svgElement: null, error: error as Error });
+      this.setState({
+        status: 'error',
+        svgElement: null,
+        error: error instanceof Error ? error : new Error(String(error)),
+      });
     }
   }
 
   private setState(state: SvgState): void {
-    this.state = state;
+    this.state = Object.freeze(state);
     this.notifyObservers();
   }
 }

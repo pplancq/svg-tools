@@ -1,5 +1,6 @@
 import DOMPurify, { type Config } from 'dompurify';
 
+import { ContentSvgError } from '../Error/ContentSvgError';
 import type { SanitizeConfig } from '../SanitizeConfig/SanitizeConfig';
 import type { SvgSanitizerInterface } from './SvgSanitizerInterface';
 
@@ -10,7 +11,13 @@ export class SvgSanitizer implements SvgSanitizerInterface {
     const parent = document.createElement('div');
     parent.innerHTML = this.sanitizer.sanitize(svgString, this.mapConfig(config));
 
-    return parent.firstChild as SVGSVGElement;
+    const svgElement = parent.querySelector('svg');
+
+    if (!(svgElement instanceof SVGSVGElement)) {
+      throw new ContentSvgError();
+    }
+
+    return svgElement;
   }
 
   // eslint-disable-next-line class-methods-use-this
