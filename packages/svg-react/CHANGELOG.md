@@ -1,3 +1,18 @@
+## @pplancq/svg-react [3.0.0](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@2.2.2...@pplancq/svg-react@3.0.0) (2026-03-10)
+
+### ⚠ BREAKING CHANGES
+
+* **svg-react:** The `renderSuspense` helper exported from `@pplancq/svg-react/tests` has been removed. Users upgrading from v2 to v3 must replace `renderSuspense` with the standar `render` from `@testing-library/react`. See [Migration Guide v2→v3](./packages/svg-react/README.md#migrating-from-v2-to-v3) for details.
+
+### Features
+
+* **svg-react:** refactor Svg component to use useSyncExternalStore ([#731](https://github.com/pplancq/svg-tools/issues/731)) ([d21ef11](https://github.com/pplancq/svg-tools/commit/d21ef11d0300945d62a8551ade4668732ac75518))
+
+
+### Dependencies
+
+* **@pplancq/svg-core:** upgraded to 3.0.0
+
 ## @pplancq/svg-react [3.0.0-alpha.1](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@2.2.2...@pplancq/svg-react@3.0.0-alpha.1) (2026-03-09)
 
 ### ⚠ BREAKING CHANGES
