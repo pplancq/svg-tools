@@ -1,8 +1,9 @@
-import type { StorybookConfig } from '@storybook/react-vite';
+import { mergeRsbuildConfig } from '@rsbuild/core';
 import { createRequire } from 'node:module';
 
 import { dirname, join } from 'path';
 import remarkGfm from 'remark-gfm';
+import type { StorybookConfig } from 'storybook-react-rsbuild';
 
 const require = createRequire(import.meta.url);
 
@@ -29,9 +30,9 @@ const config: StorybookConfig = {
   core: {
     disableTelemetry: true,
   },
-  framework: {
-    name: getAbsolutePath('@storybook/react-vite'),
-    options: {},
+  framework: 'storybook-react-rsbuild',
+  rsbuildFinal: rsbuildConfig => {
+    return mergeRsbuildConfig(rsbuildConfig, {});
   },
   typescript: {
     reactDocgen: 'react-docgen-typescript',
