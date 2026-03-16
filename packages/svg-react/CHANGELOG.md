@@ -1,3 +1,10 @@
+## @pplancq/svg-react [3.0.1](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@3.0.0...@pplancq/svg-react@3.0.1) (2026-03-16)
+
+
+### Dependencies
+
+* **@pplancq/svg-core:** upgraded to 3.0.1
+
 ## @pplancq/svg-react [3.0.0](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@2.2.2...@pplancq/svg-react@3.0.0) (2026-03-10)
 
 ### ⚠ BREAKING CHANGES
