@@ -37,7 +37,7 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Node
-        uses: pplancq/actions/setup-node@main
+        uses: pplancq/actions/setup-node@854a444dd4d856a2083a5947960890d8dc35601c # main
         with:
           use-mise: 'true'
 
