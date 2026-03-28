@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
       - name: Setup Node
-        uses: pplancq/actions/setup-node@00675452dba784bc26b6dc3492d09c336dd1a675 # main
+        uses: pplancq/actions/setup-node@413d658b5de0b604e8c0a772fd126fa583342c15 # main
         with:
           use-mise: 'true'
 
@@ -47,7 +47,7 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Node
-        uses: pplancq/actions/setup-node@00675452dba784bc26b6dc3492d09c336dd1a675 # main
+        uses: pplancq/actions/setup-node@413d658b5de0b604e8c0a772fd126fa583342c15 # main
         with:
           use-mise: 'true'
 
@@ -65,7 +65,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
       - name: Setup Node
-        uses: pplancq/actions/setup-node@00675452dba784bc26b6dc3492d09c336dd1a675 # main
+        uses: pplancq/actions/setup-node@413d658b5de0b604e8c0a772fd126fa583342c15 # main
         with:
           use-mise: 'true'
 
@@ -82,7 +82,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
       - name: Setup Node
-        uses: pplancq/actions/setup-node@00675452dba784bc26b6dc3492d09c336dd1a675 # main
+        uses: pplancq/actions/setup-node@413d658b5de0b604e8c0a772fd126fa583342c15 # main
         with:
           use-mise: 'true'
 
@@ -129,7 +129,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
       - name: Setup Node
-        uses: pplancq/actions/setup-node@00675452dba784bc26b6dc3492d09c336dd1a675 # main
+        uses: pplancq/actions/setup-node@413d658b5de0b604e8c0a772fd126fa583342c15 # main
         with:
           use-mise: 'true'
 
