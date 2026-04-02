@@ -49,7 +49,7 @@
     "@pplancq/eslint-config": "^6.0.9",
     "@pplancq/prettier-config": "^2.0.0",
     "@rsbuild/plugin-react": "^1.4.6",
-    "@rslib/core": "^0.20.1",
+    "@rslib/core": "^0.20.2",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",
