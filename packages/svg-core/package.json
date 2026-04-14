@@ -41,7 +41,7 @@
   "devDependencies": {
     "@pplancq/eslint-config": "^6.0.10",
     "@pplancq/prettier-config": "^2.0.0",
-    "@rslib/core": "^0.20.3",
+    "@rslib/core": "^0.21.0",
     "@testing-library/jest-dom": "^6.9.1",
     "@vitest/coverage-v8": "^4.1.4",
     "concurrently": "^9.2.1",
