@@ -29,7 +29,7 @@
     "@pplancq/eslint-config": "^6.0.12",
     "@pplancq/prettier-config": "^2.0.1",
     "@pplancq/stylelint-config": "^5.0.3",
-    "@rsbuild/core": "^1.7.5",
+    "@rsbuild/core": "^2.0.1",
     "@rsbuild/plugin-react": "^1.4.6",
     "@rsbuild/plugin-sass": "^1.5.1",
     "@storybook/addon-a11y": "^10.3.5",
