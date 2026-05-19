@@ -1,6 +1,6 @@
 {
   "name": "@pplancq/svg-react",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "license": "MIT",
   "description": "A React component designed to load SVG files efficiently",
   "author": "pplancq <paul.plancq@outlook.fr>",
@@ -40,7 +40,7 @@
     "react"
   ],
   "dependencies": {
-    "@pplancq/svg-core": "3.0.4"
+    "@pplancq/svg-core": "3.0.5"
   },
   "peerDependencies": {
     "react": "^19.0.0"
