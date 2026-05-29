@@ -34,7 +34,7 @@
     "apps/*"
   ],
   "devDependencies": {
-    "@anolilab/multi-semantic-release": "^4.4.3",
+    "@anolilab/multi-semantic-release": "^4.4.4",
     "@commitlint/cli": "^21.0.1",
     "@pplancq/commitlint-config": "^4.0.1",
     "@pplancq/semantic-release-config": "^3.0.6",
