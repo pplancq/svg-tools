@@ -1,4 +1,4 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
+// eslint-disable-next-line import/no-unresolved
 import concurrently from 'concurrently';
 
 const { result } = concurrently(['npm:lint:*(!fix)'], {
