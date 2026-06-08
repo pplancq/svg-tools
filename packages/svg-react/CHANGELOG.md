@@ -1,3 +1,14 @@
+## @pplancq/svg-react [3.0.8](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@3.0.7...@pplancq/svg-react@3.0.8) (2026-06-08)
+
+### Bug Fixes
+
+* **deps:** update react monorepo ([#898](https://github.com/pplancq/svg-tools/issues/898)) ([9f91553](https://github.com/pplancq/svg-tools/commit/9f91553ddf8da53d86eb85f858c0028a74ad03c3))
+
+
+### Dependencies
+
+* **@pplancq/svg-core:** upgraded to 3.0.8
+
 ## @pplancq/svg-react [3.0.7](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-react@3.0.6...@pplancq/svg-react@3.0.7) (2026-06-01)
 
 
