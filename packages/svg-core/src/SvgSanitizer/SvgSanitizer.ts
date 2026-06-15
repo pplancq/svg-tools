@@ -24,7 +24,6 @@ export class SvgSanitizer implements SvgSanitizerInterface {
   private mapConfig(sanitizeConfig: SanitizeConfig = {}): Config {
     const config: Config = {
       USE_PROFILES: { svg: true, svgFilters: true },
-      IN_PLACE: true,
     };
 
     if (sanitizeConfig.allowTags) {
