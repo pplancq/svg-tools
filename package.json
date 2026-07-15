@@ -23,7 +23,9 @@
     "prelint": "npm run build --workspace=packages",
     "lint": "npm run lint --workspace=packages --workspace=apps",
     "package:check": "node ./script/package-check.mjs",
-    "release": "multi-semantic-release",
+    "release": "nx release",
+    "release:dry-run": "nx release --dry-run",
+    "release:publish": "nx release publish",
     "prepare": "husky"
   },
   "bugs": {
@@ -34,28 +36,15 @@
     "apps/*"
   ],
   "devDependencies": {
-    "@anolilab/multi-semantic-release": "^4.4.5",
     "@commitlint/cli": "^21.2.1",
+    "@nx/js": "^23.1.0",
     "@pplancq/commitlint-config": "^4.0.2",
-    "@pplancq/semantic-release-config": "^3.0.6",
-    "conventional-changelog-conventionalcommits": "^10.2.1",
     "husky": "^9.1.7",
     "lint-staged": "^17.0.8",
-    "semantic-release": "^25.0.6",
+    "nx": "^23.1.0",
     "tsc-files": "^1.1.4"
   },
   "lint-staged": {
     "(package|package-lock).json": "npm run package:check"
-  },
-  "release": {
-    "extends": [
-      "@pplancq/semantic-release-config"
-    ],
-    "repositoryUrl": "https://github.com/pplancq/svg-tools"
-  },
-  "multi-release": {
-    "deps": {
-      "bump": "satisfy"
-    }
   }
 }

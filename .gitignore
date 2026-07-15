@@ -5,3 +5,4 @@ coverage/
 junit-report.xml
 sonar-report.xml
 .DS*
+.nx/
