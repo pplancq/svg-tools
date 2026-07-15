@@ -1,0 +1,10 @@
+import { Markdown, Meta } from '@storybook/addon-docs/blocks';
+import changeLog from '../../../CHANGELOG.md?raw';
+
+export const CHANGELOG_FOR_STORYBOOK = changeLog
+  .replace('./packages/svg-core/CHANGELOG.md', '/docs/changelog-archives-svg-core--docs')
+  .replace('./packages/svg-react/CHANGELOG.md', '/docs/changelog-archives-svg-react--docs');
+
+<Meta title="Changelog" />
+
+<Markdown>{CHANGELOG_FOR_STORYBOOK}</Markdown>

@@ -1,0 +1,96 @@
+{
+  "$schema": "https://unpkg.com/nx@23/schemas/nx-schema.json",
+  "release": {
+    "projects": ["packages/*"],
+    "projectsRelationship": "fixed",
+    "version": {
+      "currentVersionResolver": "git-tag",
+      "fallbackCurrentVersionResolver": "disk",
+      "specifierSource": "conventional-commits",
+      "updateDependents": "auto",
+      "applyPreidToDependents": true,
+      "preserveMatchingDependencyRanges": true,
+      "versionPrefix": "auto"
+    },
+    "git": {
+      "commit": true,
+      "commitMessage": "chore(release): release v{version} [skip ci]",
+      "tag": true,
+      "push": true,
+      "stageChanges": true
+    },
+    "changelog": {
+      "workspaceChangelog": {
+        "createRelease": "github",
+        "file": "CHANGELOG.md",
+        "entryWhenNoChanges": false,
+        "renderer": "{workspaceRoot}/tools/changelog-renderer.cjs"
+      },
+      "projectChangelogs": false
+    },
+    "conventionalCommits": {
+      "types": {
+        "feat": {
+          "semverBump": "minor",
+          "changelog": {
+            "title": "🎉 Features"
+          }
+        },
+        "fix": {
+          "semverBump": "patch",
+          "changelog": {
+            "title": "🐞 Bug Fixes"
+          }
+        },
+        "docs": {
+          "semverBump": "none",
+          "changelog": {
+            "title": "📚 Documentation"
+          }
+        },
+        "style": {
+          "semverBump": "none",
+          "changelog": false
+        },
+        "refactor": {
+          "semverBump": "none",
+          "changelog": {
+            "title": "♻️ Code Refactoring"
+          }
+        },
+        "perf": {
+          "semverBump": "patch",
+          "changelog": {
+            "title": "🚀 Performance Improvements"
+          }
+        },
+        "test": {
+          "semverBump": "none",
+          "changelog": false
+        },
+        "build": {
+          "semverBump": "none",
+          "changelog": {
+            "title": "🏗️ Build System"
+          }
+        },
+        "ci": {
+          "semverBump": "none",
+          "changelog": {
+            "title": "👷 CI"
+          }
+        },
+        "chore": {
+          "semverBump": "none",
+          "changelog": false
+        },
+        "revert": {
+          "semverBump": "patch",
+          "changelog": {
+            "title": "⏪ Reverts"
+          }
+        }
+      }
+    }
+  }
+}
