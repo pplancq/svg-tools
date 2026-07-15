@@ -1,6 +1,6 @@
 {
   "name": "@pplancq/svg-core",
-  "version": "3.0.10",
+  "version": "3.0.11",
   "license": "MIT",
   "description": "A functions for asynchronously loading SVG files into the DOM",
   "author": "pplancq <paul.plancq@outlook.fr>",
