@@ -71,21 +71,22 @@ jobs:
           GIT_COMMITTER_NAME: release[bot]
         run: |
           RELEASE_TYPE="${{ github.event.inputs.releaseType }}"
-          ARGS="--skip-publish"
+          ARGS=("--skip-publish")
 
           if [ "$RELEASE_TYPE" != "stable" ]; then
-            ARGS="$ARGS prerelease --preid $RELEASE_TYPE"
+            ARGS=("prerelease" "${ARGS[@]}")
+            ARGS+=("--preid" "$RELEASE_TYPE")
           fi
 
           if [ "${{ github.event.inputs.dryRun }}" = "true" ]; then
-            ARGS="$ARGS --dry-run"
+            ARGS+=("--dry-run")
           fi
 
           if [ "${{ github.event.inputs.debug }}" = "true" ]; then
-            ARGS="$ARGS --verbose"
+            ARGS+=("--verbose")
           fi
 
-          npx nx release $ARGS
+          npx nx release "${ARGS[@]}"
 
       - name: Publish to npm
         run: |
