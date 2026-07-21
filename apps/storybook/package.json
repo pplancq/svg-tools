@@ -51,7 +51,7 @@
     "storybook-react-rsbuild": "^3.3.4",
     "stylelint": "^17.14.0",
     "stylelint-prettier": "^5.0.3",
-    "typescript": "~6.0.3"
+    "typescript": "~7.0.2"
   },
   "prettier": "@pplancq/prettier-config",
   "lint-staged": {
