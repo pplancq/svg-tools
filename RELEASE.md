@@ -29,19 +29,19 @@ Nx Release determines the next version by analyzing conventional commits since t
 
 Because the packages are released together, `@pplancq/svg-react`'s dependency on `@pplancq/svg-core` is automatically updated to the new unified version during the release. You do not need to bump it manually.
 
-| Commit type | Version bump | Included in changelog | Notes |
-|-------------|--------------|----------------------|-------|
-| `feat`      | minor        | ✨ Features          |       |
-| `fix`       | patch        | 🐛 Bug Fixes         |       |
-| `perf`      | patch        | ⚡ Performance Improvements |  |
-| `revert`    | patch        | ⏪ Reverts            |       |
-| `docs`      | none         | 📚 Documentation     |       |
-| `refactor`  | none         | ♻️ Code Refactoring  |       |
-| `build`     | none         | 🏗️ Build System      |       |
-| `ci`        | none         | 👷 CI                |       |
-| `chore`     | none         | No                   |       |
-| `style`     | none         | No                   |       |
-| `test`      | none         | No                   |       |
+| Commit type | Version bump | Included in changelog       | Notes |
+| ----------- | ------------ | --------------------------- | ----- |
+| `feat`      | minor        | ✨ Features                 |       |
+| `fix`       | patch        | 🐛 Bug Fixes                |       |
+| `perf`      | patch        | ⚡ Performance Improvements |       |
+| `revert`    | patch        | ⏪ Reverts                  |       |
+| `docs`      | none         | 📚 Documentation            |       |
+| `refactor`  | none         | ♻️ Code Refactoring         |       |
+| `build`     | none         | 🏗️ Build System             |       |
+| `ci`        | none         | 👷 CI                       |       |
+| `chore`     | none         | No                          |       |
+| `style`     | none         | No                          |       |
+| `test`      | none         | No                          |       |
 
 A `BREAKING CHANGE` footer or `!` in the commit type triggers a major bump.
 

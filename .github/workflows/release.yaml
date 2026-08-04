@@ -4,22 +4,22 @@ on:
   workflow_dispatch:
     inputs:
       releaseType:
-        description: 'Release type'
+        description: "Release type"
         required: true
         type: choice
-        default: 'stable'
+        default: "stable"
         options:
           - stable
           - alpha
           - beta
           - rc
       dryRun:
-        description: 'Dry run'
+        description: "Dry run"
         required: false
         type: boolean
         default: false
       debug:
-        description: 'Debug mode'
+        description: "Debug mode"
         required: false
         type: boolean
         default: false
@@ -49,7 +49,7 @@ jobs:
       - name: Setup Node
         uses: pplancq/actions/setup-node@b248bd44a83e2d0c9f9334aff7e33771fdd77c76 # v1.1.2
         with:
-          use-mise: 'true'
+          use-mise: "true"
 
       - name: Install package
         run: npm ci

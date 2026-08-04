@@ -1,9 +1,9 @@
-import { type SanitizeConfig } from '@pplancq/svg-core';
-import { type PropsWithChildren, type SVGProps } from 'react';
-import { ErrorBoundary } from './ErrorBoundary';
-import { SvgContent } from './SvgContent';
+import { type SanitizeConfig } from "@pplancq/svg-core";
+import { type PropsWithChildren, type SVGProps } from "react";
+import { ErrorBoundary } from "./ErrorBoundary";
+import { SvgContent } from "./SvgContent";
 
-type SvgProps = Omit<SVGProps<SVGSVGElement>, 'aria-busy'> & {
+type SvgProps = Omit<SVGProps<SVGSVGElement>, "aria-busy"> & {
   src: string;
   alt?: string;
   /**

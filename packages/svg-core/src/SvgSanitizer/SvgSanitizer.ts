@@ -1,17 +1,17 @@
-import DOMPurify, { type Config } from 'dompurify';
+import DOMPurify, { type Config } from "dompurify";
 
-import { ContentSvgError } from '../Error/ContentSvgError';
-import type { SanitizeConfig } from '../SanitizeConfig/SanitizeConfig';
-import type { SvgSanitizerInterface } from './SvgSanitizerInterface';
+import { ContentSvgError } from "../Error/ContentSvgError";
+import type { SanitizeConfig } from "../SanitizeConfig/SanitizeConfig";
+import type { SvgSanitizerInterface } from "./SvgSanitizerInterface";
 
 export class SvgSanitizer implements SvgSanitizerInterface {
   constructor(private readonly sanitizer: typeof DOMPurify = DOMPurify) {}
 
   sanitize(svgString: string, config?: SanitizeConfig): SVGSVGElement {
-    const parent = document.createElement('div');
+    const parent = document.createElement("div");
     parent.innerHTML = this.sanitizer.sanitize(svgString, this.mapConfig(config));
 
-    const svgElement = parent.querySelector('svg');
+    const svgElement = parent.querySelector("svg");
 
     if (!(svgElement instanceof SVGSVGElement)) {
       throw new ContentSvgError();

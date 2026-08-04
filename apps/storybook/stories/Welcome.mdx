@@ -1,8 +1,8 @@
-import arrowCircleRightIcon from '@pplancq/shelter-ui-icon/icon/arrow-circle-right.svg';
+import arrowCircleRightIcon from "@pplancq/shelter-ui-icon/icon/arrow-circle-right.svg";
 
-import { Button, Icon } from '@pplancq/shelter-ui-react';
-import { Meta } from '@storybook/addon-docs/blocks';
-import defaultClasses from './Welcome.module.scss';
+import { Button, Icon } from "@pplancq/shelter-ui-react";
+import { Meta } from "@storybook/addon-docs/blocks";
+import defaultClasses from "./Welcome.module.scss";
 
 <Meta title="Welcome" />
 
@@ -27,21 +27,21 @@ You're in the right place!
 ## 🚀 Quick example
 
 ```jsx
-import { Svg } from '@pplancq/svg-react';
-import mySvg from './my-svg.svg';
+import { Svg } from "@pplancq/svg-react";
+import mySvg from "./my-svg.svg";
 
 export const App = () => <Svg src={mySvg} alt="My SVG" fill="red" />;
 ```
 
-<div className={defaultClasses['getting-started-container']}>
+<div className={defaultClasses["getting-started-container"]}>
   <Button
     component="a"
-    href={`${window.location.origin}${window.location.pathname.replace('/iframe.html', '')}/?path=/docs/svg-react-getting-started--docs`}
+    href={`${window.location.origin}${window.location.pathname.replace("/iframe.html", "")}/?path=/docs/svg-react-getting-started--docs`}
     variant="reverse"
     size="large"
     endIcon={<Icon icon={arrowCircleRightIcon} />}
-    className={[defaultClasses.button, 'sb-unstyled'].join(' ')}
+    className={[defaultClasses.button, "sb-unstyled"].join(" ")}
   >
-    {'Get started with the main Svg component'}
+    {"Get started with the main Svg component"}
   </Button>
 </div>

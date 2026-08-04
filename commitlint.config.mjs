@@ -1,18 +1,11 @@
 // eslint-disable-next-line import/no-default-export
 export default {
-  extends: ['@pplancq/commitlint-config'],
+  extends: ["@pplancq/commitlint-config"],
   rules: {
-    'scope-enum': [
+    "scope-enum": [
       2,
-      'always',
-      [
-        'svg-tools',
-        'svg-core',
-        'svg-react',
-        'storybook',
-        'deps',
-        'release',
-      ],
+      "always",
+      ["svg-tools", "svg-core", "svg-react", "storybook", "deps", "release"],
     ],
   },
 };

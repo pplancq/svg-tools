@@ -1,34 +1,34 @@
-import { loadEnv } from 'vite';
-import { defineConfig } from 'vitest/config';
+import { loadEnv } from "vite";
+import { defineConfig } from "vitest/config";
 
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd(), '');
+  const env = loadEnv(mode, process.cwd(), "");
 
   return {
     test: {
       projects: [
-        './packages/svg-core/vitest.config.mts',
-        './packages/svg-react/vitest.config.mts',
+        "./packages/svg-core/vitest.config.mts",
+        "./packages/svg-react/vitest.config.mts",
       ],
-      reporters: ['default', 'junit', 'vitest-sonar-reporter'],
+      reporters: ["default", "junit", "vitest-sonar-reporter"],
       outputFile: {
-        'vitest-sonar-reporter': 'sonar-report.xml',
-        'junit': 'junit-report.xml',
+        "vitest-sonar-reporter": "sonar-report.xml",
+        junit: "junit-report.xml",
       },
       maxWorkers: env.CI ? 2 : undefined,
       coverage: {
-        enabled: env.CI === 'true',
-        reporter: ['lcov', 'json', 'html', 'text', 'cobertura'],
-        provider: 'v8',
+        enabled: env.CI === "true",
+        reporter: ["lcov", "json", "html", "text", "cobertura"],
+        provider: "v8",
         lines: 80,
         functions: 75,
         branches: 80,
         statements: 80,
-        include: ['packages/*/src/**/*.[jt]s?(x)'],
+        include: ["packages/*/src/**/*.[jt]s?(x)"],
         exclude: [
-          'packages/*/src/**/*.d.[jt]s?(x)',
-          'packages/*/src/**/*.types.[jt]s?(x)',
-          'packages/*/src/**/index.[jt]s?(x)',
+          "packages/*/src/**/*.d.[jt]s?(x)",
+          "packages/*/src/**/*.types.[jt]s?(x)",
+          "packages/*/src/**/index.[jt]s?(x)",
         ],
       },
     },

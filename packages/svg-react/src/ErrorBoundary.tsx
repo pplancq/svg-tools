@@ -1,4 +1,4 @@
-import { Component, type PropsWithChildren, type ReactNode } from 'react';
+import { Component, type PropsWithChildren, type ReactNode } from "react";
 
 type ErrorBoundaryProps = {
   fallback: ReactNode;

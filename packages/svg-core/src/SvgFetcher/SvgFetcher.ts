@@ -1,6 +1,6 @@
-import { CONTENT_TYPE, MINE_TYPE_SVG } from '../constants';
-import { InvalidSvgError } from '../Error/InvalidSvgError';
-import type { SvgFetcherInterface } from './SvgFetcherInterface';
+import { CONTENT_TYPE, MINE_TYPE_SVG } from "../constants";
+import { InvalidSvgError } from "../Error/InvalidSvgError";
+import type { SvgFetcherInterface } from "./SvgFetcherInterface";
 
 export class SvgFetcher implements SvgFetcherInterface {
   private readonly inFlightRequests: Map<string, Promise<string>> = new Map();

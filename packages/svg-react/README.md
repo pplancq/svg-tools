@@ -44,8 +44,8 @@ npm install @pplancq/svg-react
 ## Usage in your React application
 
 ```javascript
-import { Svg } from '@pplancq/svg-react';
-import mySvg from './my-svg.svg';
+import { Svg } from "@pplancq/svg-react";
+import mySvg from "./my-svg.svg";
 
 export const App = () => {
   return <Svg src={mySvg} alt="mySvg" fill="red" />;
@@ -131,6 +131,7 @@ The `sanitizeConfig` prop accepts a `SanitizeConfig` object with the following p
 #### ⚠️ Security Warning
 
 **IMPORTANT**: The `sanitizeConfig` option should **only** be used when:
+
 - You control and trust the source of your SVG files
 - You understand the security implications of allowing specific elements/attributes
 - You have validated that your configuration doesn't introduce XSS vulnerabilities
@@ -140,6 +141,7 @@ The `sanitizeConfig` prop accepts a `SanitizeConfig` object with the following p
 #### Common Use Cases
 
 **Allowing SVG animations:**
+
 ```typescript
 <Svg
   src="/animated-icon.svg"
@@ -152,6 +154,7 @@ The `sanitizeConfig` prop accepts a `SanitizeConfig` object with the following p
 ```
 
 **Allowing data attributes for JavaScript interactions:**
+
 ```typescript
 <Svg
   src="/interactive.svg"
@@ -191,7 +194,7 @@ The `@testing-library/react`’s `waitFor` utility handles asynchronous updates 
 Suppose you have an `IconButton` component that uses the `<Svg />` component to display an icon:
 
 ```tsx
-import { Svg } from '@pplancq/svg-react';
+import { Svg } from "@pplancq/svg-react";
 
 export function IconButton() {
   return (
@@ -206,15 +209,15 @@ export function IconButton() {
 To test this component, use `render` and `waitFor` from `@testing-library/react`:
 
 ```tsx
-import { render, screen, waitFor } from '@testing-library/react';
-import { IconButton } from './IconButton';
+import { render, screen, waitFor } from "@testing-library/react";
+import { IconButton } from "./IconButton";
 
-it('should render the button with its SVG icon', async () => {
+it("should render the button with its SVG icon", async () => {
   render(<IconButton />);
   await waitFor(() => {
-    expect(screen.getByRole('img', { name: 'button icon' })).toBeInTheDocument();
+    expect(screen.getByRole("img", { name: "button icon" })).toBeInTheDocument();
   });
-  expect(screen.getByRole('button', { name: /action/i })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: /action/i })).toBeInTheDocument();
 });
 ```
 
