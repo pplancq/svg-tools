@@ -76,14 +76,14 @@ Both packages use **Rslib** (`rslib.config.ts`) with `bundle: false`, ESM output
 
 Conventional Commits format with a **mandatory scope**:
 
-| Scope | When to use |
-|---|---|
-| `svg-core` | Changes in `packages/svg-core` |
-| `svg-react` | Changes in `packages/svg-react` |
-| `storybook` | Changes in `apps/storybook` |
+| Scope       | When to use                         |
+| ----------- | ----------------------------------- |
+| `svg-core`  | Changes in `packages/svg-core`      |
+| `svg-react` | Changes in `packages/svg-react`     |
+| `storybook` | Changes in `apps/storybook`         |
 | `svg-tools` | Root-level or cross-cutting changes |
-| `deps` | Dependency updates |
-| `release` | Release automation |
+| `deps`      | Dependency updates                  |
+| `release`   | Release automation                  |
 
 First line must not exceed 72 characters. Use imperative mood, no trailing period.
 

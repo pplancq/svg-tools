@@ -1,12 +1,12 @@
-import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from "vitest";
 
-import { CONTENT_TYPE, MINE_TYPE_SVG } from '../../src/constants';
-import { InvalidSvgError } from '../../src/Error/InvalidSvgError';
-import { SvgFetcher } from '../../src/SvgFetcher/SvgFetcher';
+import { CONTENT_TYPE, MINE_TYPE_SVG } from "../../src/constants";
+import { InvalidSvgError } from "../../src/Error/InvalidSvgError";
+import { SvgFetcher } from "../../src/SvgFetcher/SvgFetcher";
 
 const svg = '<svg><circle cx="50" cy="50" r="40"/></svg>';
 
-describe('SvgFetcher', () => {
+describe("SvgFetcher", () => {
   const fetchMock = vi.fn();
   window.fetch = fetchMock;
 
@@ -14,38 +14,38 @@ describe('SvgFetcher', () => {
     fetchMock.mockClear();
   });
 
-  it('should fetch and return SVG string', async () => {
+  it("should fetch and return SVG string", async () => {
     fetchMock.mockResolvedValueOnce({
       headers: new Headers([[CONTENT_TYPE, MINE_TYPE_SVG]]),
       text: () => Promise.resolve(svg),
     });
 
     const fetcher = new SvgFetcher();
-    const result = await fetcher.fetch('/icon.svg');
+    const result = await fetcher.fetch("/icon.svg");
 
     expect(result).toBe(svg);
   });
 
-  it('should throw InvalidSvgError when content-type is not image/svg+xml', async () => {
+  it("should throw InvalidSvgError when content-type is not image/svg+xml", async () => {
     fetchMock.mockResolvedValueOnce({
-      headers: new Headers([[CONTENT_TYPE, 'text/html']]),
-      text: () => Promise.resolve('<html></html>'),
+      headers: new Headers([[CONTENT_TYPE, "text/html"]]),
+      text: () => Promise.resolve("<html></html>"),
     });
 
     const fetcher = new SvgFetcher();
-    await expect(fetcher.fetch('/not-svg.html')).rejects.toThrow(InvalidSvgError);
+    await expect(fetcher.fetch("/not-svg.html")).rejects.toThrow(InvalidSvgError);
   });
 
-  it('should deduplicate concurrent requests for the same URL', async () => {
+  it("should deduplicate concurrent requests for the same URL", async () => {
     let resolveFirst!: (value: unknown) => void;
-    const firstPromise = new Promise(resolve => {
+    const firstPromise = new Promise((resolve) => {
       resolveFirst = resolve;
     });
     fetchMock.mockReturnValueOnce(firstPromise);
 
     const fetcher = new SvgFetcher();
-    const p1 = fetcher.fetch('/icon.svg');
-    const p2 = fetcher.fetch('/icon.svg');
+    const p1 = fetcher.fetch("/icon.svg");
+    const p2 = fetcher.fetch("/icon.svg");
 
     resolveFirst({
       headers: new Headers([[CONTENT_TYPE, MINE_TYPE_SVG]]),
@@ -58,7 +58,7 @@ describe('SvgFetcher', () => {
     expect(r2).toBe(svg);
   });
 
-  it('should not deduplicate requests across different instances', async () => {
+  it("should not deduplicate requests across different instances", async () => {
     fetchMock.mockResolvedValue({
       headers: new Headers([[CONTENT_TYPE, MINE_TYPE_SVG]]),
       text: () => Promise.resolve(svg),
@@ -67,20 +67,20 @@ describe('SvgFetcher', () => {
     const fetcher1 = new SvgFetcher();
     const fetcher2 = new SvgFetcher();
 
-    await fetcher1.fetch('/icon.svg');
-    await fetcher2.fetch('/icon.svg');
+    await fetcher1.fetch("/icon.svg");
+    await fetcher2.fetch("/icon.svg");
 
     expect(fetchMock).toHaveBeenCalledTimes(2);
   });
 
-  it('should accept a URL instance', async () => {
+  it("should accept a URL instance", async () => {
     fetchMock.mockResolvedValueOnce({
       headers: new Headers([[CONTENT_TYPE, MINE_TYPE_SVG]]),
       text: () => Promise.resolve(svg),
     });
 
     const fetcher = new SvgFetcher();
-    const result = await fetcher.fetch(new URL('https://example.com/icon.svg'));
+    const result = await fetcher.fetch(new URL("https://example.com/icon.svg"));
 
     expect(result).toBe(svg);
   });

@@ -1,6 +1,6 @@
-import type { AbstractObserverInterface } from '../AbstractObserver/AbstractObserverInterface';
+import type { AbstractObserverInterface } from "../AbstractObserver/AbstractObserverInterface";
 
-export type SvgStatus = 'idle' | 'loading' | 'success' | 'error';
+export type SvgStatus = "idle" | "loading" | "success" | "error";
 
 export interface SvgState {
   status: SvgStatus;

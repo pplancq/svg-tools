@@ -2,251 +2,247 @@
 
 ### Bug Fixes
 
-* **deps:** update dependency dompurify to ^3.4.12 ([#966](https://github.com/pplancq/svg-tools/issues/966)) ([06c3cfe](https://github.com/pplancq/svg-tools/commit/06c3cfe32320d0483b35e83c0ee685c5837bc79d))
+- **deps:** update dependency dompurify to ^3.4.12 ([#966](https://github.com/pplancq/svg-tools/issues/966)) ([06c3cfe](https://github.com/pplancq/svg-tools/commit/06c3cfe32320d0483b35e83c0ee685c5837bc79d))
 
 ## @pplancq/svg-core [3.0.10](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@3.0.9...@pplancq/svg-core@3.0.10) (2026-06-23)
 
 ### Bug Fixes
 
-* **deps:** update dependency dompurify to ^3.4.11 ([#926](https://github.com/pplancq/svg-tools/issues/926)) ([f3a17cf](https://github.com/pplancq/svg-tools/commit/f3a17cf90079f154b4d21c8fd2aabaee58cb1182))
+- **deps:** update dependency dompurify to ^3.4.11 ([#926](https://github.com/pplancq/svg-tools/issues/926)) ([f3a17cf](https://github.com/pplancq/svg-tools/commit/f3a17cf90079f154b4d21c8fd2aabaee58cb1182))
 
 ## @pplancq/svg-core [3.0.9](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@3.0.8...@pplancq/svg-core@3.0.9) (2026-06-15)
 
 ### Bug Fixes
 
-* **deps:** update dependency dompurify to ^3.4.10 ([#910](https://github.com/pplancq/svg-tools/issues/910)) ([46e10d3](https://github.com/pplancq/svg-tools/commit/46e10d393dde774078a4d94171559b0c43987c78))
+- **deps:** update dependency dompurify to ^3.4.10 ([#910](https://github.com/pplancq/svg-tools/issues/910)) ([46e10d3](https://github.com/pplancq/svg-tools/commit/46e10d393dde774078a4d94171559b0c43987c78))
 
 ## @pplancq/svg-core [3.0.8](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@3.0.7...@pplancq/svg-core@3.0.8) (2026-06-08)
 
 ### Bug Fixes
 
-* **deps:** update dependency dompurify to ^3.4.8 ([#902](https://github.com/pplancq/svg-tools/issues/902)) ([47f32a7](https://github.com/pplancq/svg-tools/commit/47f32a745e31a4bdf127cb018b4a9948da0b43b8))
+- **deps:** update dependency dompurify to ^3.4.8 ([#902](https://github.com/pplancq/svg-tools/issues/902)) ([47f32a7](https://github.com/pplancq/svg-tools/commit/47f32a745e31a4bdf127cb018b4a9948da0b43b8))
 
 ## @pplancq/svg-core [3.0.7](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@3.0.6...@pplancq/svg-core@3.0.7) (2026-06-01)
 
 ### Bug Fixes
 
-* **deps:** update dependency dompurify to ^3.4.7 ([#885](https://github.com/pplancq/svg-tools/issues/885)) ([387a570](https://github.com/pplancq/svg-tools/commit/387a5702f18ea67ee0723c89aedd32678c4c569a))
+- **deps:** update dependency dompurify to ^3.4.7 ([#885](https://github.com/pplancq/svg-tools/issues/885)) ([387a570](https://github.com/pplancq/svg-tools/commit/387a5702f18ea67ee0723c89aedd32678c4c569a))
 
 ## @pplancq/svg-core [3.0.6](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@3.0.5...@pplancq/svg-core@3.0.6) (2026-05-26)
 
 ### Bug Fixes
 
-* **deps:** update dependency dompurify to ^3.4.5 ([#869](https://github.com/pplancq/svg-tools/issues/869)) ([1098489](https://github.com/pplancq/svg-tools/commit/1098489580014844a1d6c786804b5cc0728b1fb6))
+- **deps:** update dependency dompurify to ^3.4.5 ([#869](https://github.com/pplancq/svg-tools/issues/869)) ([1098489](https://github.com/pplancq/svg-tools/commit/1098489580014844a1d6c786804b5cc0728b1fb6))
 
 ## @pplancq/svg-core [3.0.5](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@3.0.4...@pplancq/svg-core@3.0.5) (2026-05-19)
 
 ### Bug Fixes
 
-* **deps:** update dependency dompurify to ^3.4.3 ([#862](https://github.com/pplancq/svg-tools/issues/862)) ([7c195d4](https://github.com/pplancq/svg-tools/commit/7c195d4b5d998f77fa39c3c67bc0529ebcbf22f7))
+- **deps:** update dependency dompurify to ^3.4.3 ([#862](https://github.com/pplancq/svg-tools/issues/862)) ([7c195d4](https://github.com/pplancq/svg-tools/commit/7c195d4b5d998f77fa39c3c67bc0529ebcbf22f7))
 
 ## @pplancq/svg-core [3.0.4](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@3.0.3...@pplancq/svg-core@3.0.4) (2026-05-05)
 
 ### Bug Fixes
 
-* **deps:** update dependency dompurify to ^3.4.2 ([#839](https://github.com/pplancq/svg-tools/issues/839)) ([e42c586](https://github.com/pplancq/svg-tools/commit/e42c5864ef762d34c2f22137e607bebb1c194142))
+- **deps:** update dependency dompurify to ^3.4.2 ([#839](https://github.com/pplancq/svg-tools/issues/839)) ([e42c586](https://github.com/pplancq/svg-tools/commit/e42c5864ef762d34c2f22137e607bebb1c194142))
 
 ## @pplancq/svg-core [3.0.3](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@3.0.2...@pplancq/svg-core@3.0.3) (2026-04-27)
 
 ### Bug Fixes
 
-* **deps:** update dependency dompurify to ^3.4.1 ([#820](https://github.com/pplancq/svg-tools/issues/820)) ([3809ad2](https://github.com/pplancq/svg-tools/commit/3809ad27c0e748f5b768af9d361507f9ab129785))
+- **deps:** update dependency dompurify to ^3.4.1 ([#820](https://github.com/pplancq/svg-tools/issues/820)) ([3809ad2](https://github.com/pplancq/svg-tools/commit/3809ad27c0e748f5b768af9d361507f9ab129785))
 
 ## @pplancq/svg-core [3.0.2](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@3.0.1...@pplancq/svg-core@3.0.2) (2026-04-17)
 
 ### Bug Fixes
 
-* **deps:** update dependency dompurify to ^3.4.0 ([#813](https://github.com/pplancq/svg-tools/issues/813)) ([fe7f915](https://github.com/pplancq/svg-tools/commit/fe7f9158e28c1a79656a7f9dc06b3a0f0cc7fd58))
+- **deps:** update dependency dompurify to ^3.4.0 ([#813](https://github.com/pplancq/svg-tools/issues/813)) ([fe7f915](https://github.com/pplancq/svg-tools/commit/fe7f9158e28c1a79656a7f9dc06b3a0f0cc7fd58))
 
 ## @pplancq/svg-core [3.0.1](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@3.0.0...@pplancq/svg-core@3.0.1) (2026-03-16)
 
 ### Bug Fixes
 
-* **deps:** update dependency dompurify to ^3.3.3 ([#744](https://github.com/pplancq/svg-tools/issues/744)) ([01b0d18](https://github.com/pplancq/svg-tools/commit/01b0d1821f0c64dae69ae9ccc769efa030af04f8))
+- **deps:** update dependency dompurify to ^3.3.3 ([#744](https://github.com/pplancq/svg-tools/issues/744)) ([01b0d18](https://github.com/pplancq/svg-tools/commit/01b0d1821f0c64dae69ae9ccc769efa030af04f8))
 
 ## @pplancq/svg-core [3.0.0](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@2.1.1...@pplancq/svg-core@3.0.0) (2026-03-10)
 
 ### ⚠ BREAKING CHANGES
 
-* **svg-core:** The library API has been completely redesigned. The old function-based API (`getSvg()`, `fetchSvg()`) is replaced with a class-based Observable pattern. See the [Migration Guide in README](packages/svg-core/README.md#-migration-from-v2-to-v3) for detailed upgrade instructions.
+- **svg-core:** The library API has been completely redesigned. The old function-based API (`getSvg()`, `fetchSvg()`) is replaced with a class-based Observable pattern. See the [Migration Guide in README](packages/svg-core/README.md#-migration-from-v2-to-v3) for detailed upgrade instructions.
 
 ### Features
 
-* **svg-core:** migrate to Observable pattern with class-based architecture ([#730](https://github.com/pplancq/svg-tools/issues/730)) ([cef9c3e](https://github.com/pplancq/svg-tools/commit/cef9c3eaa0b665ae1af129fd292a60c4a471dbc4))
+- **svg-core:** migrate to Observable pattern with class-based architecture ([#730](https://github.com/pplancq/svg-tools/issues/730)) ([cef9c3e](https://github.com/pplancq/svg-tools/commit/cef9c3eaa0b665ae1af129fd292a60c4a471dbc4))
 
 ### Bug Fixes
 
-* **deps:** update dependency dompurify to ^3.3.2 ([#729](https://github.com/pplancq/svg-tools/issues/729)) ([f808392](https://github.com/pplancq/svg-tools/commit/f8083922ab064863dc54e1b894ddaef37d58e9cb))
+- **deps:** update dependency dompurify to ^3.3.2 ([#729](https://github.com/pplancq/svg-tools/issues/729)) ([f808392](https://github.com/pplancq/svg-tools/commit/f8083922ab064863dc54e1b894ddaef37d58e9cb))
 
 ## @pplancq/svg-core [3.0.0-alpha.1](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@2.1.1...@pplancq/svg-core@3.0.0-alpha.1) (2026-03-09)
 
 ### ⚠ BREAKING CHANGES
 
-* **svg-core:** The library API has been completely redesigned. The old function-based API (`getSvg()`, `fetchSvg()`) is replaced with a class-based Observable pattern. See the [Migration Guide in README](packages/svg-core/README.md#-migration-from-v2-to-v3) for detailed upgrade instructions.
+- **svg-core:** The library API has been completely redesigned. The old function-based API (`getSvg()`, `fetchSvg()`) is replaced with a class-based Observable pattern. See the [Migration Guide in README](packages/svg-core/README.md#-migration-from-v2-to-v3) for detailed upgrade instructions.
 
 ### Features
 
-* **svg-core:** migrate to Observable pattern with class-based architecture ([#730](https://github.com/pplancq/svg-tools/issues/730)) ([cef9c3e](https://github.com/pplancq/svg-tools/commit/cef9c3eaa0b665ae1af129fd292a60c4a471dbc4))
+- **svg-core:** migrate to Observable pattern with class-based architecture ([#730](https://github.com/pplancq/svg-tools/issues/730)) ([cef9c3e](https://github.com/pplancq/svg-tools/commit/cef9c3eaa0b665ae1af129fd292a60c4a471dbc4))
 
 ### Bug Fixes
 
-* **deps:** update dependency dompurify to ^3.3.2 ([#729](https://github.com/pplancq/svg-tools/issues/729)) ([f808392](https://github.com/pplancq/svg-tools/commit/f8083922ab064863dc54e1b894ddaef37d58e9cb))
+- **deps:** update dependency dompurify to ^3.3.2 ([#729](https://github.com/pplancq/svg-tools/issues/729)) ([f808392](https://github.com/pplancq/svg-tools/commit/f8083922ab064863dc54e1b894ddaef37d58e9cb))
 
 ## @pplancq/svg-core [2.1.1](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@2.1.0...@pplancq/svg-core@2.1.1) (2025-12-12)
 
 ### Bug Fixes
 
-* **deps:** update dependency dompurify to ^3.3.1 ([723981e](https://github.com/pplancq/svg-tools/commit/723981e906b73734d1f17013cba7175386da077d))
+- **deps:** update dependency dompurify to ^3.3.1 ([723981e](https://github.com/pplancq/svg-tools/commit/723981e906b73734d1f17013cba7175386da077d))
 
 ## @pplancq/svg-core [2.1.0](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@2.0.3...@pplancq/svg-core@2.1.0) (2025-10-27)
 
 ### Features
 
-* **svg-core:** add custom sanitization configuration for getSvg ([c913044](https://github.com/pplancq/svg-tools/commit/c9130440872fbb3978515370b897903217f46693))
+- **svg-core:** add custom sanitization configuration for getSvg ([c913044](https://github.com/pplancq/svg-tools/commit/c9130440872fbb3978515370b897903217f46693))
 
 ## @pplancq/svg-core [2.0.3](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@2.0.2...@pplancq/svg-core@2.0.3) (2025-10-21)
 
 ### Bug Fixes
 
-* **deps:** update dependency dompurify to ^3.3.0 ([777b3a5](https://github.com/pplancq/svg-tools/commit/777b3a5aafa8066a3b7a3ee339760e4467432788))
+- **deps:** update dependency dompurify to ^3.3.0 ([777b3a5](https://github.com/pplancq/svg-tools/commit/777b3a5aafa8066a3b7a3ee339760e4467432788))
 
 ## @pplancq/svg-core [2.0.2](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@2.0.1...@pplancq/svg-core@2.0.2) (2025-10-13)
 
-### Bug Fixes 
+### Bug Fixes
 
-* **svg-core:** deduplicate simultaneous SVG fetch requests ([63c7b17](https://github.com/pplancq/svg-tools/commit/63c7b17))
+- **svg-core:** deduplicate simultaneous SVG fetch requests ([63c7b17](https://github.com/pplancq/svg-tools/commit/63c7b17))
 
 ## @pplancq/svg-core [2.0.1](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@2.0.0...@pplancq/svg-core@2.0.1) (2025-09-22)
 
 ### Bug Fixes
 
-* **deps:** update dependency dompurify to ^3.2.7 ([2aa4b3a](https://github.com/pplancq/svg-tools/commit/2aa4b3a8b4497dd12deb88eb936c06298460f388))
+- **deps:** update dependency dompurify to ^3.2.7 ([2aa4b3a](https://github.com/pplancq/svg-tools/commit/2aa4b3a8b4497dd12deb88eb936c06298460f388))
 
 ## @pplancq/svg-core [2.0.0](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.2.1...@pplancq/svg-core@2.0.0) (2025-06-09)
 
 ### ⚠ BREAKING CHANGES
 
-* **svg-core:** the getSvg function now throws custom exceptions (InvalidSvgError, ContentSvgError) in case of errors when retrieving or validating an SVG.
+- **svg-core:** the getSvg function now throws custom exceptions (InvalidSvgError, ContentSvgError) in case of errors when retrieving or validating an SVG.
 
 ### Features
 
-* **svg-core:** implement mergeSvgContent function and update exports ([5f997f3](https://github.com/pplancq/svg-tools/commit/5f997f3785bf30ab2406ba63e26d915f0cbbd1af))
-* **svg-core:** introduce custom error classes for SVG validation ([ad16579](https://github.com/pplancq/svg-tools/commit/ad16579025e923d17d2e8d6b85ada35f27ddc8f2))
+- **svg-core:** implement mergeSvgContent function and update exports ([5f997f3](https://github.com/pplancq/svg-tools/commit/5f997f3785bf30ab2406ba63e26d915f0cbbd1af))
+- **svg-core:** introduce custom error classes for SVG validation ([ad16579](https://github.com/pplancq/svg-tools/commit/ad16579025e923d17d2e8d6b85ada35f27ddc8f2))
 
 ## @pplancq/svg-core [2.0.0-alpha.1](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.2.1...@pplancq/svg-core@2.0.0-alpha.1) (2025-06-09)
- (2025-06-04)
+
+(2025-06-04)
 
 ### ⚠ BREAKING CHANGES
 
-* **svg-core:** the getSvg function now throws custom exceptions (InvalidSvgError, ContentSvgError) in case of errors when retrieving or validating an SVG.
+- **svg-core:** the getSvg function now throws custom exceptions (InvalidSvgError, ContentSvgError) in case of errors when retrieving or validating an SVG.
 
 ### Features
 
-* **svg-core:** implement mergeSvgContent function and update exports ([5f997f3](https://github.com/pplancq/svg-tools/commit/5f997f3785bf30ab2406ba63e26d915f0cbbd1af))
-* **svg-core:** introduce custom error classes for SVG validation ([ad16579](https://github.com/pplancq/svg-tools/commit/ad16579025e923d17d2e8d6b85ada35f27ddc8f2))
+- **svg-core:** implement mergeSvgContent function and update exports ([5f997f3](https://github.com/pplancq/svg-tools/commit/5f997f3785bf30ab2406ba63e26d915f0cbbd1af))
+- **svg-core:** introduce custom error classes for SVG validation ([ad16579](https://github.com/pplancq/svg-tools/commit/ad16579025e923d17d2e8d6b85ada35f27ddc8f2))
 
 ## @pplancq/svg-core [1.2.1](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.2.1...@pplancq/svg-core@1.2.1) (2025-05-26)
 
 ### Bug Fixes
 
-* **deps:** update dependency dompurify to ^3.2.6 ([094ece2](https://github.com/pplancq/svg-tools/commit/094ece2))
+- **deps:** update dependency dompurify to ^3.2.6 ([094ece2](https://github.com/pplancq/svg-tools/commit/094ece2))
 
 ## @pplancq/svg-core [1.2.0](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.1.3...@pplancq/svg-core@1.2.0) (2025-05-13)
 
 ### Features
 
-* **svg-core:** update main and types fields to point to getSvg.js ([b96e46a](https://github.com/pplancq/svg-tools/commit/b96e46a890bd89c94634d5085a60a7086e4b6e99))
+- **svg-core:** update main and types fields to point to getSvg.js ([b96e46a](https://github.com/pplancq/svg-tools/commit/b96e46a890bd89c94634d5085a60a7086e4b6e99))
 
 ## @pplancq/svg-core [1.1.3](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.1.2...@pplancq/svg-core@1.1.3) (2025-05-06)
 
 ### Bug Fixes
 
-* **svg-react:** fixed handling of inline SVGs encoded with encodeURI ([81b7b85](https://github.com/pplancq/svg-tools/commit/81b7b855d20b52928b9af04f102432039730b89d))
+- **svg-react:** fixed handling of inline SVGs encoded with encodeURI ([81b7b85](https://github.com/pplancq/svg-tools/commit/81b7b855d20b52928b9af04f102432039730b89d))
 
 ## @pplancq/svg-core [1.1.2](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.1.1...@pplancq/svg-core@1.1.2) (2025-04-07)
 
 ### Bug Fixes
 
-* **deps:** update dependency dompurify to ^3.2.5 ([bb4d1bf](https://github.com/pplancq/svg-tools/commit/bb4d1bf4df548af48859c38d1c4f2e7963d48f53))
+- **deps:** update dependency dompurify to ^3.2.5 ([bb4d1bf](https://github.com/pplancq/svg-tools/commit/bb4d1bf4df548af48859c38d1c4f2e7963d48f53))
 
 ## @pplancq/svg-core [1.1.1](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.1.0...@pplancq/svg-core@1.1.1) (2025-03-18)
 
 ### Bug Fixes
 
-* **svg-core:** fix inline SVG data base64 encoded in getSvg function ([091ef9f](https://github.com/pplancq/svg-tools/commit/091ef9f25920efb13177f880a409aa10f26d1643))
-* **svg-core:** use constant for SVG MIME type in getSvg function ([710cdb2](https://github.com/pplancq/svg-tools/commit/710cdb2187a018f3802cc174ab3fab5394665c84))
+- **svg-core:** fix inline SVG data base64 encoded in getSvg function ([091ef9f](https://github.com/pplancq/svg-tools/commit/091ef9f25920efb13177f880a409aa10f26d1643))
+- **svg-core:** use constant for SVG MIME type in getSvg function ([710cdb2](https://github.com/pplancq/svg-tools/commit/710cdb2187a018f3802cc174ab3fab5394665c84))
 
 ## @pplancq/svg-core [1.1.0](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.0.9...@pplancq/svg-core@1.1.0) (2025-03-17)
 
 ### Features
 
-* **svg-core:** add support for inline SVG data URIs in getSvg function ([ad3e7b5](https://github.com/pplancq/svg-tools/commit/ad3e7b577fd83b940d2a0b2db305af820bdda6d6))
+- **svg-core:** add support for inline SVG data URIs in getSvg function ([ad3e7b5](https://github.com/pplancq/svg-tools/commit/ad3e7b577fd83b940d2a0b2db305af820bdda6d6))
 
 ## @pplancq/svg-core [1.0.9](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.0.8...@pplancq/svg-core@1.0.9) (2025-02-04)
 
 ### Bug Fixes
 
-* **deps:** update dependency dompurify to ^3.2.4 ([77cb298](https://github.com/pplancq/svg-tools/commit/77cb2988f7596062c8be13e2e5d835a00328f2d5))
+- **deps:** update dependency dompurify to ^3.2.4 ([77cb298](https://github.com/pplancq/svg-tools/commit/77cb2988f7596062c8be13e2e5d835a00328f2d5))
 
 ## @pplancq/svg-core [1.0.8](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.0.7...@pplancq/svg-core@1.0.8) (2024-12-16)
 
 ### Bug Fixes
 
-* **deps:** update dependency dompurify to ^3.2.3 ([46ee2bb](https://github.com/pplancq/svg-tools/commit/46ee2bb6aa77e9c10762e604879b9166c787f025))
+- **deps:** update dependency dompurify to ^3.2.3 ([46ee2bb](https://github.com/pplancq/svg-tools/commit/46ee2bb6aa77e9c10762e604879b9166c787f025))
 
 ## @pplancq/svg-core [1.0.7](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.0.6...@pplancq/svg-core@1.0.7) (2024-12-10)
 
 ### Bug Fixes
 
-* **deps:** update dependency dompurify to ^3.2.2 ([99d00e7](https://github.com/pplancq/svg-tools/commit/99d00e7d5cac64e05d73620ba9b09b2909e89023))
+- **deps:** update dependency dompurify to ^3.2.2 ([99d00e7](https://github.com/pplancq/svg-tools/commit/99d00e7d5cac64e05d73620ba9b09b2909e89023))
 
 ## @pplancq/svg-core [1.0.6](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.0.5...@pplancq/svg-core@1.0.6) (2024-11-26)
 
 ### Bug Fixes
 
-* **deps:** update dependency dompurify to ^3.2.1 ([e996a3c](https://github.com/pplancq/svg-tools/commit/e996a3c36c40c2441ba75db9e6237dda3be64bb5))
+- **deps:** update dependency dompurify to ^3.2.1 ([e996a3c](https://github.com/pplancq/svg-tools/commit/e996a3c36c40c2441ba75db9e6237dda3be64bb5))
 
 ## @pplancq/svg-core [1.0.5](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.0.4...@pplancq/svg-core@1.0.5) (2024-11-18)
 
 ### Bug Fixes
 
-* **deps:** update dependency dompurify to ^3.2.0 ([1126689](https://github.com/pplancq/svg-tools/commit/1126689bbd2c87b1482f317f6e9e01e438503240))
+- **deps:** update dependency dompurify to ^3.2.0 ([1126689](https://github.com/pplancq/svg-tools/commit/1126689bbd2c87b1482f317f6e9e01e438503240))
 
 ## @pplancq/svg-core [1.0.4](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.0.3...@pplancq/svg-core@1.0.4) (2024-11-11)
 
 ### Bug Fixes
 
-* **deps:** update dependency dompurify to ^3.1.7 ([7b4c296](https://github.com/pplancq/svg-tools/commit/7b4c2969fb5ce7b8bcbf0618ec4f127d95642e20))
+- **deps:** update dependency dompurify to ^3.1.7 ([7b4c296](https://github.com/pplancq/svg-tools/commit/7b4c2969fb5ce7b8bcbf0618ec4f127d95642e20))
 
 ## @pplancq/svg-core [1.0.3](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.0.2...@pplancq/svg-core@1.0.3) (2024-05-15)
 
-
 ### Bug Fixes
 
-* fixed import and use of DOMPurify ([a12123f](https://github.com/pplancq/svg-tools/commit/a12123f184d0fd3fbe36e213c307e87610697204))
+- fixed import and use of DOMPurify ([a12123f](https://github.com/pplancq/svg-tools/commit/a12123f184d0fd3fbe36e213c307e87610697204))
 
 ## @pplancq/svg-core [1.0.2](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.0.1...@pplancq/svg-core@1.0.2) (2024-05-14)
 
-
 ### Bug Fixes
 
-* sanitize svg before merge in svgEl ([4db7e89](https://github.com/pplancq/svg-tools/commit/4db7e897844a0377259650d80db62e0d2961fcec))
+- sanitize svg before merge in svgEl ([4db7e89](https://github.com/pplancq/svg-tools/commit/4db7e897844a0377259650d80db62e0d2961fcec))
 
 ## @pplancq/svg-core [1.0.1](https://github.com/pplancq/svg-tools/compare/@pplancq/svg-core@1.0.0...@pplancq/svg-core@1.0.1) (2024-05-07)
 
-
 ### Bug Fixes
 
-* remove test on npm publish ([7e5ce7e](https://github.com/pplancq/svg-tools/commit/7e5ce7e207de978b5b297df4102127ccfd9e4822))
+- remove test on npm publish ([7e5ce7e](https://github.com/pplancq/svg-tools/commit/7e5ce7e207de978b5b297df4102127ccfd9e4822))
 
 ## @pplancq/svg-core 1.0.0 (2024-05-07)
 
-
 ### Features
 
-* implement getSvg ([ca31482](https://github.com/pplancq/svg-tools/commit/ca314825ea8f686766b05fd9b1d8c04e0adbf576))
-
+- implement getSvg ([ca31482](https://github.com/pplancq/svg-tools/commit/ca314825ea8f686766b05fd9b1d8c04e0adbf576))
 
 ### Bug Fixes
 
-* package type module and build typescript declaration ([b1a8998](https://github.com/pplancq/svg-tools/commit/b1a8998f0e75e70252524128d9e9b44a6d0d7bfc))
+- package type module and build typescript declaration ([b1a8998](https://github.com/pplancq/svg-tools/commit/b1a8998f0e75e70252524128d9e9b44a6d0d7bfc))

@@ -1,14 +1,15 @@
-const DefaultChangelogRenderer = require('nx/release/changelog-renderer').default;
+const DefaultChangelogRenderer =
+  require("nx/release/changelog-renderer").default;
 
-const DEPENDENCY_SCOPE = 'deps';
+const DEPENDENCY_SCOPE = "deps";
 
 class CustomChangelogRenderer extends DefaultChangelogRenderer {
   renderChangesByType() {
     const dependencyChanges = this.relevantChanges.filter(
-      (change) => change.scope?.trim() === DEPENDENCY_SCOPE
+      (change) => change.scope?.trim() === DEPENDENCY_SCOPE,
     );
     const otherChanges = this.relevantChanges.filter(
-      (change) => change.scope?.trim() !== DEPENDENCY_SCOPE
+      (change) => change.scope?.trim() !== DEPENDENCY_SCOPE,
     );
 
     const originalRelevantChanges = this.relevantChanges;
@@ -18,9 +19,10 @@ class CustomChangelogRenderer extends DefaultChangelogRenderer {
       const markdownLines = super.renderChangesByType();
 
       if (dependencyChanges.length > 0) {
-        markdownLines.push('', '### 📦 Dependencies', '');
+        markdownLines.push("", "### 📦 Dependencies", "");
 
-        const dependencyChangesByType = this.groupChangesByTypeFor(dependencyChanges);
+        const dependencyChangesByType =
+          this.groupChangesByTypeFor(dependencyChanges);
         const changeTypes = this.conventionalCommitsConfig?.types ?? {};
 
         for (const type of Object.keys(changeTypes)) {

@@ -1,4 +1,4 @@
-import type { SvgMergerInterface } from './SvgMergerInterface';
+import type { SvgMergerInterface } from "./SvgMergerInterface";
 
 export class SvgMerger implements SvgMergerInterface {
   merge(source: SVGSVGElement, target: SVGSVGElement): SVGSVGElement {
@@ -12,7 +12,7 @@ export class SvgMerger implements SvgMergerInterface {
   // eslint-disable-next-line class-methods-use-this
   private mergeAttributes(from: SVGSVGElement, to: SVGSVGElement): void {
     const attributes = from.getAttributeNames();
-    attributes.forEach(attribute => {
+    attributes.forEach((attribute) => {
       if (to.hasAttribute(attribute)) {
         return;
       }

@@ -1,5 +1,5 @@
 ---
-applyTo: '.github/instructions/*.instructions.md'
+applyTo: ".github/instructions/*.instructions.md"
 description: Template and requirements for writing meta-instructions for Copilot. Every instruction must include an applyTo and description in its front-matter, and follow the documented structure and best practices.
 ---
 

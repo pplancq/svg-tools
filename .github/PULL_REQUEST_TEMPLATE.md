@@ -22,8 +22,8 @@ Closes #<!-- issue number -->
 
 <!-- Summary of what was changed and why. No raw diff. -->
 
-- 
-- 
+-
+-
 
 ## Checklist
 

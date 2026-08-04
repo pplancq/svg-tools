@@ -1,27 +1,27 @@
-import { defineConfig } from '@rslib/core';
+import { defineConfig } from "@rslib/core";
 
 export default defineConfig({
   plugins: [],
   source: {
-    tsconfigPath: './tsconfig.build.json',
+    tsconfigPath: "./tsconfig.build.json",
     entry: {
-      index: ['./src/**'],
+      index: ["./src/**"],
     },
   },
   lib: [
     {
       bundle: false,
       dts: true,
-      format: 'esm',
+      format: "esm",
     },
   ],
   output: {
-    target: 'web',
+    target: "web",
     distPath: {
-      root: 'build',
+      root: "build",
     },
     copy: {
-      patterns: [{ from: '**/*.d.ts', context: 'src' }],
+      patterns: [{ from: "**/*.d.ts", context: "src" }],
     },
   },
 });

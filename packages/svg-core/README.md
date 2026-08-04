@@ -7,6 +7,7 @@ Lightweight library to asynchronously load and inject SVG files into the DOM, wi
 `@pplancq/svg-core` provides a class-based architecture to fetch an SVG (from a URL, a local path, or a data URI), sanitize it with DOMPurify, and merge its attributes into an existing SVG element when needed. The library uses the Observer pattern to expose reactive state changes, making it easy to integrate with any UI framework.
 
 Main goals:
+
 - Load SVGs asynchronously with reactive state (`idle` → `loading` → `success | error`).
 - Protect against malicious SVG content using DOMPurify.
 - Provide a simple observer-based API to react to SVG loading events.
@@ -21,26 +22,26 @@ npm install @pplancq/svg-core
 ## 🚀 Quick start
 
 ```javascript
-import { SvgStore } from '@pplancq/svg-core';
+import { SvgStore } from "@pplancq/svg-core";
 
 // Create a store — the pipeline starts immediately
-const store = new SvgStore('https://example.com/my-icon.svg');
+const store = new SvgStore("https://example.com/my-icon.svg");
 
 // Subscribe to state changes
 const unsubscribe = store.subscribe(() => {
   const { status, svgElement, error } = store.getSvgResult();
 
-  if (status === 'loading') {
-    console.log('Loading…');
+  if (status === "loading") {
+    console.log("Loading…");
   }
 
-  if (status === 'success') {
+  if (status === "success") {
     document.body.appendChild(svgElement);
     unsubscribe(); // stop listening once done
   }
 
-  if (status === 'error') {
-    console.error('Failed to load SVG:', error);
+  if (status === "error") {
+    console.error("Failed to load SVG:", error);
   }
 });
 
@@ -55,11 +56,11 @@ console.log(currentState.status); // 'idle' (before the microtask runs)
 
 Creates a new store and immediately schedules the loading pipeline.
 
-| Parameter        | Type                    | Required | Description                                                         |
-| ---------------- | ----------------------- | -------- | ------------------------------------------------------------------- |
-| `src`            | `string \| URL`         | ✅        | URL, path, or data URI (`data:image/svg+xml`) pointing to the SVG. |
-| `svgElement`     | `SVGSVGElement`         | ❌        | Existing SVG element to receive the fetched attributes and content. |
-| `sanitizeConfig` | `SanitizeConfig`        | ❌        | Custom sanitization options. **⚠️ Only use with trusted sources.**  |
+| Parameter        | Type             | Required | Description                                                         |
+| ---------------- | ---------------- | -------- | ------------------------------------------------------------------- |
+| `src`            | `string \| URL`  | ✅       | URL, path, or data URI (`data:image/svg+xml`) pointing to the SVG.  |
+| `svgElement`     | `SVGSVGElement`  | ❌       | Existing SVG element to receive the fetched attributes and content. |
+| `sanitizeConfig` | `SanitizeConfig` | ❌       | Custom sanitization options. **⚠️ Only use with trusted sources.**  |
 
 The pipeline is deferred via `queueMicrotask`, which guarantees that any `subscribe()` call placed immediately after construction will receive all state transitions (`loading`, then `success` or `error`).
 
@@ -71,17 +72,17 @@ Returns the current state of the store synchronously.
 
 ```typescript
 interface SvgState {
-  status: 'idle' | 'loading' | 'success' | 'error';
+  status: "idle" | "loading" | "success" | "error";
   svgElement: SVGSVGElement | null;
   error: Error | null;
 }
 ```
 
-| Status    | Meaning                                           |
-| --------- | ------------------------------------------------- |
-| `idle`    | Store just created, pipeline not started yet.     |
-| `loading` | Fetching or decoding the SVG is in progress.      |
-| `success` | SVG loaded successfully — `svgElement` is set.    |
+| Status    | Meaning                                          |
+| --------- | ------------------------------------------------ |
+| `idle`    | Store just created, pipeline not started yet.    |
+| `loading` | Fetching or decoding the SVG is in progress.     |
+| `success` | SVG loaded successfully — `svgElement` is set.   |
 | `error`   | Loading failed — `error` contains the exception. |
 
 ---
@@ -108,23 +109,23 @@ By default, all SVG content is sanitized using [DOMPurify](https://github.com/cu
 If you **control your SVG sources** and need to allow specific elements or attributes, pass a `SanitizeConfig` as the third constructor argument:
 
 ```javascript
-import { SvgStore } from '@pplancq/svg-core';
+import { SvgStore } from "@pplancq/svg-core";
 
-const store = new SvgStore('/animated-spinner.svg', undefined, {
-  allowTags: ['animateTransform', 'animate', 'animateMotion'],
-  allowAttributes: ['from', 'to', 'dur', 'repeatCount', 'values', 'keyTimes'],
+const store = new SvgStore("/animated-spinner.svg", undefined, {
+  allowTags: ["animateTransform", "animate", "animateMotion"],
+  allowAttributes: ["from", "to", "dur", "repeatCount", "values", "keyTimes"],
 });
 ```
 
 **Available `SanitizeConfig` options:**
 
-| Option               | Type       | Description                                    |
-| -------------------- | ---------- | ---------------------------------------------- |
-| `allowTags`          | `string[]` | Additional tag names to allow.                 |
-| `allowAttributes`    | `string[]` | Additional attribute names to allow.           |
-| `forbidTags`         | `string[]` | Tag names to explicitly forbid.                |
-| `forbidAttributes`   | `string[]` | Attribute names to explicitly forbid.          |
-| `allowDataAttributes`| `boolean`  | Allow `data-*` attributes (default: `false`).  |
+| Option                | Type       | Description                                   |
+| --------------------- | ---------- | --------------------------------------------- |
+| `allowTags`           | `string[]` | Additional tag names to allow.                |
+| `allowAttributes`     | `string[]` | Additional attribute names to allow.          |
+| `forbidTags`          | `string[]` | Tag names to explicitly forbid.               |
+| `forbidAttributes`    | `string[]` | Attribute names to explicitly forbid.         |
+| `allowDataAttributes` | `boolean`  | Allow `data-*` attributes (default: `false`). |
 
 **⚠️ Security Warning:** Do **not** use custom sanitization with user-uploaded SVGs or SVGs from untrusted sources.
 
@@ -149,10 +150,10 @@ const store = new SvgStore('/animated-spinner.svg', undefined, {
 ## 🧪 Development & testing
 
 ```bash
-npm run dev     # build in watch mode
-npm run build   # production build
-npm test        # run tests (vitest)
-npm run lint    # eslint + tsc
+npm run dev   # build in watch mode
+npm run build # production build
+npm test      # run tests (vitest)
+npm run lint  # eslint + tsc
 ```
 
 Tests use `vitest` and `jsdom` to simulate a DOM environment.
@@ -165,64 +166,64 @@ Version 3 replaces the functional API with a class-based, Observer-pattern archi
 
 ### What changed
 
-| v2 (functional)                         | v3 (OOP / Observer)                                  |
-| --------------------------------------- | ---------------------------------------------------- |
-| `getSvg(src, el?, config?)` (async fn)  | `new SvgStore(src, el?, config?)` + `.subscribe()`   |
-| Returns `Promise<SVGSVGElement>`        | Returns `SvgState` via `getSvgResult()`              |
-| One-shot call, no lifecycle events      | Reactive state: `idle → loading → success \| error`  |
-| `mergeSvgContent(source, target)`       | Handled internally — pass `svgElement` to constructor |
-| No error state, `catch` on the promise  | `state.status === 'error'` + `state.error`           |
+| v2 (functional)                        | v3 (OOP / Observer)                                   |
+| -------------------------------------- | ----------------------------------------------------- |
+| `getSvg(src, el?, config?)` (async fn) | `new SvgStore(src, el?, config?)` + `.subscribe()`    |
+| Returns `Promise<SVGSVGElement>`       | Returns `SvgState` via `getSvgResult()`               |
+| One-shot call, no lifecycle events     | Reactive state: `idle → loading → success \| error`   |
+| `mergeSvgContent(source, target)`      | Handled internally — pass `svgElement` to constructor |
+| No error state, `catch` on the promise | `state.status === 'error'` + `state.error`            |
 
 ### Before (v2)
 
 ```javascript
-import { getSvg } from '@pplancq/svg-core';
+import { getSvg } from "@pplancq/svg-core";
 
 try {
-  const svgEl = await getSvg('/icon.svg');
+  const svgEl = await getSvg("/icon.svg");
   document.body.appendChild(svgEl);
 } catch (error) {
-  console.error('Failed:', error);
+  console.error("Failed:", error);
 }
 
 // With a target element
-const target = document.querySelector('svg#icon');
-await getSvg('/icon.svg', target);
+const target = document.querySelector("svg#icon");
+await getSvg("/icon.svg", target);
 
 // With custom sanitization
-const animated = await getSvg('/spinner.svg', undefined, {
-  allowTags: ['animateTransform'],
-  allowAttributes: ['dur', 'repeatCount'],
+const animated = await getSvg("/spinner.svg", undefined, {
+  allowTags: ["animateTransform"],
+  allowAttributes: ["dur", "repeatCount"],
 });
 ```
 
 ### After (v3)
 
 ```javascript
-import { SvgStore } from '@pplancq/svg-core';
+import { SvgStore } from "@pplancq/svg-core";
 
 // Basic usage
-const store = new SvgStore('/icon.svg');
+const store = new SvgStore("/icon.svg");
 const unsubscribe = store.subscribe(() => {
   const { status, svgElement, error } = store.getSvgResult();
-  if (status === 'success') {
+  if (status === "success") {
     document.body.appendChild(svgElement);
     unsubscribe();
   }
-  if (status === 'error') {
-    console.error('Failed:', error);
+  if (status === "error") {
+    console.error("Failed:", error);
     unsubscribe();
   }
 });
 
 // With a target element
-const target = document.querySelector('svg#icon');
-const store2 = new SvgStore('/icon.svg', target);
+const target = document.querySelector("svg#icon");
+const store2 = new SvgStore("/icon.svg", target);
 
 // With custom sanitization
-const store3 = new SvgStore('/spinner.svg', undefined, {
-  allowTags: ['animateTransform'],
-  allowAttributes: ['dur', 'repeatCount'],
+const store3 = new SvgStore("/spinner.svg", undefined, {
+  allowTags: ["animateTransform"],
+  allowAttributes: ["dur", "repeatCount"],
 });
 ```
 
