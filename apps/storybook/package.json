@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@pplancq/eslint-config": "^6.0.19",
-    "@pplancq/prettier-config": "^4.0.0",
+    "@pplancq/prettier-config": "^4.0.1",
     "@pplancq/stylelint-config": "^6.0.0",
     "@rsbuild/core": "^2.1.13",
     "@rsbuild/plugin-react": "^2.1.0",
