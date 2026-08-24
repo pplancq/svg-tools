@@ -1,5 +1,5 @@
 export default {
-  extends: ["@pplancq/stylelint-config", "@pplancq/stylelint-config/prettier"],
+  extends: ["@pplancq/stylelint-config"],
   rules: {
     "selector-class-pattern": [
       // official bem regex

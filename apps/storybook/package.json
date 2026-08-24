@@ -12,8 +12,8 @@
     "lint:eslint:fix": "eslint \"**/*.{js,jsx,mjs,ts,tsx}\" --fix",
     "lint:stylelint": "stylelint \"**/*.{scss,css}\"",
     "lint:stylelint:fix": "stylelint \"**/*.{scss,css}\" --fix",
-    "lint:prettier": "prettier \"**/*.!(js|jsx|mjs|ts|tsx|scss|css)\" --check --ignore-unknown",
-    "lint:prettier:fix": "prettier \"**/*.!(js|jsx|mjs|ts|tsx|scss|css)\" --write --ignore-unknown",
+    "lint:prettier": "prettier . --check --ignore-unknown",
+    "lint:prettier:fix": "prettier . --write --ignore-unknown",
     "lint:tsc": "tsc --noEmit"
   },
   "dependencies": {
@@ -58,6 +58,6 @@
     "*.(js|jsx|ts|tsx)": "eslint --fix",
     "*.{ts,tsx}": "tsc-files --noEmit",
     "*.(scss|css)": "stylelint --fix",
-    "*.!(scss|css)": "prettier --write --ignore-unknown"
+    "*": "prettier --write --ignore-unknown"
   }
 }
