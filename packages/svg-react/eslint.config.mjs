@@ -3,8 +3,11 @@ import { defineConfig } from "@pplancq/eslint-config";
 export default defineConfig({
   enableReact: true,
   enableVitest: true,
-  enablePrettier: "on",
+  enablePrettier: "disableStyleOnly",
   extendConfig: [
+    {
+      ignores: ["build"],
+    },
     {
       files: ["*.config.ts", "*.config.mts"],
       rules: {

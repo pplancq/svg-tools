@@ -31,9 +31,7 @@ const config: StorybookConfig = {
     disableTelemetry: true,
   },
   framework: "storybook-react-rsbuild",
-  rsbuildFinal: (rsbuildConfig) => {
-    return mergeRsbuildConfig(rsbuildConfig, {});
-  },
+  rsbuildFinal: (rsbuildConfig) => mergeRsbuildConfig(rsbuildConfig, {}),
   typescript: {
     reactDocgen: "react-docgen-typescript",
   },
