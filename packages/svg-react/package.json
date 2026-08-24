@@ -57,7 +57,7 @@
     "@testing-library/user-event": "^14.6.5",
     "@types/react": "^19.2.18",
     "@vitejs/plugin-react": "^6.0.5",
-    "@vitest/coverage-v8": "^4.1.10",
+    "@vitest/coverage-v8": "^4.1.11",
     "concurrently": "^10.0.5",
     "eslint": "^9.39.5",
     "eslint-plugin-prettier": "^5.5.6",
@@ -66,7 +66,7 @@
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.10",
+    "vitest": "^4.1.11",
     "vitest-sonar-reporter": "^3.0.0"
   },
   "overrides": {
