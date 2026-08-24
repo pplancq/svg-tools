@@ -12,8 +12,8 @@
     "lint:eslint:fix": "eslint \"**/*.{js,jsx,mjs,ts,tsx}\" --fix",
     "lint:stylelint": "stylelint \"**/*.{scss,css}\"",
     "lint:stylelint:fix": "stylelint \"**/*.{scss,css}\" --fix",
-    "lint:prettier": "prettier \"**/*.!(js|jsx|mjs|ts|tsx|scss|css)\" --check --ignore-unknown",
-    "lint:prettier:fix": "prettier \"**/*.!(js|jsx|mjs|ts|tsx|scss|css)\" --write --ignore-unknown",
+    "lint:prettier": "prettier . --check --ignore-unknown",
+    "lint:prettier:fix": "prettier . --write --ignore-unknown",
     "lint:tsc": "tsc --noEmit"
   },
   "dependencies": {
@@ -28,7 +28,7 @@
   "devDependencies": {
     "@pplancq/eslint-config": "^6.1.0",
     "@pplancq/prettier-config": "^4.0.1",
-    "@pplancq/stylelint-config": "^6.0.0",
+    "@pplancq/stylelint-config": "^6.1.0",
     "@rsbuild/core": "^2.1.13",
     "@rsbuild/plugin-react": "^2.1.0",
     "@rsbuild/plugin-sass": "^2.0.1",
@@ -58,6 +58,6 @@
     "*.(js|jsx|ts|tsx)": "eslint --fix",
     "*.{ts,tsx}": "tsc-files --noEmit",
     "*.(scss|css)": "stylelint --fix",
-    "*.!(scss|css)": "prettier --write --ignore-unknown"
+    "*": "prettier --write --ignore-unknown"
   }
 }
