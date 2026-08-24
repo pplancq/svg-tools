@@ -27,10 +27,8 @@ type SvgProps = Omit<SVGProps<SVGSVGElement>, "aria-busy"> & {
   sanitizeConfig?: SanitizeConfig;
 };
 
-export const Svg = ({ src, alt, role, sanitizeConfig, ...props }: PropsWithChildren<SvgProps>) => {
-  return (
-    <ErrorBoundary fallback={alt ? <span>{alt}</span> : null} key={src}>
-      <SvgContent src={src} alt={alt} role={role} sanitizeConfig={sanitizeConfig} {...props} />
-    </ErrorBoundary>
-  );
-};
+export const Svg = ({ src, alt, role, sanitizeConfig, ...props }: PropsWithChildren<SvgProps>) => (
+  <ErrorBoundary fallback={alt ? <span>{alt}</span> : null} key={src}>
+    <SvgContent src={src} alt={alt} role={role} sanitizeConfig={sanitizeConfig} {...props} />
+  </ErrorBoundary>
+);

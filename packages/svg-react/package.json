@@ -27,6 +27,8 @@
     "lint": "concurrently --prefix-colors auto \"npm:eslint\" \"npm:tsc\"",
     "eslint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
     "eslint:fix": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
+    "lint:prettier": "prettier . --check --ignore-unknown",
+    "lint:prettier:fix": "prettier . --write --ignore-unknown",
     "tsc": "tsc --noEmit"
   },
   "engines": {
@@ -46,7 +48,7 @@
     "react": "^19.0.0"
   },
   "devDependencies": {
-    "@pplancq/eslint-config": "^6.0.19",
+    "@pplancq/eslint-config": "^6.1.0",
     "@pplancq/prettier-config": "^4.0.1",
     "@rsbuild/plugin-react": "^2.1.0",
     "@rslib/core": "^0.23.2",
@@ -76,6 +78,7 @@
   "prettier": "@pplancq/prettier-config",
   "lint-staged": {
     "*.(js|jsx|ts|tsx)": "eslint --fix",
-    "*.{ts,tsx}": "tsc-files --noEmit"
+    "*.{ts,tsx}": "tsc-files --noEmit",
+    "*": "prettier --check --ignore-unknown"
   }
 }
