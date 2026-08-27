@@ -1,5 +1,6 @@
 import { AbstractObserver } from "../AbstractObserver/AbstractObserver";
 import { Container } from "../Container/Container";
+import { IS_SERVER } from "../constants";
 import type { SanitizeConfig } from "../SanitizeConfig/SanitizeConfig";
 import { SvgFetcher } from "../SvgFetcher/SvgFetcher";
 import type { SvgFetcherInterface } from "../SvgFetcher/SvgFetcherInterface";
@@ -43,9 +44,11 @@ export class SvgStore extends AbstractObserver implements SvgStoreInterface {
     this.sanitizer = Container.get(SvgSanitizer);
     this.merger = Container.get(SvgMerger);
 
-    queueMicrotask(() => {
-      this.pipeline();
-    });
+    if (!IS_SERVER) {
+      queueMicrotask(() => {
+        this.pipeline();
+      });
+    }
   }
 
   getSvgResult(): SvgState {
