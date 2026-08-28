@@ -1,3 +1,17 @@
+## 3.0.13 (2026-08-28)
+
+### 🐞 Bug Fixes
+
+- **svg-core:** resolve DOMParser crash during SSR/SSG pre-rendering ([#1030](https://github.com/pplancq/svg-tools/pull/1030))
+
+### 📦 Dependencies
+
+- **deps:** update dependency dompurify to ^3.4.14 ([#1005](https://github.com/pplancq/svg-tools/pull/1005))
+
+### ❤️ Thank You
+
+- Paul PLANCQ
+
 ## 3.0.12 (2026-07-15)
 
 ### 🎉 Features
