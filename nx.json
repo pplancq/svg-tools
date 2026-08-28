@@ -1,15 +1,12 @@
 {
   "$schema": "https://unpkg.com/nx@23/schemas/nx-schema.json",
+  "analytics": false,
   "release": {
-    "projects": ["packages/*"],
-    "projectsRelationship": "fixed",
     "version": {
-      "currentVersionResolver": "git-tag",
-      "fallbackCurrentVersionResolver": "disk",
-      "specifierSource": "conventional-commits",
+      "conventionalCommits": true,
       "updateDependents": "auto",
       "applyPreidToDependents": true,
-      "preserveMatchingDependencyRanges": true,
+      "preserveMatchingDependencyRanges": false,
       "versionPrefix": "auto"
     },
     "git": {
@@ -24,7 +21,7 @@
         "createRelease": "github",
         "file": "CHANGELOG.md",
         "entryWhenNoChanges": false,
-        "renderer": "{workspaceRoot}/tools/changelog-renderer.cjs"
+        "renderer": "@pplancq/nx-release-plugin/changelog-renderer.cjs"
       },
       "projectChangelogs": false
     },
@@ -45,17 +42,19 @@
         "docs": {
           "semverBump": "none",
           "changelog": {
-            "title": "📚 Documentation"
+            "hidden": true
           }
         },
         "style": {
           "semverBump": "none",
-          "changelog": false
+          "changelog": {
+            "hidden": true
+          }
         },
         "refactor": {
           "semverBump": "none",
           "changelog": {
-            "title": "♻️ Code Refactoring"
+            "hidden": true
           }
         },
         "perf": {
@@ -66,23 +65,27 @@
         },
         "test": {
           "semverBump": "none",
-          "changelog": false
+          "changelog": {
+            "hidden": true
+          }
         },
         "build": {
           "semverBump": "none",
           "changelog": {
-            "title": "🏗️ Build System"
+            "hidden": true
           }
         },
         "ci": {
           "semverBump": "none",
           "changelog": {
-            "title": "👷 CI"
+            "hidden": true
           }
         },
         "chore": {
           "semverBump": "none",
-          "changelog": false
+          "changelog": {
+            "hidden": true
+          }
         },
         "revert": {
           "semverBump": "patch",
@@ -91,6 +94,10 @@
           }
         }
       }
-    }
+    },
+    "projects": [
+      "packages/*"
+    ],
+    "projectsRelationship": "fixed"
   }
 }

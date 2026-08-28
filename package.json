@@ -24,8 +24,6 @@
     "lint": "npm run lint --workspace=packages --workspace=apps",
     "package:check": "node ./script/package-check.mjs",
     "release": "nx release",
-    "release:dry-run": "nx release --dry-run",
-    "release:publish": "nx release publish",
     "prepare": "husky"
   },
   "bugs": {
@@ -39,9 +37,9 @@
     "@commitlint/cli": "^21.2.2",
     "@nx/js": "^23.1.1",
     "@pplancq/commitlint-config": "^4.0.5",
+    "@pplancq/nx-release-plugin": "^1.0.4",
     "husky": "^9.1.7",
     "lint-staged": "^17.3.0",
-    "nx": "^23.1.1",
     "tsc-files": "^1.1.4"
   },
   "lint-staged": {
