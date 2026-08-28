@@ -62,7 +62,7 @@ jobs:
           npm config set access=public
           npm config set provenance=true
 
-      - name: Version and changelog
+      - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GIT_AUTHOR_EMAIL: release[bot]@users.noreply.github.com
@@ -71,7 +71,7 @@ jobs:
           GIT_COMMITTER_NAME: release[bot]
         run: |
           RELEASE_TYPE="${{ github.event.inputs.releaseType }}"
-          ARGS=("--skip-publish")
+          ARGS=("--yes")
 
           if [ "$RELEASE_TYPE" != "stable" ]; then
             ARGS=("prerelease" "${ARGS[@]}")
@@ -87,24 +87,3 @@ jobs:
           fi
 
           npx nx release "${ARGS[@]}"
-
-      - name: Publish to npm
-        run: |
-          RELEASE_TYPE="${{ github.event.inputs.releaseType }}"
-          TAG="latest"
-
-          if [ "$RELEASE_TYPE" != "stable" ]; then
-            TAG="$RELEASE_TYPE"
-          fi
-
-          ARGS="--tag $TAG"
-
-          if [ "${{ github.event.inputs.dryRun }}" = "true" ]; then
-            ARGS="$ARGS --dry-run"
-          fi
-
-          if [ "${{ github.event.inputs.debug }}" = "true" ]; then
-            ARGS="$ARGS --verbose"
-          fi
-
-          npx nx release publish $ARGS
