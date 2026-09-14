@@ -1,3 +1,18 @@
+## 3.0.14 (2026-09-14)
+
+### 🐞 Bug Fixes
+
+- **storybook:** resolve workspace dependency installation ([#1051](https://github.com/pplancq/svg-tools/pull/1051))
+
+### 📦 Dependencies
+
+- **deps:** update react monorepo to ^19.3.0 ([#1054](https://github.com/pplancq/svg-tools/pull/1054))
+- **deps:** update dependency dompurify to ^3.4.15 ([#1042](https://github.com/pplancq/svg-tools/pull/1042))
+
+### ❤️ Thank You
+
+- Paul PLANCQ
+
 ## 3.0.13 (2026-08-28)
 
 ### 🐞 Bug Fixes
