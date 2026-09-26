@@ -37,7 +37,7 @@
     "@commitlint/cli": "^21.2.3",
     "@nx/js": "^23.2.1",
     "@pplancq/commitlint-config": "^4.0.8",
-    "@pplancq/nx-release-plugin": "^1.0.5",
+    "@pplancq/nx-release-plugin": "^1.0.6",
     "husky": "^9.1.7",
     "lint-staged": "^17.5.1",
     "tsc-files": "^1.1.4"
