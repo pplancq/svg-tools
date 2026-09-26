@@ -36,7 +36,7 @@
   "devDependencies": {
     "@commitlint/cli": "^21.2.3",
     "@nx/js": "^23.2.1",
-    "@pplancq/commitlint-config": "^4.0.7",
+    "@pplancq/commitlint-config": "^4.0.8",
     "@pplancq/nx-release-plugin": "^1.0.5",
     "husky": "^9.1.7",
     "lint-staged": "^17.5.1",
