@@ -46,7 +46,7 @@
     "prettier": "^3.9.9",
     "react-docgen-typescript": "^2.4.0",
     "remark-gfm": "^4.0.1",
-    "sass-embedded": "^1.104.1",
+    "sass-embedded": "^1.105.0",
     "storybook": "^10.6.0",
     "storybook-react-rsbuild": "^3.6.0",
     "stylelint": "^17.15.0",
