@@ -62,6 +62,6 @@
     "*": "prettier --check --ignore-unknown"
   },
   "dependencies": {
-    "dompurify": "^3.4.15"
+    "dompurify": "^3.4.16"
   }
 }
