@@ -1,3 +1,9 @@
+## 3.0.15 (2026-09-28)
+
+### 📦 Dependencies
+
+- **deps:** update dependency dompurify to ^3.4.16 ([#1083](https://github.com/pplancq/svg-tools/pull/1083))
+
 ## 3.0.14 (2026-09-14)
 
 ### 🐞 Bug Fixes
