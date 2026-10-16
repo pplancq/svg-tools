@@ -1,3 +1,10 @@
+## 3.0.16 (2026-10-16)
+
+### 📦 Dependencies
+
+- **deps:** update dependency dompurify to ^3.4.17 ([#1122](https://github.com/pplancq/svg-tools/pull/1122))
+- **deps:** update shelter-ui mono repo to ^1.0.0-alpha.7 ([#1106](https://github.com/pplancq/svg-tools/pull/1106))
+
 ## 3.0.15 (2026-09-28)
 
 ### 📦 Dependencies
