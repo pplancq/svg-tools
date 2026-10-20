@@ -13,6 +13,11 @@ on:
           - alpha
           - beta
           - rc
+      firstRelease:
+        description: "First release (allow missing previous release reference)"
+        required: false
+        type: boolean
+        default: false
       dryRun:
         description: "Dry run"
         required: false
@@ -46,6 +51,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           release-type: ${{ inputs.releaseType }}
+          first-release: ${{ inputs.firstRelease }}
           dry-run: ${{ inputs.dryRun }}
           debug: ${{ inputs.debug }}
           build-command: npm run build:packages
