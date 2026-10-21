@@ -13,6 +13,11 @@ on:
           - alpha
           - beta
           - rc
+      firstRelease:
+        description: "First release (allow missing previous release reference)"
+        required: false
+        type: boolean
+        default: false
       dryRun:
         description: "Dry run"
         required: false
@@ -42,10 +47,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Release
-        uses: pplancq/actions/nx-release@72cc7f266d747ce0558318611cf11857c894e6ff # v1.1.4
+        uses: pplancq/actions/nx-release@2c562638cd9f0ca64f237af46f6052e71b2536b8 # v1.1.5
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           release-type: ${{ inputs.releaseType }}
+          first-release: ${{ inputs.firstRelease }}
           dry-run: ${{ inputs.dryRun }}
           debug: ${{ inputs.debug }}
           build-command: npm run build:packages
