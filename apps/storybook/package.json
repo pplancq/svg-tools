@@ -37,6 +37,7 @@
     "@storybook/addon-links": "^10.6.2",
     "@storybook/addon-onboarding": "^10.6.2",
     "@storybook/react": "^10.6.2",
+    "@types/node": "^24.19.2",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "concurrently": "^10.0.6",
