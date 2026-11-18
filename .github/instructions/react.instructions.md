@@ -49,8 +49,8 @@ Instructions for building high-quality React applications with modern patterns, 
 - Follow SOLID, DRY, KISS principles.
 - Prefer code simplicity and clarity.
 - Factorize common code.
-- Do not declare more than one React component per file (`react/no-multi-comp`).
-- Do not use conditional rendering that could cause leaked renders (`react/jsx-no-leaked-render`).
+- Do not declare more than one React component per file (`pplancq-react/no-multi-comp`).
+- Do not use conditional rendering that could cause leaked renders (`react-x/no-leaked-conditional-rendering`).
 - Follow the `react/function-component-definition` rule: always declare components as arrow functions.
 - Implement component composition over inheritance.
 

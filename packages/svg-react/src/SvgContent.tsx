@@ -50,7 +50,7 @@ export const SvgContent = ({ src, alt, role, sanitizeConfig, ...props }: PropsWi
         role={role}
         {...ariaAttrs}
         // Safe: content is pre-sanitized by DOMPurify via svg-core's SvgSanitizer
-        // eslint-disable-next-line react/no-danger
+        // eslint-disable-next-line react-dom/no-dangerously-set-innerhtml
         dangerouslySetInnerHTML={{ __html: state.svgElement!.innerHTML }}
       />
     );
