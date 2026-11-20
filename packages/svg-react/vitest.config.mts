@@ -1,6 +1,5 @@
 import react from "@vitejs/plugin-react";
 import { loadEnv } from "vite";
-// eslint-disable-next-line import/no-unresolved
 import { defineConfig } from "vitest/config";
 
 export default defineConfig(({ mode }) => {

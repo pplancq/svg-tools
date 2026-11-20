@@ -3,6 +3,7 @@ import { defineConfig } from "@pplancq/eslint-config";
 export default defineConfig({
   enableVitest: true,
   enablePrettier: "disableStyleOnly",
+  rulesNaming: "modern",
   extendConfig: [
     {
       ignores: ["build"],
@@ -10,8 +11,8 @@ export default defineConfig({
     {
       files: ["*.config.ts", "*.config.mts"],
       rules: {
-        "import/no-extraneous-dependencies": "off",
-        "import/no-default-export": "off",
+        "import-x/no-extraneous-dependencies": "off",
+        "import-x/no-default-export": "off",
       },
     },
   ],

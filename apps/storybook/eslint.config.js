@@ -3,6 +3,7 @@ import { defineConfig } from "@pplancq/eslint-config";
 export default defineConfig({
   enableReact: true,
   enablePrettier: "disableStyleOnly",
+  rulesNaming: "modern",
   extendConfig: [
     {
       files: [
@@ -10,8 +11,8 @@ export default defineConfig({
         ".storybook/**/*.{js,jsx,ts,tsx,mjs,cjs,cts,mts}",
       ],
       rules: {
-        "import/no-extraneous-dependencies": "off",
-        "import/no-default-export": "off",
+        "import-x/no-extraneous-dependencies": "off",
+        "import-x/no-default-export": "off",
       },
     },
     {

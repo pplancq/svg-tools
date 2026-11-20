@@ -1,2 +1,2 @@
-/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import-x/no-extraneous-dependencies */
 import "@testing-library/jest-dom/vitest";
